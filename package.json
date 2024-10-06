@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "serverless-plugin-typescript": "^2.1.5"
+  }
+}

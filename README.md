@@ -23,13 +23,13 @@ This examples defines a single function, `rateHandler` which is triggered by an 
 
 In order to deploy the example, you need to run the following command:
 
-```
+```shell
 serverless deploy
 ```
 
 After running deploy, you should see output similar to:
 
-```
+```shell
 Deploying "aws-node-scheduled-cron" to stage "dev" (us-east-1)
 
 ✔ Service deployed to stack aws-node-scheduled-cron-dev (151s)
@@ -45,7 +45,7 @@ There is no additional step required. Your defined schedules becomes active righ
 
 The easiest way to develop and test your function is to use the `dev` command:
 
-```
+```shell
 serverless dev
 ```
 

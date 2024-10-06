@@ -1,0 +1,16 @@
+# "org" ensures this Service is used with the correct Serverless Framework Access Key.
+org: camilabs
+# "app" enables Serverless Framework Dashboard features and sharing them with other Services.
+app: bots
+# "service" is the name of this project. This will also be added to your AWS resource names.
+service: discord-wanted
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+
+functions:
+  rateHandler:
+    handler: handler.run
+    events:
+      - schedule: rate(1 minute)

@@ -1,10 +1,18 @@
 version: "0.2"
-ignorePaths: []
+ignorePaths:
+  - .gitignore
+  - eslint.config.mjs
+  - parameters.json
 dictionaryDefinitions:
-  - name: location
+  - name: regional
     description: 한국 및 해외 지명
     path: .cspell/custom-dictionary-workspace.txt
-dictionaries: []
-words: []
+    scope: workspace
+    addWords: false
+dictionaries:
+  - regional
+words: [dongminyu]
 ignoreWords: []
 import: []
+useGitignore: true
+allowCompoundWords: true

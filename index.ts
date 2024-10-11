@@ -13,7 +13,7 @@ const discordClient = new Client({ intents: [GatewayIntentBits.Guilds] });
  * @param client - 이제 Discord 클라이언트 인스턴스가 준비되었습니다.
  */
 discordClient.once(Events.ClientReady, (client: Client<true>) => {
-  console.log(`Ready! Logged in as ${client.user.tag}`);
+  console.debug(`Ready! Logged in as ${client.user.tag}`);
 });
 
 // 클라이언트의 토큰으로 Discord에 로그인합니다.

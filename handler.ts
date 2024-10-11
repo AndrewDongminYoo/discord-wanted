@@ -33,7 +33,7 @@ export async function run() {
   const response = await fetchData(url);
 
   const jobs: WantedResponse = response.data;
-  console.log(jobs.data);
+  console.debug(jobs.data);
 }
 
 function fetchData(url: string) {

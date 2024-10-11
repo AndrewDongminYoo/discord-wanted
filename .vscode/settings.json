@@ -1,3 +1,11 @@
 {
+  "cSpell.customDictionaries": {
+    "custom-dictionary-workspace": {
+      "addWords": true,
+      "name": "custom-dictionary-workspace",
+      "path": "${workspaceFolder:discord-wanted}/.cspell/custom-dictionary-workspace.txt",
+      "scope": "workspace"
+    }
+  },
   "cSpell.words": ["dongminyu"]
 }

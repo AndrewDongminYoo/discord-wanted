@@ -1,6 +1,9 @@
 version: "0.2"
 ignorePaths: []
-dictionaryDefinitions: []
+dictionaryDefinitions:
+  - name: location
+    description: 한국 및 해외 지명
+    path: .cspell/custom-dictionary-workspace.txt
 dictionaries: []
 words: []
 ignoreWords: []

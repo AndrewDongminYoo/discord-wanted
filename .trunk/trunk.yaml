@@ -16,6 +16,12 @@ runtimes:
     - python@3.10.8
 # This is the section where you manage your linters. (https://docs.trunk.io/check/configuration)
 lint:
+  definitions:
+    - name: prettier
+      files:
+        - typescript
+        - javascript
+        - json
   enabled:
     - cspell@8.15.0
     - eslint@9.12.0

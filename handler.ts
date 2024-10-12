@@ -1,5 +1,5 @@
 import Axios from 'axios';
-import { WantedResponse } from './wanted';
+import { WantedResponse } from './wanted-response';
 
 const baseURL = 'https://www.wanted.co.kr';
 

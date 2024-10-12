@@ -3,6 +3,7 @@ ignorePaths:
   - .gitignore
   - eslint.config.mjs
   - parameters.json
+  - .vscode/*.json
 dictionaryDefinitions:
   - name: regional
     description: 한국 및 해외 지명

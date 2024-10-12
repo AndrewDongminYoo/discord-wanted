@@ -1,9 +1,15 @@
 {
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "cSpell.customDictionaries": {
-    "custom-dictionary-workspace": {
+    "regional": {
       "addWords": true,
-      "name": "custom-dictionary-workspace",
-      "path": "${workspaceFolder:discord-wanted}/.cspell/custom-dictionary-workspace.txt",
+      "name": "regional",
+      "path": ".cspell/regional.txt",
       "scope": "workspace"
     }
   },

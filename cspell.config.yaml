@@ -6,7 +6,7 @@ ignorePaths:
 dictionaryDefinitions:
   - name: regional
     description: 한국 및 해외 지명
-    path: .cspell/custom-dictionary-workspace.txt
+    path: .cspell/regional.txt
     scope: workspace
     addWords: false
 dictionaries:

@@ -25,11 +25,11 @@ export interface Address {
 }
 
 export enum AddressCountry {
-  한국 = "한국",
+  한국 = '한국',
 }
 
 export enum Location {
-  서울 = "서울",
+  서울 = '서울',
 }
 
 export interface CategoryTag {

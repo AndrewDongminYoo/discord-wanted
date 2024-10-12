@@ -1,5 +1,5 @@
-import { Client, Events, GatewayIntentBits } from "discord.js";
-import { configDotenv } from "dotenv";
+import { Client, Events, GatewayIntentBits } from 'discord.js';
+import { configDotenv } from 'dotenv';
 
 // .env 파일 내용을 process.env로 로드합니다.
 configDotenv();

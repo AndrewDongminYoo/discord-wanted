@@ -5,14 +5,5 @@
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "cSpell.customDictionaries": {
-    "regional": {
-      "addWords": true,
-      "name": "regional",
-      "path": ".cspell/regional.txt",
-      "scope": "workspace"
-    }
-  },
-  "cSpell.words": ["dongminyu"],
   "eslint.useFlatConfig": true
 }

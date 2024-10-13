@@ -1,6 +1,6 @@
 import Axios from 'axios';
-import { WantedResponse } from './types/wanted-response';
-import { UserInput } from './types/user-input';
+import { type WantedResponse } from './types/wanted-response';
+import { type UserInput } from './types/user-input';
 import { JobIds } from './types/user-enums';
 
 const baseURL = 'https://www.wanted.co.kr';
@@ -32,10 +32,10 @@ function buildUrl(params: UserInput): string {
   const queryParams: string[] = [];
 
   // 기본값 설정
-  const jobSortKey = params.jobSortKey || 'job.recommend_order';
-  const jobGroupId = params.jobGroupId || 518;
-  const countryKey = params.countryKey || 'kr';
-  const limit = params.limit || 20;
+  const jobSortKey = params.jobSortKey ?? 'job.recommend_order';
+  const jobGroupId = params.jobGroupId ?? 518;
+  const countryKey = params.countryKey ?? 'kr';
+  const limit = params.limit ?? 20;
 
   // 작업 정렬 키 추가
   queryParams.push(`job_sort=${jobSortKey}`);

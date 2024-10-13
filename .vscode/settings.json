@@ -13,5 +13,6 @@
       "scope": "workspace"
     }
   },
-  "cSpell.words": ["dongminyu"]
+  "cSpell.words": ["dongminyu"],
+  "eslint.useFlatConfig": true
 }

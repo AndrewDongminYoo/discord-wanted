@@ -1,4 +1,4 @@
-import { JobIds } from './user-enums';
+import { type JobIds } from './user-enums';
 
 export interface UserInput {
   jobSortKey?: string; // 예시: 'job.recommend_order', 'job.latest_order'

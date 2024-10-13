@@ -1,3 +1,4 @@
+import { attractionTagsMap } from './attraction-tags.js';
 import { type JobData, type Reward } from './wanted-response.js';
 
 export class JobInfoDisplay {
@@ -23,16 +24,21 @@ export class JobInfoDisplay {
 
   // 덜 유용한 추가 정보를 반환하는 메서드
   public getAdditionalInfo() {
-    const { is_bookmark, title_img, skill_tags, attraction_tags, user_oriented_tags } =
-      this.jobData;
+    const { is_bookmark, title_img, skill_tags, attraction_tags } = this.jobData;
 
     return {
       bookmark: is_bookmark ? '북마크 O' : '북마크 X',
       titleImage: title_img.thumb,
       skillTags: skill_tags.length ? skill_tags : '기술 태그 없음',
-      attractionTags: attraction_tags.length ? attraction_tags : '장점 태그 없음',
-      userOrientedTags: user_oriented_tags.length ? user_oriented_tags : '지원자 태그 없음',
+      attractionTags: attraction_tags.length
+        ? this.getAttractionTags(attraction_tags)
+        : '장점 태그 없음',
     };
+  }
+
+  // Attraction tags를 태그 ID에서 태그 이름으로 변환하는 메서드
+  private getAttractionTags(tagIds: number[]): string[] {
+    return tagIds.map((id) => attractionTagsMap[id] || `알 수 없는 태그(${id})`);
   }
 
   // 리워드 포맷팅 함수

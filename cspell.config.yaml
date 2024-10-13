@@ -12,7 +12,15 @@ dictionaryDefinitions:
     addWords: false
 dictionaries:
   - regional
-words: [dongminyu, pharma, recommendee]
+words: 
+  - adwords
+  - asana
+  - cnet
+  - convio
+  - dongminyu
+  - flickr
+  - pharma
+  - recommendee
 ignoreWords: []
 import: []
 useGitignore: true

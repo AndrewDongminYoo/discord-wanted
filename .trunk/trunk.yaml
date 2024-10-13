@@ -23,13 +23,14 @@ lint:
         - javascript
         - json
   enabled:
+    - osv-scanner@1.9.0
     - cspell@8.15.0
     - eslint@9.12.0
-    - checkov@3.2.256
+    - checkov@3.2.257
     - git-diff-check
     - markdownlint@0.42.0
     - prettier@3.3.3
-    - trufflehog@3.82.6
+    - trufflehog@3.82.8
     - yamllint@1.35.1
 actions:
   enabled:

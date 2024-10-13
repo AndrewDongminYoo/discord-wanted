@@ -2,6 +2,9 @@
 
 name: Manual workflow
 
+# Ensure top-level permissions are not set to write-all (checkov/CKV2_GHA_1)
+permissions: read-all
+
 # Controls when the action will run. Workflow runs when manually triggered using the UI
 # or API.
 on:
@@ -23,6 +26,7 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - name: Send greeting
+      # cspell:ignore johnnyhuy
       # You may pin to the exact commit or the version.
       # uses: johnnyhuy/actions-discord-git-webhook@ba54912b26910da886c9095317d6da6182a87224
       uses: johnnyhuy/actions-discord-git-webhook@v1.0.0

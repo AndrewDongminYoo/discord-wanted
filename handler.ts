@@ -1,7 +1,7 @@
 import Axios from 'axios';
 import { type WantedResponse } from './types/wanted-response.js';
 import { type UserInput } from './types/user-input.js';
-import { JobIds } from './types/user-enums.js';
+import { JobGroupId, JobIds, JobSort, Years } from './types/user-enums.js';
 
 const baseURL = 'https://www.wanted.co.kr';
 
@@ -32,8 +32,8 @@ function buildUrl(params: UserInput): string {
   const queryParams: string[] = [];
 
   // 기본값 설정
-  const jobSortKey = params.jobSortKey ?? 'job.recommend_order';
-  const jobGroupId = params.jobGroupId ?? 518;
+  const jobSortKey = params.jobSortKey ?? JobSort.recommend;
+  const jobGroupId = params.jobGroupId ?? JobGroupId.development;
   const countryKey = params.countryKey ?? 'kr';
   const limit = params.limit ?? 20;
 
@@ -50,7 +50,7 @@ function buildUrl(params: UserInput): string {
 
   // 경력 연도 추가
   if (params.years.length > 0) {
-    params.years.forEach((year: string) => queryParams.push(`years=${year}`));
+    params.years.forEach((year: Years) => queryParams.push(`years=${year}`));
   }
 
   // 국가 추가
@@ -65,7 +65,7 @@ function buildUrl(params: UserInput): string {
   return `/api/chaos/navigation/v1/results?${queryParams.join('&')}`;
 }
 
-export async function run(jobIds: JobIds[], years: string[], locationKey: string) {
+export async function run(jobIds: JobIds[], years: Years[], locationKey: string) {
   const userInput: UserInput = {
     jobIds, // 디스코드에서 입력된 값
     years, // 디스코드에서 입력된 값
@@ -80,4 +80,4 @@ export async function run(jobIds: JobIds[], years: string[], locationKey: string
 }
 
 // 예시로 함수 호출: 실제로는 디스코드로부터 입력받은 인수로 호출될 것
-await run([JobIds.CrossPlatformDeveloper], ['0', '5'], 'seoul.all');
+await run([JobIds.CrossPlatformDeveloper], [Years.All, Years.OneYear, Years.TwoYears], 'seoul.all');

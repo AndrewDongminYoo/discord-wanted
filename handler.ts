@@ -39,10 +39,10 @@ function buildUrl(params: UserInput): string {
   const countryKey = params.countryKey ?? 'kr';
   const limit = params.limit ?? 20;
 
-  // 작업 정렬 키 추가
+  // 채용 정보 정렬 키 추가
   queryParams.push(`job_sort=${jobSortKey}`);
 
-  // 작업 그룹 ID 추가
+  // 채용 정보 그룹 ID 추가
   queryParams.push(`job_group_id=${jobGroupId}`);
 
   // 직무 ID 추가
@@ -80,7 +80,7 @@ export async function run(jobIds: JobIds[], years: Years[], locationKey: string)
   };
 
   const url = buildUrl(userInput);
-  const response = await axios.get(url);
+  const response = await axios.get<WantedResponse>(url);
 
   const jobs: WantedResponse = response.data;
   console.debug(jobs.data);

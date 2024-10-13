@@ -2,6 +2,7 @@ import Axios from 'axios';
 import { type WantedResponse } from './types/wanted-response.js';
 import { type UserInput } from './types/user-input.js';
 import { JobGroupId, JobIds, JobSort, Years } from './types/user-enums.js';
+import { isValidLocation, Locations } from './types/locations.js';
 
 const baseURL = 'https://www.wanted.co.kr';
 
@@ -56,8 +57,13 @@ function buildUrl(params: UserInput): string {
   // 국가 추가
   queryParams.push(`country=${countryKey}`);
 
-  // 위치 추가
-  queryParams.push(`locations=${params.locationKey}`);
+  if (isValidLocation(params.locationKey)) {
+    // 위치 추가
+    queryParams.push(`locations=${params.locationKey}`);
+  } else {
+    // 모든 지역
+    queryParams.push('locations=all');
+  }
 
   // 결과 제한 추가
   queryParams.push(`limit=${limit}`);
@@ -80,4 +86,8 @@ export async function run(jobIds: JobIds[], years: Years[], locationKey: string)
 }
 
 // 예시로 함수 호출: 실제로는 디스코드로부터 입력받은 인수로 호출될 것
-await run([JobIds.CrossPlatformDeveloper], [Years.All, Years.OneYear, Years.TwoYears], 'seoul.all');
+await run(
+  [JobIds.CrossPlatformDeveloper],
+  [Years.All, Years.OneYear, Years.TwoYears],
+  Locations.Seoul.all,
+);

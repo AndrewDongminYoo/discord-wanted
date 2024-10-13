@@ -122,7 +122,7 @@ export default [
       '@typescript-eslint/no-explicit-any': 'error',
       '@typescript-eslint/no-inferrable-types': 'error',
       '@typescript-eslint/no-misused-new': 'error',
-      '@typescript-eslint/no-namespace': 'error',
+      '@typescript-eslint/no-namespace': 'off',
       '@typescript-eslint/no-non-null-assertion': 'off',
       '@typescript-eslint/no-require-imports': 'error',
       '@typescript-eslint/no-shadow': 'error',

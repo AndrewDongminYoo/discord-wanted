@@ -1,7 +1,7 @@
 import Axios from 'axios';
-import { type WantedResponse } from './types/wanted-response';
-import { type UserInput } from './types/user-input';
-import { JobIds } from './types/user-enums';
+import { type WantedResponse } from './types/wanted-response.js';
+import { type UserInput } from './types/user-input.js';
+import { JobIds } from './types/user-enums.js';
 
 const baseURL = 'https://www.wanted.co.kr';
 
@@ -45,12 +45,12 @@ function buildUrl(params: UserInput): string {
 
   // 직무 ID 추가
   if (params.jobIds.length > 0) {
-    params.jobIds.forEach((id) => queryParams.push(`job_ids=${id}`));
+    params.jobIds.forEach((id: JobIds) => queryParams.push(`job_ids=${id}`));
   }
 
   // 경력 연도 추가
   if (params.years.length > 0) {
-    params.years.forEach((year) => queryParams.push(`years=${year}`));
+    params.years.forEach((year: string) => queryParams.push(`years=${year}`));
   }
 
   // 국가 추가
@@ -80,4 +80,4 @@ export async function run(jobIds: JobIds[], years: string[], locationKey: string
 }
 
 // 예시로 함수 호출: 실제로는 디스코드로부터 입력받은 인수로 호출될 것
-run([JobIds.CrossPlatformDeveloper], ['0', '5'], 'seoul.all');
+await run([JobIds.CrossPlatformDeveloper], ['0', '5'], 'seoul.all');

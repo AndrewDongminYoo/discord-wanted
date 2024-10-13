@@ -1,4 +1,4 @@
-import { type Years, type JobIds, type JobGroupId, type JobSort } from './user-enums.js';
+import { type JobGroupId, type JobIds, type JobSort, type Years } from './user-enums.js';
 
 export interface UserInput {
   /**

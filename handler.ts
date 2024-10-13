@@ -1,8 +1,9 @@
 import Axios from 'axios';
-import { type WantedResponse } from './types/wanted-response.js';
-import { type UserInput } from './types/user-input.js';
-import { JobGroupId, JobIds, JobSort, Years } from './types/user-enums.js';
+
 import { isValidLocation, Locations } from './types/locations.js';
+import { JobGroupId, JobIds, JobSort, Years } from './types/user-enums.js';
+import { type UserInput } from './types/user-input.js';
+import { type WantedResponse } from './types/wanted-response.js';
 
 const baseURL = 'https://www.wanted.co.kr';
 

@@ -1,6 +1,8 @@
-import globals from 'globals';
 import eslint from '@eslint/js';
 import parser from '@typescript-eslint/parser';
+import importPlugin from 'eslint-plugin-import';
+import simpleImportSort from 'eslint-plugin-simple-import-sort';
+import globals from 'globals';
 import tseslint from 'typescript-eslint';
 
 /**
@@ -20,10 +22,25 @@ import tseslint from 'typescript-eslint';
 export default [
   { files: ['**/*.ts'] },
   { languageOptions: { globals: globals.node, ecmaVersion: 2021 } },
+  {
+    plugins: {
+      // https://github.com/lydell/eslint-plugin-simple-import-sort
+      'simple-import-sort': simpleImportSort,
+    },
+  },
   eslint.configs.recommended,
+  importPlugin.flatConfigs.recommended,
   ...tseslint.configs.recommendedTypeChecked,
   ...tseslint.configs.stylisticTypeChecked,
   {
+    settings: {
+      'import/resolver': {
+        // You will also need to install and configure the TypeScript resolver
+        // See also https://github.com/import-js/eslint-import-resolver-typescript#configuration
+        typescript: true,
+        node: true,
+      },
+    },
     languageOptions: {
       parser,
       parserOptions: {
@@ -145,6 +162,17 @@ export default [
       '@typescript-eslint/prefer-namespace-keyword': 'error',
       '@typescript-eslint/restrict-template-expressions': 'off',
       '@typescript-eslint/unified-signatures': 'error',
+      'import/consistent-type-specifier-style': ['error', 'prefer-inline'],
+      'import/newline-after-import': 'error',
+      'import/no-duplicates': [
+        'error',
+        {
+          'prefer-inline': true,
+        },
+      ],
+      'import/no-unresolved': 'error',
+      'simple-import-sort/exports': 'error',
+      'simple-import-sort/imports': 'error',
     },
   },
   {

@@ -12,7 +12,7 @@ dictionaryDefinitions:
     addWords: false
 dictionaries:
   - regional
-words: [dongminyu]
+words: [dongminyu, pharma]
 ignoreWords: []
 import: []
 useGitignore: true

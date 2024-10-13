@@ -1,9 +1,10 @@
 import Axios from 'axios';
 
+import { JobInfoDisplay } from './types/job-info-display.js';
 import { isValidLocation, Locations } from './types/locations.js';
 import { JobGroupId, JobIds, JobSort, Years } from './types/user-enums.js';
 import { type UserInput } from './types/user-input.js';
-import { type WantedResponse } from './types/wanted-response.js';
+import { type JobData, type WantedResponse } from './types/wanted-response.js';
 
 const baseURL = 'https://www.wanted.co.kr';
 
@@ -83,7 +84,18 @@ export async function run(jobIds: JobIds[], years: Years[], locationKey: string)
   const response = await axios.get<WantedResponse>(url);
 
   const jobs: WantedResponse = response.data;
-  console.debug(jobs.data);
+
+  jobs.data.forEach((job: JobData) => {
+    const jobInfoDisplay = new JobInfoDisplay(job);
+
+    // 유용한 정보 출력
+    console.debug('유용한 정보:');
+    console.debug(jobInfoDisplay.getUsefulInfo());
+
+    // 덜 유용한 추가 정보 출력
+    console.debug('추가 정보:');
+    console.debug(jobInfoDisplay.getAdditionalInfo());
+  });
 }
 
 // 예시로 함수 호출: 실제로는 디스코드로부터 입력받은 인수로 호출될 것

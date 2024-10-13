@@ -1,6 +1,7 @@
 import globals from 'globals';
-import plugin from '@eslint/js';
-import eslint from 'typescript-eslint';
+import eslint from '@eslint/js';
+import parser from '@typescript-eslint/parser';
+import tseslint from 'typescript-eslint';
 
 /**
  * 코드베이스에서 JavaScript, TypeScript 및 관련 파일을 린팅하기 위한 규칙과 설정을 정의하는 ESLint 구성 개체 배열을 내보냅니다.
@@ -17,11 +18,19 @@ import eslint from 'typescript-eslint';
  *   - var보다 const를 사용하도록 요구
  */
 export default [
-  { files: ['**/*.{js,mjs,cjs,ts}'] },
+  { files: ['**/*.ts'] },
   { languageOptions: { globals: globals.node, ecmaVersion: 2021 } },
-  plugin.configs.recommended,
-  ...eslint.configs.recommended,
+  eslint.configs.recommended,
+  ...tseslint.configs.recommendedTypeChecked,
+  ...tseslint.configs.stylisticTypeChecked,
   {
+    languageOptions: {
+      parser,
+      parserOptions: {
+        projectService: true,
+        tsconfigRootDir: import.meta.name,
+      },
+    },
     rules: {
       'arrow-body-style': 'error',
       complexity: 'off',
@@ -78,5 +87,9 @@ export default [
       'valid-typeof': 'off',
       yoda: 'error',
     },
+  },
+  {
+    files: ['**/*.{js,cjs,mjs}'],
+    ...tseslint.configs.disableTypeChecked,
   },
 ];

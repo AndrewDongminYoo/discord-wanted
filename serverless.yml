@@ -11,7 +11,7 @@ provider:
 
 functions:
   rateHandler:
-    handler: handler.run
+    handler: wanted.run
     events:
       - schedule: rate(1 minute)
 

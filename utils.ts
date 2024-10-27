@@ -1,5 +1,7 @@
 import 'dotenv/config';
 
+import axios, { AxiosError, type AxiosRequestConfig, type AxiosResponse } from 'axios';
+
 const DISCORD_TOKEN = process.env.DISCORD_TOKEN;
 console.debug('🚀 - DISCORD_TOKEN:', DISCORD_TOKEN);
 
@@ -10,39 +12,35 @@ if (!DISCORD_TOKEN) {
 /**
  * Discord API에 요청하는 헬퍼 기능
  * @param {string} endpoint - 요청할 API 엔드포인트
- * @param {RequestInit} options - 요청에 대한 가져오기 옵션
- * @returns Promise<Response>
+ * @param {AxiosRequestConfig} options - Axios 요청 옵션
+ * @returns Promise<AxiosResponse<any>>
  */
-/* eslint-disable-next-line @typescript-eslint/no-explicit-any */
-export async function DiscordRequest(endpoint: string, options?: any): Promise<Response> {
+export async function DiscordRequest(
+  endpoint: string,
+  options?: AxiosRequestConfig,
+): Promise<AxiosResponse | undefined> {
   // 루트 API URL에 엔드포인트 추가
   const url = 'https://discord.com/api/v10/' + endpoint;
 
-  // 페이로드 문자열화
-  if (options?.body) {
-    options.body = JSON.stringify(options.body);
+  try {
+    // Axios 요청
+    return axios({
+      url,
+      headers: {
+        Authorization: `Bot ${DISCORD_TOKEN}`,
+        'Content-Type': 'application/json; charset=UTF-8',
+        'User-Agent': 'DiscordBot (https://github.com/discord/discord-example-app, 1.0.0)',
+      },
+      ...options,
+    });
+  } catch (error: unknown) {
+    if (error instanceof AxiosError) {
+      const errorData = error?.response?.data || error?.message;
+      console.error('Error sending request:', errorData);
+      throw new Error(JSON.stringify(errorData));
+    }
+    throw error;
   }
-
-  // fetch를 사용하여 요청하기
-  /* eslint-disable-next-line @typescript-eslint/no-unsafe-argument */
-  const res = await fetch(url, {
-    headers: {
-      Authorization: `Bot ${DISCORD_TOKEN}`,
-      'Content-Type': 'application/json; charset=UTF-8',
-      'User-Agent': 'DiscordBot (https://github.com/discord/discord-example-app, 1.0.0)',
-    },
-    ...options,
-  });
-
-  // API 오류 발생
-  if (!res.ok) {
-    const data = await res.json();
-    console.debug(`Not OK; ${res.status}`);
-    throw new Error(JSON.stringify(data));
-  }
-
-  // 원본 응답 반환
-  return res;
 }
 
 export interface Commands {
@@ -74,7 +72,7 @@ export async function InstallGlobalCommands(appId: string, commands: Commands[])
 
   try {
     // 대량 덮어쓰기 엔드포인트를 호출합니다: https://discord.com/developers/docs/interactions/application-commands#bulk-overwrite-global-application-commands
-    await DiscordRequest(endpoint, { method: 'PUT', body: commands });
+    await DiscordRequest(endpoint, { method: 'PUT', data: commands });
   } catch (err) {
     console.error(err);
   }

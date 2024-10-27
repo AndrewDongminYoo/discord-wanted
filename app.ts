@@ -35,6 +35,19 @@ if (!APPLICATION_ID) {
 // 저장소를 사용합니다. 프로덕션 환경에서는 DB를 사용해야 합니다.
 const activeGames: Record<string, { id: string; objectName: string }> = {};
 
+interface InteractionData {
+  id: string;
+  name: string;
+  type: number;
+  values: string[];
+  custom_id: string;
+  options: Array<{
+    name: string;
+    type: number;
+    value: string;
+  }>;
+}
+
 /**
  * Discord가 HTTP 요청을 보낼 상호작용 엔드포인트 URL
  * 요청 본문을 구문 분석하고 Discord-인터랙션 패키지를 사용하여 수신 요청을 확인합니다.
@@ -43,20 +56,9 @@ app.post('/interactions', verifyKeyMiddleware(PUBLIC_KEY), async (req: Request, 
   // 인터랙션 유형 및 데이터
   const type: InteractionType = Number(req.body.type) as InteractionType;
   const id: number = req.body.id;
-  const data: {
-    values: string[];
-    custom_id: string;
-    id: string;
-    name: string;
-    type: number;
-    options: Array<{
-      name: string;
-      type: number;
-      value: string;
-    }>;
-  } = req.body.data;
+  const data: InteractionData = req.body.data;
 
-  console.debug('🚀 - type: InteractionType', typeof type, type);
+  console.debug(`🚀 - type: InteractionType.${InteractionType[type]}`);
   console.debug('🚀 - id: number', id);
   console.debug('🚀 - data:', data);
 
@@ -177,7 +179,7 @@ app.post('/interactions', verifyKeyMiddleware(PUBLIC_KEY), async (req: Request, 
           });
           await DiscordRequest(endpoint, {
             method: 'PATCH',
-            body: {
+            data: {
               content: 'Nice choice ' + getRandomEmoji(),
               components: [],
             },

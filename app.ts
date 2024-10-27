@@ -13,34 +13,34 @@ import express, { type Request, type Response } from 'express';
 import { getResult, getShuffledOptions } from './game.js';
 import { DiscordRequest, getRandomEmoji } from './utils.js';
 
-// Create an express app
+// 익스프레스 앱 생성
 const app = express();
-// Get port, or default to 3000
+// 포트 가져오기 또는 기본값 3000
 const PORT = process.env.PORT ?? 3000;
 
 const PUBLIC_KEY = process.env.PUBLIC_KEY;
 console.debug('🚀 - PUBLIC_KEY:', PUBLIC_KEY);
 
 if (!PUBLIC_KEY) {
-  throw new Error(`PUBLIC_KEY is not defined in environment variables. ${PUBLIC_KEY}`);
+  throw new Error('PUBLIC_KEY is not defined in environment variables.');
 }
 
 const APPLICATION_ID = process.env.APPLICATION_ID;
 console.debug('🚀 - APPLICATION_ID:', APPLICATION_ID);
 
 if (!APPLICATION_ID) {
-  throw new Error(`APPLICATION_ID is not defined in environment variables. ${APPLICATION_ID}`);
+  throw new Error('APPLICATION_ID is not defined in environment variables.');
 }
 
-// Store for in-progress games. In production, you'd want to use a DB
+// 저장소를 사용합니다. 프로덕션 환경에서는 DB를 사용해야 합니다.
 const activeGames: Record<string, { id: string; objectName: string }> = {};
 
 /**
- * Interactions endpoint URL where Discord will send HTTP requests
- * Parse request body and verifies incoming requests using discord-interactions package
+ * Discord가 HTTP 요청을 보낼 상호작용 엔드포인트 URL
+ * 요청 본문을 구문 분석하고 Discord-인터랙션 패키지를 사용하여 수신 요청을 확인합니다.
  */
 app.post('/interactions', verifyKeyMiddleware(PUBLIC_KEY), async (req: Request, res: Response) => {
-  // Interaction type and data
+  // 인터랙션 유형 및 데이터
   const type: InteractionType = Number(req.body.type) as InteractionType;
   const id: number = req.body.id;
   const data: {
@@ -61,42 +61,42 @@ app.post('/interactions', verifyKeyMiddleware(PUBLIC_KEY), async (req: Request, 
   console.debug('🚀 - data:', data);
 
   /**
-   * Handle verification requests
+   * 확인 요청 처리
    */
   if (type === InteractionType.PING) {
     res.send({ type: InteractionResponseType.PONG });
   }
 
   /**
-   * Handle slash command requests
-   * See https://discord.com/developers/docs/interactions/application-commands#slash-commands
+   * 슬래시 명령 요청 처리
+   * https://discord.com/developers/docs/interactions/application-commands#slash-commands 참조
    */
   if (type === InteractionType.APPLICATION_COMMAND) {
     const { name } = data;
 
-    // "test" command
+    // "test" 명령
     if (name === 'test') {
-      // Send a message into the channel where command was triggered from
+      // 명령이 트리거된 채널로 메시지를 보냅니다.
       res.send({
         type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
         data: {
-          // Fetches a random emoji to send from a helper function
+          // 도우미 함수에서 보낼 임의의 이모티콘을 가져옵니다.
           content: `hello world ${getRandomEmoji()}`,
         },
       });
       return;
     }
 
-    // "challenge" command
+    // "challenge" 명령
     if (name === 'challenge') {
-      // Interaction context
+      // 상호작용 컨텍스트
       const context = req.body.context;
-      // User ID is in user field for (G)DMs, and member for servers
+      // 사용자 ID는 (G)DM의 경우 사용자 필드에, 서버의 경우 멤버 필드에 있습니다.
       const userId = context === 0 ? req.body.member.user.id : req.body.user.id;
-      // User's object choice
+      // 사용자의 개체 선택
       const objectName = data.options[0].value;
 
-      // Create active game using message ID as the game ID
+      // 메시지 ID를 게임 ID로 사용하여 활성 게임 생성
       activeGames[id] = { id: userId, objectName };
       console.debug('🚀 - activeGames:', activeGames);
 
@@ -110,7 +110,7 @@ app.post('/interactions', verifyKeyMiddleware(PUBLIC_KEY), async (req: Request, 
               components: [
                 {
                   type: MessageComponentTypes.BUTTON,
-                  // Append the game ID to use later on
+                  // 나중에 사용할 게임 ID 추가
                   custom_id: `accept_button_${id}`,
                   label: 'Accept',
                   style: ButtonStyleTypes.PRIMARY,

@@ -4,26 +4,26 @@ const DISCORD_TOKEN = process.env.DISCORD_TOKEN;
 console.debug('🚀 - DISCORD_TOKEN:', DISCORD_TOKEN);
 
 if (!DISCORD_TOKEN) {
-  throw new Error(`DISCORD_TOKEN is not defined in environment variables. ${DISCORD_TOKEN}`);
+  throw new Error('DISCORD_TOKEN is not defined in environment variables.');
 }
 
 /**
- * Helper function to make requests to Discord API
- * @param endpoint - API endpoint to request
- * @param options - Fetch options for the request
+ * Discord API에 요청하는 헬퍼 기능
+ * @param {string} endpoint - 요청할 API 엔드포인트
+ * @param {RequestInit} options - 요청에 대한 가져오기 옵션
  * @returns Promise<Response>
  */
 /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
 export async function DiscordRequest(endpoint: string, options?: any): Promise<Response> {
-  // append endpoint to root API URL
+  // 루트 API URL에 엔드포인트 추가
   const url = 'https://discord.com/api/v10/' + endpoint;
 
-  // Stringify payloads
+  // 페이로드 문자열화
   if (options?.body) {
     options.body = JSON.stringify(options.body);
   }
 
-  // Use fetch to make requests
+  // fetch를 사용하여 요청하기
   /* eslint-disable-next-line @typescript-eslint/no-unsafe-argument */
   const res = await fetch(url, {
     headers: {
@@ -34,14 +34,14 @@ export async function DiscordRequest(endpoint: string, options?: any): Promise<R
     ...options,
   });
 
-  // throw API errors
+  // API 오류 발생
   if (!res.ok) {
     const data = await res.json();
     console.debug(`Not OK; ${res.status}`);
     throw new Error(JSON.stringify(data));
   }
 
-  // return original response
+  // 원본 응답 반환
   return res;
 }
 
@@ -64,16 +64,16 @@ export interface Commands {
 }
 
 /**
- * Install global commands to Discord API
- * @param appId - Discord Application ID
- * @param commands - Commands to be installed
+ * Discord API에 전역 명령 설치
+ * @param {string} appId - Discord 애플리케이션 ID
+ * @param {Array<Commands>} commands - 설치할 명령어
  */
 export async function InstallGlobalCommands(appId: string, commands: Commands[]) {
-  // API endpoint to overwrite global commands
+  // 전역 명령 덮어쓰기를 위한 API 엔드포인트
   const endpoint = `applications/${appId}/commands`;
 
   try {
-    // This is calling the bulk overwrite endpoint: https://discord.com/developers/docs/interactions/application-commands#bulk-overwrite-global-application-commands
+    // 대량 덮어쓰기 엔드포인트를 호출합니다: https://discord.com/developers/docs/interactions/application-commands#bulk-overwrite-global-application-commands
     await DiscordRequest(endpoint, { method: 'PUT', body: commands });
   } catch (err) {
     console.error(err);
@@ -81,7 +81,7 @@ export async function InstallGlobalCommands(appId: string, commands: Commands[])
 }
 
 /**
- * Simple method that returns a random emoji from list
+ * 목록에서 임의의 이모티콘을 반환하는 간단한 방법
  * @returns string
  */
 export function getRandomEmoji(): string {
@@ -105,8 +105,8 @@ export function getRandomEmoji(): string {
 }
 
 /**
- * Capitalize the first letter of a string
- * @param str - Input string
+ * 문자열의 첫 글자를 대문자로 합니다.
+ * @param {string} str - 입력 문자열
  * @returns string
  */
 export function capitalize(str: string): string {

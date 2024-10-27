@@ -7,10 +7,10 @@ const APPLICATION_ID = process.env.APPLICATION_ID;
 console.debug('🚀 - APPLICATION_ID:', APPLICATION_ID);
 
 if (!APPLICATION_ID) {
-  throw new Error(`APPLICATION_ID is not defined in environment variables. ${APPLICATION_ID}`);
+  throw new Error('APPLICATION_ID is not defined in environment variables.');
 }
 
-// Get the game choices from game.js
+// game.js에서 게임 선택 사항 가져오기
 function createCommandChoices() {
   const choices = getRPSChoices();
   const commandChoices = [];
@@ -25,7 +25,7 @@ function createCommandChoices() {
   return commandChoices;
 }
 
-// Simple test command
+// 간단한 테스트 명령
 const TEST_COMMAND = {
   name: 'test',
   description: 'Basic command',
@@ -34,7 +34,7 @@ const TEST_COMMAND = {
   contexts: [0, 1, 2],
 };
 
-// Command containing options
+// 옵션이 포함된 명령
 const CHALLENGE_COMMAND = {
   name: 'challenge',
   description: 'Challenge to a match of rock paper scissors',

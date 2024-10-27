@@ -1,5 +1,12 @@
 import 'dotenv/config';
 
+const DISCORD_TOKEN = process.env.DISCORD_TOKEN;
+console.debug('🚀 - DISCORD_TOKEN:', DISCORD_TOKEN);
+
+if (!DISCORD_TOKEN) {
+  throw new Error(`DISCORD_TOKEN is not defined in environment variables. ${DISCORD_TOKEN}`);
+}
+
 /**
  * Helper function to make requests to Discord API
  * @param endpoint - API endpoint to request
@@ -18,7 +25,7 @@ export async function DiscordRequest(endpoint: string, options?: RequestInit): P
   // Use fetch to make requests
   const res = await fetch(url, {
     headers: {
-      Authorization: `Bot ${process.env.DISCORD_TOKEN}`,
+      Authorization: `Bot ${DISCORD_TOKEN}`,
       'Content-Type': 'application/json; charset=UTF-8',
       'User-Agent': 'DiscordBot (https://github.com/discord/discord-example-app, 1.0.0)',
     },

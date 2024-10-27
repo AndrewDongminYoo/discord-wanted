@@ -18,9 +18,19 @@ const app = express();
 // Get port, or default to 3000
 const PORT = process.env.PORT ?? 3000;
 
-const PUBLIC_KEY = process.env.PUBLIC_KEY ?? '';
+const PUBLIC_KEY = process.env.PUBLIC_KEY;
+console.debug('🚀 - PUBLIC_KEY:', PUBLIC_KEY);
 
-console.debug(PUBLIC_KEY);
+if (!PUBLIC_KEY) {
+  throw new Error(`PUBLIC_KEY is not defined in environment variables. ${PUBLIC_KEY}`);
+}
+
+const APPLICATION_ID = process.env.APPLICATION_ID;
+console.debug('🚀 - APPLICATION_ID:', APPLICATION_ID);
+
+if (!APPLICATION_ID) {
+  throw new Error(`APPLICATION_ID is not defined in environment variables. ${APPLICATION_ID}`);
+}
 
 // Store for in-progress games. In production, you'd want to use a DB
 const activeGames: Record<string, { id: string; objectName: string }> = {};
@@ -122,7 +132,7 @@ app.post('/interactions', verifyKeyMiddleware(PUBLIC_KEY), async (req: Request, 
 
     if (componentId.startsWith('accept_button_')) {
       const gameId = componentId.replace('accept_button_', '');
-      const endpoint = `webhooks/${process.env.APP_ID}/${req.body.token}/messages/${req.body.message.id}`;
+      const endpoint = `webhooks/${APPLICATION_ID}/${req.body.token}/messages/${req.body.message.id}`;
 
       try {
         res.send({

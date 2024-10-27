@@ -18,29 +18,20 @@ if (!DISCORD_TOKEN) {
 export async function DiscordRequest(
   endpoint: string,
   options?: AxiosRequestConfig,
-): Promise<AxiosResponse | undefined> {
+): Promise<AxiosResponse> {
   // 루트 API URL에 엔드포인트 추가
   const url = 'https://discord.com/api/v10/' + endpoint;
 
-  try {
-    // Axios 요청
-    return axios({
-      url,
-      headers: {
-        Authorization: `Bot ${DISCORD_TOKEN}`,
-        'Content-Type': 'application/json; charset=UTF-8',
-        'User-Agent': 'DiscordBot (https://github.com/discord/discord-example-app, 1.0.0)',
-      },
-      ...options,
-    });
-  } catch (error: unknown) {
-    if (error instanceof AxiosError) {
-      const errorData = error?.response?.data || error?.message;
-      console.error('Error sending request:', errorData);
-      throw new Error(JSON.stringify(errorData));
-    }
-    throw error;
-  }
+  // Axios 요청
+  return axios({
+    url,
+    headers: {
+      Authorization: `Bot ${DISCORD_TOKEN}`,
+      'Content-Type': 'application/json; charset=UTF-8',
+      'User-Agent': 'DiscordBot (https://github.com/AndrewDongminYoo/discord-wanted, 1.0.0)',
+    },
+    ...options,
+  });
 }
 
 /**
@@ -93,8 +84,12 @@ export async function InstallGlobalCommands(appId: string, commands: Commands[])
   try {
     // 대량 덮어쓰기 엔드포인트를 호출합니다: https://discord.com/developers/docs/interactions/application-commands#bulk-overwrite-global-application-commands
     await DiscordRequest(endpoint, { method: 'PUT', data: commands });
-  } catch (err) {
-    console.error(err);
+  } catch (error) {
+    if (error instanceof AxiosError) {
+      const errorData = error?.response?.data || error?.message;
+      console.error('Error sending request:', errorData);
+      throw new Error(JSON.stringify(errorData));
+    }
   }
 }
 

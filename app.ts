@@ -2,6 +2,7 @@ import 'dotenv/config';
 
 import {
   ButtonStyleTypes,
+  InteractionResponseFlags,
   InteractionResponseType,
   InteractionType,
   MessageComponentTypes,
@@ -9,7 +10,8 @@ import {
 } from 'discord-interactions';
 import express, { type Request, type Response } from 'express';
 
-import { getRandomEmoji } from './utils.js';
+import { getShuffledOptions } from './game.js';
+import { DiscordRequest, getRandomEmoji } from './utils.js';
 
 // Create an express app
 const app = express();
@@ -27,11 +29,13 @@ const activeGames: Record<string, { id: string; objectName: string }> = {};
  * Interactions endpoint URL where Discord will send HTTP requests
  * Parse request body and verifies incoming requests using discord-interactions package
  */
-app.post('/interactions', verifyKeyMiddleware(PUBLIC_KEY), (req: Request, res: Response) => {
+app.post('/interactions', verifyKeyMiddleware(PUBLIC_KEY), async (req: Request, res: Response) => {
   // Interaction type and data
   const type: InteractionType = req.body.type;
   const id: number = req.body.id;
   const data: {
+    values: string[];
+    custom_id: string;
     id: string;
     name: string;
     type: number;
@@ -111,6 +115,41 @@ app.post('/interactions', verifyKeyMiddleware(PUBLIC_KEY), (req: Request, res: R
 
     console.error(`unknown command: ${name}`);
     res.status(400).json({ error: 'unknown command' });
+  }
+
+  if (type === InteractionType.MESSAGE_COMPONENT) {
+    const componentId = data.custom_id;
+
+    if (componentId.startsWith('accept_button_')) {
+      const gameId = componentId.replace('accept_button_', '');
+      const endpoint = `webhooks/${process.env.APP_ID}/${req.body.token}/messages/${req.body.message.id}`;
+
+      try {
+        res.send({
+          type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
+          data: {
+            content: 'What is your object of choice?',
+            flags: InteractionResponseFlags.EPHEMERAL,
+            components: [
+              {
+                type: MessageComponentTypes.ACTION_ROW,
+                components: [
+                  {
+                    type: MessageComponentTypes.STRING_SELECT,
+                    custom_id: `select_choice_${gameId}`,
+                    options: getShuffledOptions(),
+                  },
+                ],
+              },
+            ],
+          },
+        });
+        await DiscordRequest(endpoint, { method: 'DELETE' });
+      } catch (err) {
+        console.error('Error sending message:', err);
+      }
+    }
+    return;
   }
 
   console.error('unknown interaction type', type);

@@ -79,3 +79,49 @@ export function getShuffledOptions(): SelectOption[] {
 
   return options.sort(() => Math.random() - 0.5);
 }
+
+// 게임 결과 객체의 타입 선언
+interface Player {
+  id: string;
+  objectName: string;
+}
+
+interface GameResult {
+  win: Player;
+  lose: Player;
+  verb: string;
+}
+
+// 게임 결과를 형식화하는 함수
+function formatResult(result: GameResult): string {
+  const { win, lose, verb } = result;
+  return verb === 'tie'
+    ? `<@${win.id}> and <@${lose.id}> draw with **${win.objectName}**`
+    : `<@${win.id}>'s **${win.objectName}** ${verb} <@${lose.id}>'s **${lose.objectName}**`;
+}
+
+// 두 플레이어의 선택에 따른 게임 결과를 반환하는 함수
+export function getResult(p1: Player, p2: Player): string {
+  let gameResult: GameResult;
+
+  if (RPSChoices[p1.objectName] && RPSChoices[p1.objectName][p2.objectName]) {
+    // p1이 승리한 경우
+    gameResult = {
+      win: p1,
+      lose: p2,
+      verb: RPSChoices[p1.objectName][p2.objectName],
+    };
+  } else if (RPSChoices[p2.objectName] && RPSChoices[p2.objectName][p1.objectName]) {
+    // p2가 승리한 경우
+    gameResult = {
+      win: p2,
+      lose: p1,
+      verb: RPSChoices[p2.objectName][p1.objectName],
+    };
+  } else {
+    // 비긴 경우
+    gameResult = { win: p1, lose: p2, verb: 'tie' };
+  }
+
+  return formatResult(gameResult);
+}

@@ -10,7 +10,7 @@ import {
 } from 'discord-interactions';
 import express, { type Request, type Response } from 'express';
 
-import { getShuffledOptions } from './game.js';
+import { getResult, getShuffledOptions } from './game.js';
 import { DiscordRequest, getRandomEmoji } from './utils.js';
 
 // Create an express app
@@ -41,7 +41,7 @@ const activeGames: Record<string, { id: string; objectName: string }> = {};
  */
 app.post('/interactions', verifyKeyMiddleware(PUBLIC_KEY), async (req: Request, res: Response) => {
   // Interaction type and data
-  const type: InteractionType = req.body.type;
+  const type: InteractionType = Number(req.body.type) as InteractionType;
   const id: number = req.body.id;
   const data: {
     values: string[];
@@ -56,7 +56,7 @@ app.post('/interactions', verifyKeyMiddleware(PUBLIC_KEY), async (req: Request, 
     }>;
   } = req.body.data;
 
-  console.debug('🚀 - type: InteractionType', type);
+  console.debug('🚀 - type: InteractionType', typeof type, type);
   console.debug('🚀 - id: number', id);
   console.debug('🚀 - data:', data);
 
@@ -157,6 +157,34 @@ app.post('/interactions', verifyKeyMiddleware(PUBLIC_KEY), async (req: Request, 
         await DiscordRequest(endpoint, { method: 'DELETE' });
       } catch (err) {
         console.error('Error sending message:', err);
+      }
+    } else if (componentId.startsWith('select_choice_')) {
+      const gameId = componentId.replace('select_choice_', '');
+
+      if (activeGames[gameId]) {
+        const context = req.body.context;
+        const userId = context === 0 ? req.body.member.user.id : req.body.user.id;
+        const objectName = data.values[0];
+        const resultStr = getResult(activeGames[gameId], { id: userId, objectName });
+
+        delete activeGames[gameId];
+        const endpoint = `webhooks/${APPLICATION_ID}/${req.body.token}/messages/${req.body.message.id}`;
+
+        try {
+          res.send({
+            type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
+            data: { content: resultStr },
+          });
+          await DiscordRequest(endpoint, {
+            method: 'PATCH',
+            body: {
+              content: 'Nice choice ' + getRandomEmoji(),
+              components: [],
+            },
+          });
+        } catch (err) {
+          console.error('Error sending message:', err);
+        }
       }
     }
     return;

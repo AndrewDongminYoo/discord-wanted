@@ -43,22 +43,42 @@ export async function DiscordRequest(
   }
 }
 
+/**
+ * https://discord.com/developers/docs/interactions/application-commands#application-command-object-application-command-option-type 참조
+ */
+type CommandOptionType =
+  | 1 // SUB_COMMAND
+  | 2 // SUB_COMMAND_GROUP
+  | 3 // STRING
+  | 4 // INTEGER
+  | 5 // BOOLEAN
+  | 6 // USER
+  | 7 // CHANNEL
+  | 8 // ROLE
+  | 9 // MENTIONABLE
+  | 10 // NUMBER
+  | 11; // ATTACHMENT
+
+interface CommandChoice<T extends CommandOptionType> {
+  name: string;
+  value: T extends 3 | 7 | 8 | 9 | 11 ? string : number;
+}
+
+interface CommandOption<T extends CommandOptionType = CommandOptionType> {
+  type: T;
+  name: string;
+  description: string;
+  required: boolean;
+  choices?: Array<CommandChoice<T>>;
+}
+
 export interface Commands {
   name: string;
   description: string;
   type: number;
   integration_types: number[];
   contexts: number[];
-  options?: Array<{
-    type: number;
-    name: string;
-    description: string;
-    required: boolean;
-    choices: Array<{
-      name: string;
-      value: string;
-    }>;
-  }>;
+  options?: CommandOption[];
 }
 
 /**

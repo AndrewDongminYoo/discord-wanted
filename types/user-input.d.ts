@@ -1,5 +1,5 @@
-import { type JobGroupId, type JobIds, type JobSort, type Years } from './user-enums.js';
-import { type CountryCode } from './wanted-response.js';
+import { type JobGroupId, type JobIds, type JobSort, type Years } from './user-enums.ts';
+import { type CountryCode } from './wanted-response.ts';
 
 export interface UserInput {
   /**
@@ -16,7 +16,7 @@ export interface UserInput {
   jobIds: JobIds[];
   /**
    * 채용 경력
-   * @default '-1'
+   * @default ['-1']
    */
   years: Years[];
   /**

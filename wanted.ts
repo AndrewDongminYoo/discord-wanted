@@ -73,7 +73,7 @@ function buildUrl(params: UserInput): string {
   return `/api/chaos/navigation/v1/results?${queryParams.join('&')}`;
 }
 
-export async function run(jobIds: JobIds[], years: Years[], locationKey: string) {
+export async function fetchJobs(jobIds: JobIds[], years: Years[], locationKey: string) {
   const userInput: UserInput = {
     jobIds, // 디스코드에서 입력된 값
     years, // 디스코드에서 입력된 값
@@ -85,21 +85,23 @@ export async function run(jobIds: JobIds[], years: Years[], locationKey: string)
 
   const jobs: WantedResponse = response.data;
 
-  jobs.data.forEach((job: JobData) => {
-    const jobInfoDisplay = new JobInfoDisplay(job);
+  return jobs.data.map((job: JobData) => {
+    const jobInfo = new JobInfoDisplay(job);
 
     // 유용한 정보 출력
     console.debug('유용한 정보:');
-    console.debug(jobInfoDisplay.getUsefulInfo());
+    console.debug(jobInfo.usefulInfo());
 
     // 덜 유용한 추가 정보 출력
     console.debug('추가 정보:');
-    console.debug(jobInfoDisplay.getAdditionalInfo());
+    console.debug(jobInfo.additionalInfo());
+
+    return jobInfo;
   });
 }
 
 // 예시로 함수 호출: 실제로는 디스코드로부터 입력받은 인수로 호출될 것
-await run(
+await fetchJobs(
   [JobIds.CrossPlatformDeveloper],
   [Years.All, Years.OneYear, Years.TwoYears],
   Locations.Seoul.all,

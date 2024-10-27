@@ -6,7 +6,7 @@ export class JobInfoDisplay {
   constructor(private jobData: JobData) {}
 
   // 유용한 정보를 반환하는 메서드
-  public getUsefulInfo() {
+  public usefulInfo() {
     const { id, company, position, address, annual_from, annual_to, is_newbie, reward } =
       this.jobData;
 
@@ -24,7 +24,7 @@ export class JobInfoDisplay {
   }
 
   // 덜 유용한 추가 정보를 반환하는 메서드
-  public getAdditionalInfo() {
+  public additionalInfo() {
     const { is_bookmark, title_img, skill_tags, attraction_tags } = this.jobData;
 
     return {

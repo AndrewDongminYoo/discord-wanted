@@ -542,6 +542,9 @@ export namespace Locations {
     /** 제주시 */
     jejuSi = 'jeju.jeju-si',
   }
+
+  /** 전국 */
+  export const all = 'all';
 }
 
 export function isValidLocation(location: string): boolean {

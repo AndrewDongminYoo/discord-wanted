@@ -21,8 +21,7 @@ const PUBLIC_KEY = process.env.PUBLIC_KEY ?? '';
 console.debug(PUBLIC_KEY);
 
 // Store for in-progress games. In production, you'd want to use a DB
-/* eslint-disable-next-line @typescript-eslint/no-explicit-any */
-const activeGames: Record<any, any> = {};
+const activeGames: Record<string, { id: string; objectName: string }> = {};
 
 /**
  * Interactions endpoint URL where Discord will send HTTP requests
@@ -71,23 +70,20 @@ app.post('/interactions', verifyKeyMiddleware(PUBLIC_KEY), (req: Request, res: R
           content: `hello world ${getRandomEmoji()}`,
         },
       });
+      return;
     }
 
     // "challenge" command
-    if (name === 'challenge' && id) {
+    if (name === 'challenge') {
       // Interaction context
       const context = req.body.context;
       // User ID is in user field for (G)DMs, and member for servers
       const userId = context === 0 ? req.body.member.user.id : req.body.user.id;
       // User's object choice
-      const objectName = req.body.data.options[0].value;
+      const objectName = data.options[0].value;
 
       // Create active game using message ID as the game ID
-      activeGames[id] = {
-        id: userId,
-        objectName,
-      };
-
+      activeGames[id] = { id: userId, objectName };
       console.debug('🚀 - activeGames:', activeGames);
 
       res.send({
@@ -101,7 +97,7 @@ app.post('/interactions', verifyKeyMiddleware(PUBLIC_KEY), (req: Request, res: R
                 {
                   type: MessageComponentTypes.BUTTON,
                   // Append the game ID to use later on
-                  custom_id: `accept_button_${req.body.id}`,
+                  custom_id: `accept_button_${id}`,
                   label: 'Accept',
                   style: ButtonStyleTypes.PRIMARY,
                 },
@@ -110,6 +106,7 @@ app.post('/interactions', verifyKeyMiddleware(PUBLIC_KEY), (req: Request, res: R
           ],
         },
       });
+      return;
     }
 
     console.error(`unknown command: ${name}`);

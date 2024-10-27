@@ -2,9 +2,9 @@ import Axios from 'axios';
 
 import { JobInfoDisplay } from './types/job-info-display.js';
 import { isValidLocation } from './types/locations.js';
-import { JobGroupId, type JobIds, JobSort, type Years } from './types/user-enums.js';
+import { type JobGroupId, type JobIds, type JobSort, type Years } from './types/user-enums.js';
 import { type UserInput } from './types/user-input.js';
-import { type JobData, type WantedResponse } from './types/wanted-response.js';
+import { type CountryCode, type JobData, type WantedResponse } from './types/wanted-response.js';
 
 const baseURL = 'https://www.wanted.co.kr';
 
@@ -35,9 +35,9 @@ function buildUrl(params: UserInput): string {
   const queryParams: string[] = [];
 
   // 기본값 설정
-  const jobSortKey = params.jobSortKey ?? JobSort.recommend;
-  const jobGroupId = params.jobGroupId ?? JobGroupId.development;
-  const countryKey = params.countryKey ?? 'kr';
+  const jobSortKey: JobSort = params.jobSortKey ?? 'job.recommend_order';
+  const jobGroupId: JobGroupId = params.jobGroupId ?? 518;
+  const countryKey: CountryCode = params.countryKey ?? 'kr';
   const limit = params.limit ?? 20;
 
   // 채용 정보 정렬 키 추가
@@ -99,3 +99,6 @@ export async function fetchJobs(jobIds: JobIds[], years: Years[], locationKey: s
     return jobInfo;
   });
 }
+
+// 예시로 함수 호출: 실제로는 디스코드로부터 입력받은 인수로 호출될 것
+// await fetchJobs([10111], ['-1'], Locations.Seoul.all);

@@ -55,7 +55,7 @@ interface CommandChoice<T extends CommandOptionType> {
   value: T extends 3 | 7 | 8 | 9 | 11 ? string : number;
 }
 
-interface CommandOption<T extends CommandOptionType = CommandOptionType> {
+export interface CommandOption<T extends CommandOptionType = CommandOptionType> {
   type: T;
   name: string;
   description: string;

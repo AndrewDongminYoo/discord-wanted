@@ -1,8 +1,8 @@
 import Axios from 'axios';
 
 import { JobInfoDisplay } from './types/job-info-display.js';
-import { isValidLocation, Locations } from './types/locations.js';
-import { JobGroupId, JobIds, JobSort, Years } from './types/user-enums.js';
+import { isValidLocation } from './types/locations.js';
+import { JobGroupId, type JobIds, JobSort, type Years } from './types/user-enums.js';
 import { type UserInput } from './types/user-input.js';
 import { type JobData, type WantedResponse } from './types/wanted-response.js';
 
@@ -99,10 +99,3 @@ export async function fetchJobs(jobIds: JobIds[], years: Years[], locationKey: s
     return jobInfo;
   });
 }
-
-// 예시로 함수 호출: 실제로는 디스코드로부터 입력받은 인수로 호출될 것
-await fetchJobs(
-  [JobIds.CrossPlatformDeveloper],
-  [Years.All, Years.OneYear, Years.TwoYears],
-  Locations.Seoul.all,
-);

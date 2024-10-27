@@ -1,4 +1,7 @@
-// JSON 데이터를 기반으로 태그 매핑 생성
+/**
+ * 어트랙션 태그 ID를 해당 태그 이름에 매핑합니다.
+ * 이 매핑은 JSON 데이터를 기반으로 하며 숫자 태그 ID를 사람이 읽을 수 있는 태그 이름과 연결하는 데 사용됩니다.
+ */
 export const attractionTagsMap: Record<number, string> = {
   10395: '연봉 업계평균이상',
   10396: '연봉상위1%',
@@ -70,4 +73,4 @@ export const attractionTagsMap: Record<number, string> = {
   10518: '경기도 우수 중소기업',
   10519: '장애인전형',
   10520: '출산육아휴직',
-};
+} as const;

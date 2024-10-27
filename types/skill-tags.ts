@@ -1,4 +1,7 @@
-// JSON 데이터를 기반으로 태그 매핑 생성
+/**
+ * 스킬 스택 ID를 해당 태그 이름에 매핑합니다.
+ * 이 매핑은 JSON 데이터를 기반으로 하며 스킬 스택 ID를 사람이 읽을 수 있는 태그 이름과 연결하는 데 사용됩니다.
+ */
 export const skillStackTagsMap: Record<number, string> = {
   1662: 'Agile',
   1438: 'Android',
@@ -173,4 +176,4 @@ export const skillStackTagsMap: Record<number, string> = {
   1562: 'SQL',
   1563: 'Swift',
   1564: 'TypeScript',
-};
+} as const;

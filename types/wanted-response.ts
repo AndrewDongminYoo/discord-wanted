@@ -47,43 +47,43 @@ export interface JobData {
 
 export interface Address {
   /** 국가 */
-  country: AddressCountry;
+  country: Country;
   /** 지역 (서울, 경기 등) */
   location: Location;
   /** 상세 지역 (강남구, 구로구 등) */
   district: null | string;
 }
 
-export enum CountryCode {
-  전세계 = 'all',
-  대만 = 'tw',
-  싱가폴 = 'sg',
-  일본 = 'jp',
-  한국 = 'kr',
-}
+export const countryCodes = {
+  전세계: 'all',
+  대만: 'tw',
+  싱가폴: 'sg',
+  일본: 'jp',
+  한국: 'kr',
+} as const;
 
-export type AddressCountry = keyof typeof CountryCode;
+export type Country = keyof typeof countryCodes;
+export type CountryCode = (typeof countryCodes)[Country];
 
-export enum Location {
-  전국 = '전국',
-  서울 = '서울',
-  부산 = '부산',
-  대구 = '대구',
-  인천 = '인천',
-  광주 = '광주',
-  대전 = '대전',
-  울산 = '울산',
-  세종 = '세종',
-  경기 = '경기',
-  강원 = '강원',
-  충북 = '충북',
-  충남 = '충남',
-  전북 = '전북',
-  전남 = '전남',
-  경북 = '경북',
-  경남 = '경남',
-  제주 = '제주',
-}
+export type Location =
+  | '전국'
+  | '서울'
+  | '부산'
+  | '대구'
+  | '인천'
+  | '광주'
+  | '대전'
+  | '울산'
+  | '세종'
+  | '경기'
+  | '강원'
+  | '충북'
+  | '충남'
+  | '전북'
+  | '전남'
+  | '경북'
+  | '경남'
+  | '제주';
 
 export interface CategoryTag {
   /** 직무 그룹 ID */
@@ -128,10 +128,4 @@ export interface Reward {
   reward_recommendee_unit: Currency;
 }
 
-export enum Currency {
-  krw = 'KRW',
-  jpy = 'JPY',
-  twd = 'TWD',
-  usd = 'USD',
-  sgd = 'SGD',
-}
+export type Currency = 'KRW' | 'JPY' | 'TWD' | 'USD' | 'SGD';

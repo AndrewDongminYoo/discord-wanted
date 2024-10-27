@@ -13,7 +13,8 @@ if (!DISCORD_TOKEN) {
  * @param options - Fetch options for the request
  * @returns Promise<Response>
  */
-export async function DiscordRequest(endpoint: string, options?: RequestInit): Promise<Response> {
+/* eslint-disable-next-line @typescript-eslint/no-explicit-any */
+export async function DiscordRequest(endpoint: string, options?: any): Promise<Response> {
   // append endpoint to root API URL
   const url = 'https://discord.com/api/v10/' + endpoint;
 
@@ -23,6 +24,7 @@ export async function DiscordRequest(endpoint: string, options?: RequestInit): P
   }
 
   // Use fetch to make requests
+  /* eslint-disable-next-line @typescript-eslint/no-unsafe-argument */
   const res = await fetch(url, {
     headers: {
       Authorization: `Bot ${DISCORD_TOKEN}`,
@@ -35,7 +37,7 @@ export async function DiscordRequest(endpoint: string, options?: RequestInit): P
   // throw API errors
   if (!res.ok) {
     const data = await res.json();
-    console.debug(res.status);
+    console.debug(`Not OK; ${res.status}`);
     throw new Error(JSON.stringify(data));
   }
 
@@ -43,13 +45,30 @@ export async function DiscordRequest(endpoint: string, options?: RequestInit): P
   return res;
 }
 
+export interface Commands {
+  name: string;
+  description: string;
+  type: number;
+  integration_types: number[];
+  contexts: number[];
+  options?: Array<{
+    type: number;
+    name: string;
+    description: string;
+    required: boolean;
+    choices: Array<{
+      name: string;
+      value: string;
+    }>;
+  }>;
+}
+
 /**
  * Install global commands to Discord API
  * @param appId - Discord Application ID
  * @param commands - Commands to be installed
  */
-/* eslint-disable-next-line @typescript-eslint/no-explicit-any */
-export async function InstallGlobalCommands(appId: string, commands: any) {
+export async function InstallGlobalCommands(appId: string, commands: Commands[]) {
   // API endpoint to overwrite global commands
   const endpoint = `applications/${appId}/commands`;
 

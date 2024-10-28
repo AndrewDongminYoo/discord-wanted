@@ -2,11 +2,30 @@ import { attractionTagsMap } from './attraction-tags.js';
 import { skillStackTagsMap } from './skill-tags.js';
 import { type JobData, type Reward } from './wanted-response.js';
 
+interface UsefulInfo {
+  company: string;
+  position: string;
+  jobInfoLink: string;
+  companyInfoLink: string;
+  address: string;
+  experienceRange: string;
+  isNewbie: string;
+  reward: string;
+  avgResponseRate?: number;
+}
+
+interface AdditionalInfo {
+  bookmark: string;
+  titleImage?: string;
+  skillTags: string;
+  attractionTags: string;
+}
+
 export class JobInfoDisplay {
   constructor(private jobData: JobData) {}
 
   // 유용한 정보를 반환하는 메서드
-  public usefulInfo() {
+  public usefulInfo(): UsefulInfo {
     const { id, company, position, address, annual_from, annual_to, is_newbie, reward } =
       this.jobData;
 
@@ -14,41 +33,38 @@ export class JobInfoDisplay {
       company: company.name,
       position,
       jobInfoLink: `https://www.wanted.co.kr/wd/${id}`,
-      comanyInfoLink: `https://www.wanted.co.kr/company/${company.id}`,
-      address: `${address.location} ${address.district ?? '전체'}`,
-      experienceRange: `${annual_from} - ${annual_to}년`,
-      isNewbie: is_newbie ? '신입 가능' : '경력직',
+      companyInfoLink: `https://www.wanted.co.kr/company/${company.id}`,
+      address: [address.location, address.district].filter(Boolean).join(' ') || '주소 정보 없음',
+      experienceRange: `${annual_from} - ${annual_to}년차`,
+      isNewbie: is_newbie ? '신입 가능' : '경력',
       reward: this.formatReward(reward),
-      avgResponseRate: company.application_response_stats.avg_rate,
+      avgResponseRate: company.application_response_stats?.avg_rate,
     };
   }
 
   // 덜 유용한 추가 정보를 반환하는 메서드
-  public additionalInfo() {
+  public additionalInfo(): AdditionalInfo {
     const { is_bookmark, title_img, skill_tags, attraction_tags } = this.jobData;
 
     return {
       bookmark: is_bookmark ? '북마크 O' : '북마크 X',
-      titleImage: title_img.thumb,
-      skillTags: skill_tags.length ? this.getSkillStackTags(skill_tags) : '기술 태그 없음',
+      titleImage: title_img?.thumb,
+      skillTags: skill_tags.length
+        ? this.getTags(skill_tags, skillStackTagsMap).join(' ')
+        : '기술 태그 없음',
       attractionTags: attraction_tags.length
-        ? this.getAttractionTags(attraction_tags)
+        ? this.getTags(attraction_tags, attractionTagsMap).join(' ')
         : '장점 태그 없음',
     };
   }
 
-  // Attraction tags를 태그 ID에서 태그 이름으로 변환하는 메서드
-  private getAttractionTags(tagIds: number[]): string[] {
-    return tagIds.map((id) => attractionTagsMap[id] || '').filter((text) => text.length > 0);
-  }
-
-  // Skill Stack tags를 태그 ID에서 태그 이름으로 변환하는 메서드
-  private getSkillStackTags(tagIds: number[]): string[] {
-    return tagIds.map((id) => skillStackTagsMap[id] || '').filter((text) => text.length > 0);
+  // 태그 ID를 태그 이름으로 변환하는 일반화된 메서드
+  private getTags(tagIds: number[], tagsMap: Record<number, string>): string[] {
+    return tagIds.map((id) => `#${tagsMap[id] || ''}`).filter((text) => text.length > 1);
   }
 
   // 리워드 포맷팅 함수
-  private formatReward(reward: Reward | undefined) {
+  private formatReward(reward: Reward | undefined): string {
     if (reward) {
       return `추천인: ${reward.reward_recommender} ${reward.reward_recommender_unit}, 지원자: ${reward.reward_recommendee} ${reward.reward_recommendee_unit}`;
     }

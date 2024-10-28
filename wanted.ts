@@ -38,7 +38,7 @@ function buildUrl(params: UserInput): string {
   const jobSortKey: JobSort = params.jobSortKey ?? 'job.recommend_order';
   const jobGroupId: JobGroupId = params.jobGroupId ?? 518;
   const countryKey: CountryCode = params.countryKey ?? 'kr';
-  const limit = params.limit ?? 20;
+  const limit = params.limit ?? 10;
 
   // 채용 정보 정렬 키 추가
   queryParams.push(`job_sort=${jobSortKey}`);

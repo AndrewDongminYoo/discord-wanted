@@ -1,5 +1,5 @@
 {
-  "name": "discord-getting-started",
+  "name": "discord-wanted",
   "private": true,
   "version": "1.0.0",
   "description": "Discord example app",
@@ -18,7 +18,8 @@
     "axios": "^1.7.7",
     "discord-interactions": "^4.1.0",
     "dotenv": "^16.4.5",
-    "express": "^4.21.1"
+    "express": "^4.21.1",
+    "serverless-http": "^3.2.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.12.0",
@@ -34,6 +35,7 @@
     "globals": "^15.11.0",
     "jest": "^29.7.0",
     "serverless": "^4.4.5",
+    "serverless-offline": "^14.3.3",
     "serverless-plugin-typescript": "^2.1.5",
     "ts-jest": "^29.2.5",
     "typescript": "^5.6.3",

@@ -12,12 +12,13 @@ dictionaryDefinitions:
     addWords: false
 dictionaries:
   - regional
-words: 
+words:
   - adwords
   - asana
   - cnet
   - convio
   - dongminyu
+  - dotenv
   - flickr
   - pharma
   - recommendee

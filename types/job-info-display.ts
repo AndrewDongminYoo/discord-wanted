@@ -1,6 +1,6 @@
 import { attractionTagsMap } from './attraction-tags.js';
 import { skillStackTagsMap } from './skill-tags.js';
-import { type JobData, type Reward } from './wanted-response.js';
+import { type Currency, type JobData, type Reward } from './wanted-response.js';
 
 interface UsefulInfo {
   company: string;
@@ -66,8 +66,26 @@ export class JobInfoDisplay {
   // 리워드 포맷팅 함수
   private formatReward(reward: Reward | undefined): string {
     if (reward) {
-      return `추천인: ${reward.reward_recommender} ${reward.reward_recommender_unit}, 지원자: ${reward.reward_recommendee} ${reward.reward_recommendee_unit}`;
+      const recommenderAmount = this.formatCurrency(
+        reward.reward_recommender,
+        reward.reward_recommender_unit,
+      );
+      const recommendeeAmount = this.formatCurrency(
+        reward.reward_recommendee,
+        reward.reward_recommendee_unit,
+      );
+
+      return `추천인: ${recommenderAmount}, 지원자: ${recommendeeAmount}`;
     }
     return '리워드 정보 없음';
+  }
+
+  // 통화 포맷팅 함수
+  private formatCurrency(amount: number, currencyCode: Currency): string {
+    return new Intl.NumberFormat('ko-KR', {
+      style: 'currency',
+      currency: currencyCode,
+      maximumFractionDigits: 0, // 소수점 이하 자릿수 조절
+    }).format(amount);
   }
 }

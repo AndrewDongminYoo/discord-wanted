@@ -8,12 +8,32 @@ service: discord-wanted
 provider:
   name: aws
   runtime: nodejs20.x
+  region: ap-northeast-2
+  environment:
+    NODE_ENV: production
+    # .env 파일에 정의된 환경 변수들을 Lambda에 전달
+    PUBLIC_KEY: ${env:PUBLIC_KEY}
+    APPLICATION_ID: ${env:APPLICATION_ID}
+    DISCORD_TOKEN: ${env:DISCORD_TOKEN}
 
 functions:
-  rateHandler:
-    handler: wanted.run
+  app:
+    handler: app.handler
     events:
-      - schedule: rate(1 minute)
+      - httpApi:
+          path: /{proxy+}                    # 모든 경로를 Lambda로 라우팅
+          method: ANY                        # 모든 HTTP 메서드 지원
 
 plugins:
-  - serverless-plugin-typescript
+  - serverless-offline # 로컬 테스트를 위한 플러그인
+
+package:
+  individually: true
+  exclude:
+    - node_modules/**
+  include:
+    - .env
+
+custom:
+  dotenv:
+    path: .env

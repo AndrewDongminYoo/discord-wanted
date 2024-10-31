@@ -6,6 +6,7 @@ import {
   verifyKeyMiddleware,
 } from 'discord-interactions';
 import express, { type Request, type Response } from 'express';
+import serverless from 'serverless-http';
 
 import { type JobIds, type Years } from './types/user-enums.js';
 import { getRandomEmoji } from './utils.js';
@@ -154,6 +155,12 @@ app.post('/interactions', verifyKeyMiddleware(PUBLIC_KEY), async (req: Request, 
   res.status(400).json({ error: 'unknown interaction type' });
 });
 
-app.listen(PORT, () => {
-  console.debug('Listening on port', PORT);
-});
+// serverless.yaml > functions > app > handler
+export const handler = serverless(app);
+
+// 로컬 서버용 설정
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(PORT, () => {
+    console.debug(`Server running at http://localhost:${PORT}`);
+  });
+}

@@ -1,7 +1,7 @@
 import 'dotenv/config';
 
+import { type Commands, InstallGlobalCommands } from './src/utils.js';
 import { Locations } from './types/locations.js';
-import { type Commands, InstallGlobalCommands } from './utils.js';
 
 const APPLICATION_ID = process.env.APPLICATION_ID;
 console.debug('🚀 - APPLICATION_ID:', APPLICATION_ID);

@@ -8,9 +8,9 @@ import {
 import express, { type Request, type Response } from 'express';
 import serverless from 'serverless-http';
 
+import { getRandomEmoji } from './src/utils.js';
 import { type JobIds, type Years } from './types/user-enums.js';
-import { getRandomEmoji } from './utils.js';
-import { fetchJobs } from './wanted.js';
+import { fetchJobs } from './src/wanted.js';
 
 // 익스프레스 앱 생성
 const app = express();

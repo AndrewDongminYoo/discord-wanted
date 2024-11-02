@@ -28,17 +28,21 @@ export class JobInfoDisplay extends IJobInfoDisplay {
     return {
       bookmark: scraped ? '북마크 O' : '북마크 X',
       titleImage: imagePath,
-      skillTags: techStacks.length ? techStacks.join(' ') : '기술 태그 없음',
+      skillTags: techStacks.length
+        ? techStacks
+            .map((tag) => `#${tag}`)
+            .filter((text) => text.length > 1)
+            .join(' ')
+        : '기술 태그 없음',
     };
   }
 
   // 리워드 포맷팅 함수
   private formatReward(reward: number | undefined): string {
     if (reward) {
-      const recommenderAmount = this.formatCurrency(reward, 'KRW');
-      const recommendeeAmount = this.formatCurrency(reward, 'KRW');
+      const recommendeeAmount = this.formatCurrency(reward * 10_000, 'KRW');
 
-      return `추천인: ${recommenderAmount}, 지원자: ${recommendeeAmount}`;
+      return `지원자: ${recommendeeAmount}`;
     }
     return '리워드 정보 없음';
   }

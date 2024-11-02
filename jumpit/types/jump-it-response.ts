@@ -1,3 +1,5 @@
+import { type StackName } from './tech-stacks.js';
+
 export interface JumpItResponse {
   message: string;
   status: number;
@@ -21,7 +23,7 @@ export interface Position {
   imagePath: string;
   title: string;
   companyName: string;
-  techStacks: string[];
+  techStacks: StackName[];
   scrapCount: number;
   viewCount: number;
   newcomer: boolean;

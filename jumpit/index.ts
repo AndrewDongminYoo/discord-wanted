@@ -1,7 +1,8 @@
 import Axios from 'axios';
 
-import { type Sort, type TechStack } from './types/job-codes.js';
+import { type Sort } from './types/job-codes.js';
 import { type JumpItResponse } from './types/jump-it-response.js';
+import { type StackName } from './types/tech-stacks.js';
 
 const baseURL = 'https://jumpit-api.saramin.co.kr';
 
@@ -28,7 +29,7 @@ interface UrlOption {
    * '전체'인 경우 입력하지 않음
    */
   career?: string;
-  techStack: Array<TechStack['name']>;
+  techStack: StackName[];
   sort?: Sort['id'];
   highlight?: boolean;
 }

@@ -1,5 +1,7 @@
+import { type StackName } from './tech-stacks.js';
+
 export interface TechStack {
-  name: string;
+  name: StackName;
   imagePath: string;
 }
 
@@ -675,6 +677,7 @@ export const tags: Tag[] = [
     emoticon: '📗',
   },
   {
+    // cSpell:ignore TEXI
     id: 'TEXI_FARE',
     name: '#택시비지원',
     emoticon: '🚕',
@@ -692,7 +695,7 @@ export const tags: Tag[] = [
 ] as const;
 
 export interface Sort {
-  id: string;
+  id: 'rsp_rate' | 'reg_dt' | 'popular' | 'relation';
   name: string;
   default: boolean;
   searchDefault: boolean;

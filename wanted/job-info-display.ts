@@ -1,28 +1,12 @@
+import { type AdditionalInfo, IJobInfoDisplay, type UsefulInfo } from '../i-job-info-display.js';
 import { attractionTagsMap } from './attraction-tags.js';
 import { skillStackTagsMap } from './skill-tags.js';
-import { type Currency, type JobData, type Reward } from './types/wanted-response.js';
+import { type JobData, type Reward } from './types/wanted-response.js';
 
-interface UsefulInfo {
-  company: string;
-  position: string;
-  jobInfoLink: string;
-  companyInfoLink: string;
-  address: string;
-  experienceRange: string;
-  isNewbie: string;
-  reward: string;
-  avgResponseRate?: number;
-}
-
-interface AdditionalInfo {
-  bookmark: string;
-  titleImage?: string;
-  skillTags: string;
-  attractionTags: string;
-}
-
-export class JobInfoDisplay {
-  constructor(private jobData: JobData) {}
+export class JobInfoDisplay extends IJobInfoDisplay {
+  constructor(protected jobData: JobData) {
+    super(jobData);
+  }
 
   // 유용한 정보를 반환하는 메서드
   public usefulInfo(): UsefulInfo {
@@ -78,14 +62,5 @@ export class JobInfoDisplay {
       return `추천인: ${recommenderAmount}, 지원자: ${recommendeeAmount}`;
     }
     return '리워드 정보 없음';
-  }
-
-  // 통화 포맷팅 함수
-  private formatCurrency(amount: number, currencyCode: Currency): string {
-    return new Intl.NumberFormat('ko-KR', {
-      style: 'currency',
-      currency: currencyCode,
-      maximumFractionDigits: 0, // 소수점 이하 자릿수 조절
-    }).format(amount);
   }
 }

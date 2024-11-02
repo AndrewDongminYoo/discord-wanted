@@ -10,8 +10,12 @@ dictionaryDefinitions:
     path: .cspell/regional.txt
     scope: workspace
     addWords: false
+  - name: technical
+    path: .cspell/technical.txt
+    addWords: true
 dictionaries:
   - regional
+  - technical
 words:
   - adwords
   - asana

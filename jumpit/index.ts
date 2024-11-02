@@ -29,10 +29,10 @@ interface UrlOption {
   /**
    * '전체'인 경우 입력하지 않음
    */
-  career?: string;
+  career?: '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10';
   techStack: StackName[];
   sort?: Sort['id'];
-  highlight?: boolean;
+  location?: number;
 }
 
 /**
@@ -43,21 +43,20 @@ interface UrlOption {
  * @param highlight - 하이라이트 여부 (기본값: false)
  * @returns Saramin API URL 문자열
  */
-function buildUrl({
-  career,
-  techStack = [],
-  sort = 'reg_dt',
-  highlight = false,
-}: UrlOption): string {
-  const queryParams: string[] = [`sort=${sort}`, `highlight=${highlight}`];
+function buildUrl({ career, techStack = [], sort = 'reg_dt', location }: UrlOption): string {
+  const queryParams: string[] = [];
   if (career) {
     const temp = Number(career);
     if (temp >= 0 && temp <= 10) {
       queryParams.push(`career=${career}`);
     }
   }
-
   techStack.forEach((tech) => queryParams.push(`techStack=${tech}`));
+
+  if (location) {
+    queryParams.push(`locationTag=${location}`);
+  }
+  queryParams.push(`sort=${sort}`);
 
   return `/api/positions?${queryParams.join('&')}`;
 }
@@ -98,4 +97,4 @@ export async function fetchSaraminJobs(options: UrlOption): Promise<JobInfoDispl
 }
 
 // 예시: career가 0, 기술 스택이 Java와 Spring인 경우 호출
-fetchSaraminJobs({ career: '0', techStack: ['Java', 'Spring'] });
+// fetchSaraminJobs({ career: '0', techStack: ['Java', 'Spring'] });

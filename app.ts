@@ -8,6 +8,9 @@ import {
 import express, { type Request, type Response } from 'express';
 import serverless from 'serverless-http';
 
+import { fetchSaraminJobs } from './jumpit/index.js';
+import { type Sort } from './jumpit/types/job-codes.js';
+import { type StackName } from './jumpit/types/tech-stacks.js';
 import { getRandomEmoji } from './src/utils.js';
 import { fetchJobs } from './wanted/index.js';
 import { type JobIds, type Years } from './wanted/types/user-enums.js';
@@ -67,6 +70,7 @@ app.post('/interactions', verifyKeyMiddleware(PUBLIC_KEY), async (req: Request, 
    */
   if (type === InteractionType.PING) {
     res.send({ type: InteractionResponseType.PONG });
+    return;
   }
 
   /**
@@ -81,10 +85,8 @@ app.post('/interactions', verifyKeyMiddleware(PUBLIC_KEY), async (req: Request, 
       // 명령이 트리거된 채널로 메시지를 보냅니다.
       res.send({
         type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
-        data: {
-          // 도우미 함수에서 보낼 임의의 이모티콘을 가져옵니다.
-          content: `hello world ${getRandomEmoji()}`,
-        },
+        // 도우미 함수에서 보낼 임의의 이모티콘을 가져옵니다.
+        data: { content: `hello world ${getRandomEmoji()}` },
       });
       return;
     }
@@ -116,7 +118,7 @@ app.post('/interactions', verifyKeyMiddleware(PUBLIC_KEY), async (req: Request, 
 
         for (const job of jobs) {
           const info = job.usefulInfo();
-          content += `회사: [${info.company}](${info.companyInfoLink})\n`;
+          content += `회사: ${info.company}\n`;
           content += `포지션: [${info.position}](${info.jobInfoLink})\n`;
           content += `주소: ${info.address}\n`;
           content += `경력: ${info.experienceRange} (${info.isNewbie})\n`;
@@ -138,12 +140,69 @@ app.post('/interactions', verifyKeyMiddleware(PUBLIC_KEY), async (req: Request, 
         console.error('Error fetching jobs:', error);
         res.send({
           type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
-          data: {
-            content: '채용 정보를 가져오는 중 오류가 발생했습니다.',
-          },
+          data: { content: '채용 정보를 가져오는 중 오류가 발생했습니다.' },
         });
       }
+      return;
+    }
 
+    // "saramin" 명령
+    if (name === 'saramin') {
+      const options = data.options;
+      let location = 1;
+      let career;
+      let techStack: StackName = 'Java';
+      let sort: Sort['id'] = 'reg_dt';
+
+      options.forEach((option) => {
+        if (option.name === 'location') {
+          location = Number.parseInt(option.value, 10);
+        } else if (option.name === 'career') {
+          const temp = Number.parseInt(option.value, 10);
+          if (!Number.isNaN(temp) && temp <= 10 && temp >= 0) {
+            career = `${temp}` as '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10';
+          }
+        } else if (option.name === 'job-id') {
+          techStack = option.value as StackName;
+        } else if (option.name === 'sort') {
+          sort = option.value as Sort['id'];
+        }
+      });
+
+      try {
+        const jobs = await fetchSaraminJobs({
+          career,
+          techStack: [techStack],
+          sort,
+          location,
+        });
+        let content = '**사람인 채용 정보:**\n';
+
+        for (const job of jobs) {
+          const info = job.usefulInfo();
+          content += `회사: ${info.company}\n`;
+          content += `포지션: [${info.position}](${info.jobInfoLink})\n`;
+          content += `경력: ${info.experienceRange} (${info.isNewbie})\n`;
+          const detail = job.additionalInfo();
+          content += `기술스택: ${detail.skillTags}\n`;
+          content += '--------------------\n';
+        }
+
+        if (content.length > MESSAGE_CHAR_LIMIT) {
+          content = content.substring(0, MESSAGE_CHAR_LIMIT - 3) + '...';
+        }
+
+        res.send({
+          type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
+          data: { content },
+        });
+      } catch (error) {
+        console.error('Error fetching Saramin jobs:', error);
+        res.send({
+          type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
+          data: { content: '사람인 채용 정보를 가져오는 중 오류가 발생했습니다.' },
+        });
+      }
       return;
     }
 

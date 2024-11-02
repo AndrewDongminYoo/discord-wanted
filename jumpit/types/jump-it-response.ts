@@ -4,10 +4,10 @@ export interface JumpItResponse {
   message: string;
   status: number;
   code: string;
-  result: Result;
+  result: JumpItResult;
 }
 
-export interface Result {
+export interface JumpItResult {
   totalCount: number;
   page: number;
   keyword: string;

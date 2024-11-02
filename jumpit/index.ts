@@ -1,7 +1,7 @@
 import Axios from 'axios';
 
 import { type Sort } from './types/job-codes.js';
-import { type JumpItResponse } from './types/jump-it-response.js';
+import { type JumpItResponse, type Position } from './types/jump-it-response.js';
 import { type StackName } from './types/tech-stacks.js';
 
 const baseURL = 'https://jumpit-api.saramin.co.kr';
@@ -66,12 +66,16 @@ function buildUrl({
  * @param options - career, techStack, sort, highlight 옵션 객체
  * @returns Saramin API 응답 데이터
  */
-export async function fetchSaraminJobs(options: UrlOption): Promise<JumpItResponse> {
+export async function fetchSaraminJobs(options: UrlOption): Promise<Position[]> {
   const url = buildUrl(options);
 
   try {
     const response = await saramin.get<JumpItResponse>(url);
-    return response.data;
+    console.debug('🚀 - JumpItResponse.code:', response.data.code);
+    console.debug('🚀 - JumpItResponse.message:', response.data.message);
+    console.debug('🚀 - JumpItResponse.status:', response.data.status);
+    console.debug('🚀 - JumpItResponse.result:', response.data.result);
+    return response.data.result.positions;
   } catch (error) {
     console.error('Error fetching Saramin jobs:', error);
     throw error;
@@ -79,6 +83,4 @@ export async function fetchSaraminJobs(options: UrlOption): Promise<JumpItRespon
 }
 
 // 예시: career가 0, 기술 스택이 Java와 Spring인 경우 호출
-fetchSaraminJobs({ career: '0', techStack: ['Java', 'Spring'] }).then((response) =>
-  console.debug(response.result.positions),
-);
+fetchSaraminJobs({ career: '0', techStack: ['Java', 'Spring'] });

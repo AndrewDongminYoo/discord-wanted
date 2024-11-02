@@ -1,7 +1,8 @@
 import Axios from 'axios';
 
+import { JobInfoDisplay } from './job-info-display.js';
 import { type Sort } from './types/job-codes.js';
-import { type JumpItResponse, type Position } from './types/jump-it-response.js';
+import { type JumpItResponse, type JumpItResult, type Position } from './types/jump-it-response.js';
 import { type StackName } from './types/tech-stacks.js';
 
 const baseURL = 'https://jumpit-api.saramin.co.kr';
@@ -66,7 +67,7 @@ function buildUrl({
  * @param options - career, techStack, sort, highlight 옵션 객체
  * @returns Saramin API 응답 데이터
  */
-export async function fetchSaraminJobs(options: UrlOption): Promise<Position[]> {
+export async function fetchSaraminJobs(options: UrlOption): Promise<JobInfoDisplay[]> {
   const url = buildUrl(options);
 
   try {
@@ -74,8 +75,22 @@ export async function fetchSaraminJobs(options: UrlOption): Promise<Position[]> 
     console.debug('🚀 - JumpItResponse.code:', response.data.code);
     console.debug('🚀 - JumpItResponse.message:', response.data.message);
     console.debug('🚀 - JumpItResponse.status:', response.data.status);
-    console.debug('🚀 - JumpItResponse.result:', response.data.result);
-    return response.data.result.positions;
+
+    const jobs: JumpItResult = response.data.result;
+
+    return jobs.positions.map((position: Position) => {
+      const jobInfo = new JobInfoDisplay(position);
+
+      // 유용한 정보 출력
+      console.debug('유용한 정보:');
+      console.debug(jobInfo.usefulInfo());
+
+      // 덜 유용한 추가 정보 출력
+      console.debug('추가 정보:');
+      console.debug(jobInfo.additionalInfo());
+
+      return jobInfo;
+    });
   } catch (error) {
     console.error('Error fetching Saramin jobs:', error);
     throw error;

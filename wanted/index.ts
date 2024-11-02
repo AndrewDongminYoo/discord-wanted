@@ -101,4 +101,4 @@ export async function fetchJobs(jobIds: JobIds[], years: Years[], locationKey: s
 }
 
 // 예시로 함수 호출: 실제로는 디스코드로부터 입력받은 인수로 호출될 것
-// await fetchJobs([10111], ['-1'], Locations.Seoul.all);
+// await fetchJobs([10111], ['-1'], 'seoul.all');

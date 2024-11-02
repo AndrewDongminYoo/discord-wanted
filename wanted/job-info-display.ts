@@ -1,6 +1,6 @@
 import { attractionTagsMap } from './attraction-tags.js';
 import { skillStackTagsMap } from './skill-tags.js';
-import { type Currency, type JobData, type Reward } from './wanted-response.js';
+import { type Currency, type JobData, type Reward } from './types/wanted-response.js';
 
 interface UsefulInfo {
   company: string;

@@ -1,7 +1,6 @@
 import 'dotenv/config';
 
 import { type Commands, InstallGlobalCommands } from './src/utils.js';
-import { Locations } from './types/locations.js';
 
 const APPLICATION_ID = process.env.APPLICATION_ID;
 console.debug('🚀 - APPLICATION_ID:', APPLICATION_ID);
@@ -21,24 +20,24 @@ const WANTED_COMMAND: Commands = {
       type: 3, // STRING
       required: true,
       choices: [
-        { name: Locations.all, value: '전국' },
-        { name: Locations.Seoul.all, value: '서울' },
-        { name: Locations.Busan.all, value: '부산' },
-        { name: Locations.Daegu.all, value: '대구' },
-        { name: Locations.Incheon.all, value: '인천' },
-        { name: Locations.Gwangju.all, value: '광주' },
-        { name: Locations.Daejeon.all, value: '대전' },
-        { name: Locations.Ulsan.all, value: '울산' },
-        { name: Locations.Sejong.all, value: '세종' },
-        { name: Locations.Gyeonggi.all, value: '경기' },
-        { name: Locations.Gangwon.all, value: '강원' },
-        { name: Locations.ChungcheongBuk.all, value: '충북' },
-        { name: Locations.ChungcheongNamDo.all, value: '충남' },
-        { name: Locations.JeollaBuk.all, value: '전북' },
-        { name: Locations.JeollaNamDo.all, value: '전남' },
-        { name: Locations.GyeongsangBuk.all, value: '경북' },
-        { name: Locations.GyeongsangNamDo.all, value: '경남' },
-        { name: Locations.Jeju.all, value: '제주' },
+        { name: 'all', value: '전국' },
+        { name: 'seoul.all', value: '서울' },
+        { name: 'busan.all', value: '부산' },
+        { name: 'daegu.all', value: '대구' },
+        { name: 'incheon.all', value: '인천' },
+        { name: 'gwangju.all', value: '광주' },
+        { name: 'daejeon.all', value: '대전' },
+        { name: 'ulsan.all', value: '울산' },
+        { name: 'sejong.all', value: '세종' },
+        { name: 'gyeonggi.all', value: '경기' },
+        { name: 'gangwon.all', value: '강원' },
+        { name: 'n-chungcheong.all', value: '충북' },
+        { name: 's-chungcheong.all', value: '충남' },
+        { name: 'n-jeolla.all', value: '전북' },
+        { name: 's-jeolla.all', value: '전남' },
+        { name: 'n-gyeongsang.all', value: '경북' },
+        { name: 's-gyeongsang.all', value: '경남' },
+        { name: 'jeju.all', value: '제주' },
       ],
     },
     {

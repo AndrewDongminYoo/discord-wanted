@@ -1,10 +1,10 @@
 import Axios from 'axios';
 
-import { JobInfoDisplay } from '../types/job-info-display.js';
-import { isValidLocation } from '../types/locations.js';
-import { type JobGroupId, type JobIds, type JobSort, type Years } from '../types/user-enums.js';
-import { type UserInput } from '../types/user-input.js';
-import { type CountryCode, type JobData, type WantedResponse } from '../types/wanted-response.js';
+import { JobInfoDisplay } from './job-info-display.js';
+import { isValidLocation } from './locations.js';
+import { type JobGroupId, type JobIds, type JobSort, type Years } from './types/user-enums.js';
+import { type UserInput } from './types/user-input.js';
+import { type CountryCode, type JobData, type WantedResponse } from './types/wanted-response.js';
 
 const baseURL = 'https://www.wanted.co.kr';
 

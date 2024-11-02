@@ -114,7 +114,7 @@ app.post('/interactions', verifyKeyMiddleware(PUBLIC_KEY), async (req: Request, 
 
       try {
         const jobs = await fetchJobs(jobIds, yearsArray, locationKey);
-        let content = '**채용 정보:**\n';
+        let content = '**원티드 채용 정보:**\n';
 
         for (const job of jobs) {
           const info = job.usefulInfo();
@@ -124,6 +124,7 @@ app.post('/interactions', verifyKeyMiddleware(PUBLIC_KEY), async (req: Request, 
           content += `경력: ${info.experienceRange} (${info.isNewbie})\n`;
           const detail = job.additionalInfo();
           content += `포인트: ${detail.attractionTags}\n`;
+          content += `기술스택: ${detail.skillTags}\n`;
           content += '--------------------\n';
         }
 

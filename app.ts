@@ -1,10 +1,9 @@
-import 'dotenv/config';
-
 import {
   InteractionResponseType,
   InteractionType,
   verifyKeyMiddleware,
 } from 'discord-interactions';
+import { config } from 'dotenv';
 import express, { type Request, type Response } from 'express';
 import serverless from 'serverless-http';
 
@@ -14,6 +13,8 @@ import { type StackName } from './jumpit/types/tech-stacks.js';
 import { getRandomEmoji } from './src/utils.js';
 import { fetchJobs } from './wanted/index.js';
 import { type JobIds, type Years } from './wanted/types/user-enums.js';
+
+config();
 
 // 익스프레스 앱 생성
 const app = express();

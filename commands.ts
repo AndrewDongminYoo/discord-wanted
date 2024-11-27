@@ -1,6 +1,8 @@
-import 'dotenv/config';
+import { config } from 'dotenv';
 
 import { type Commands, InstallGlobalCommands } from './src/utils.js';
+
+config();
 
 const APPLICATION_ID = process.env.APPLICATION_ID;
 console.debug('🚀 - APPLICATION_ID:', APPLICATION_ID);

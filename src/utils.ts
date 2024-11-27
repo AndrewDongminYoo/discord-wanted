@@ -1,7 +1,7 @@
-import 'dotenv/config';
-
 import axios, { AxiosError, type AxiosRequestConfig, type AxiosResponse } from 'axios';
+import { config } from 'dotenv';
 
+config();
 const DISCORD_TOKEN = process.env.DISCORD_TOKEN;
 console.debug('🚀 - DISCORD_TOKEN:', DISCORD_TOKEN);
 

@@ -4,12 +4,12 @@
   "version": "1.0.0",
   "description": "Discord example app",
   "main": "app.js",
-  "type": "module",
   "engines": {
     "node": ">=18.x"
   },
   "scripts": {
     "start": "serverless offline",
+    "logs": "serverless logs -f app --tail",
     "deploy": "serverless deploy"
   },
   "author": "Dongmin Yu",

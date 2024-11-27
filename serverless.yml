@@ -7,7 +7,7 @@ service: discord-wanted
 
 provider:
   name: aws
-  runtime: nodejs20.x
+  runtime: nodejs18.x
   region: ap-northeast-2
   environment:
     NODE_ENV: production

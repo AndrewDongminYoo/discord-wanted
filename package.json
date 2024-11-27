@@ -9,8 +9,8 @@
     "node": ">=18.x"
   },
   "scripts": {
-    "start": "npx tsx app.js",
-    "register": "npx tsx commands.js"
+    "start": "serverless offline",
+    "deploy": "serverless deploy"
   },
   "author": "Dongmin Yu",
   "license": "MIT",

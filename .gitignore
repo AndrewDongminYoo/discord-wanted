@@ -125,3 +125,7 @@ out
 .svelte-kit
 
 # End of https://www.toptal.com/developers/gitignore/api/node
+
+#intelij
+.idea/
+/README-SUB.md

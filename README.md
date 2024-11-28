@@ -31,7 +31,7 @@
 
 #### ![Job-id](https://img.shields.io/badge/💼%20JobId-FFC107?style=flat-square&logo=briefcase&logoColor=white)
 - 당신의 커리어 목표에 맞는 포지션을 선택하세요.<br>
-- **포지션**: `Sofeware Engineer`, `Web Developer`, `Server Developer`, `Front-end Developer`, `Back-end Developer`, `Java Developer`, `C,C++ Developer`, `Python Developer`, `Machine Learning Engineer`, `ETC...`<br>
+- **포지션**: `Software Engineer`, `Web Developer`, `Server Developer`, `Front-end Developer`, `Back-end Developer`, `Java Developer`, `C,C++ Developer`, `Python Developer`, `Machine Learning Engineer`, `ETC...`<br>
 
 ---
 
@@ -52,7 +52,7 @@
 
 프로젝트의 기본적인 구조는 다음과 같습니다:
 
-```
+```log
 [discord-wanted]
     ├── .cspell
     │   ├── regional.txt

@@ -4,7 +4,7 @@
     "eamodio.gitlens",
     "mgmcdermott.vscode-language-babel",
     "wix.vscode-import-cost",
-    "pflannery.vscode-versionlens",
+    "legalfina.npm-version-lens",
     "editorconfig.editorconfig"
   ],
   "unwantedRecommendations": []

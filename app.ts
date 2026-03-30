@@ -7,6 +7,7 @@ import { config } from 'dotenv';
 import express, { type Request, type Response } from 'express';
 import serverless from 'serverless-http';
 
+import { type IJobInfoDisplay } from './i-job-info-display.js';
 import { fetchSaraminJobs } from './jumpit/index.js';
 import { type Sort } from './jumpit/types/job-codes.js';
 import { type StackName } from './jumpit/types/tech-stacks.js';
@@ -33,6 +34,21 @@ if (!APPLICATION_ID) {
   throw new Error('APPLICATION_ID is not defined in environment variables.');
 }
 
+interface DiscordEmbedField {
+  name: string;
+  value: string;
+  inline?: boolean;
+}
+
+interface DiscordEmbed {
+  title: string;
+  url: string;
+  color: number;
+  description: string;
+  thumbnail?: { url: string };
+  fields: DiscordEmbedField[];
+}
+
 interface InteractionData {
   id: string;
   name: string;
@@ -46,11 +62,37 @@ interface InteractionData {
   }>;
 }
 
-/**
- * 디스코드 메세지 API 길이 제한
- * @see https://github.com/discordjs/discord.js/pull/641
- */
-const MESSAGE_CHAR_LIMIT = 2000;
+function buildJobEmbed(job: IJobInfoDisplay, color: number): DiscordEmbed {
+  const info = job.usefulInfo();
+  const detail = job.additionalInfo();
+
+  const fields: DiscordEmbedField[] = [
+    { name: '📍 주소', value: info.address, inline: true },
+    { name: '🧑‍💻 경력', value: `${info.experienceRange} (${info.isNewbie})`, inline: true },
+  ];
+
+  if (detail.skillTags !== '기술 태그 없음') {
+    fields.push({ name: '🛠️ 기술스택', value: detail.skillTags });
+  }
+
+  if (detail.attractionTags) {
+    fields.push({ name: '✨ 복지', value: detail.attractionTags });
+  }
+
+  const embed: DiscordEmbed = {
+    title: info.position,
+    url: info.jobInfoLink,
+    color,
+    description: info.companyInfoLink ? `[${info.company}](${info.companyInfoLink})` : info.company,
+    fields,
+  };
+
+  if (detail.titleImage) {
+    embed.thumbnail = { url: detail.titleImage };
+  }
+
+  return embed;
+}
 
 /**
  * Discord가 HTTP 요청을 보낼 상호작용 엔드포인트 URL
@@ -113,28 +155,11 @@ app.post('/interactions', verifyKeyMiddleware(PUBLIC_KEY), async (req: Request, 
 
       try {
         const jobs = await fetchJobs(jobIds, yearsArray, locationKey);
-        let content = '**원티드 채용 정보:**\n';
-
-        for (const job of jobs) {
-          const info = job.usefulInfo();
-          content += `회사: ${info.company}\n`;
-          content += `포지션: [${info.position}](${info.jobInfoLink})\n`;
-          content += `주소: ${info.address}\n`;
-          content += `경력: ${info.experienceRange} (${info.isNewbie})\n`;
-          const detail = job.additionalInfo();
-          content += `포인트: ${detail.attractionTags}\n`;
-          content += `기술스택: ${detail.skillTags}\n`;
-          content += '--------------------\n';
-        }
-
-        // 콘텐츠 길이를 확인하고 필요한 경우 잘라내기
-        if (content.length > MESSAGE_CHAR_LIMIT) {
-          content = content.substring(0, MESSAGE_CHAR_LIMIT - 3) + '...';
-        }
+        const embeds = jobs.map((job) => buildJobEmbed(job, 0xe84255));
 
         res.send({
           type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
-          data: { content },
+          data: { content: '**원티드 채용 정보:**', embeds },
         });
       } catch (error) {
         console.error('Error fetching jobs:', error);
@@ -176,25 +201,11 @@ app.post('/interactions', verifyKeyMiddleware(PUBLIC_KEY), async (req: Request, 
           sort,
           location,
         });
-        let content = '**사람인 채용 정보:**\n';
-
-        for (const job of jobs) {
-          const info = job.usefulInfo();
-          content += `회사: ${info.company}\n`;
-          content += `포지션: [${info.position}](${info.jobInfoLink})\n`;
-          content += `경력: ${info.experienceRange} (${info.isNewbie})\n`;
-          const detail = job.additionalInfo();
-          content += `기술스택: ${detail.skillTags}\n`;
-          content += '--------------------\n';
-        }
-
-        if (content.length > MESSAGE_CHAR_LIMIT) {
-          content = content.substring(0, MESSAGE_CHAR_LIMIT - 3) + '...';
-        }
+        const embeds = jobs.map((job) => buildJobEmbed(job, 0x0075ff));
 
         res.send({
           type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
-          data: { content },
+          data: { content: '**사람인 채용 정보:**', embeds },
         });
       } catch (error) {
         console.error('Error fetching Saramin jobs:', error);

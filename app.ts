@@ -228,7 +228,10 @@ app.post('/interactions', verifyKeyMiddleware(PUBLIC_KEY), async (req: Request, 
     }
 
     console.error(`unknown command: ${name}`);
-    res.status(400).json({ error: 'unknown command' });
+    res.send({
+      type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
+      data: { content: `알 수 없는 명령어입니다: \`${name}\`` },
+    });
   }
 
   console.error('unknown interaction type', type);

@@ -35,7 +35,7 @@ export class JobInfoDisplay extends IJobInfoDisplay {
       titleImage: title_img?.thumb,
       skillTags: skill_tags.length
         ? this.getTags(skill_tags, skillStackTagsMap).join(' ')
-        : '기술 태그 없음',
+        : '기술스택 없음',
       attractionTags: attraction_tags.length
         ? this.getTags(attraction_tags, attractionTagsMap).join(' ')
         : '장점 태그 없음',

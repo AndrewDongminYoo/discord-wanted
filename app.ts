@@ -62,6 +62,16 @@ interface InteractionData {
   }>;
 }
 
+function formatTags(tags: string): string {
+  if (!tags.startsWith('#')) {
+    return tags;
+  }
+  return tags
+    .split(' #')
+    .map((tag, i) => `\`${i === 0 ? tag : `#${tag}`}\``)
+    .join(' ');
+}
+
 function buildJobEmbed(job: IJobInfoDisplay, color: number): DiscordEmbed {
   const info = job.usefulInfo();
   const detail = job.additionalInfo();
@@ -71,12 +81,12 @@ function buildJobEmbed(job: IJobInfoDisplay, color: number): DiscordEmbed {
     { name: '🧑‍💻 경력', value: `${info.experienceRange} (${info.isNewbie})`, inline: true },
   ];
 
-  if (detail.skillTags !== '기술 태그 없음') {
-    fields.push({ name: '🛠️ 기술스택', value: detail.skillTags });
+  if (detail.skillTags !== '기술스택 없음') {
+    fields.push({ name: '🛠️ 기술스택', value: formatTags(detail.skillTags) });
   }
 
   if (detail.attractionTags) {
-    fields.push({ name: '✨ 복지', value: detail.attractionTags });
+    fields.push({ name: '✨ 태그', value: formatTags(detail.attractionTags) });
   }
 
   const embed: DiscordEmbed = {

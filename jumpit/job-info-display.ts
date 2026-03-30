@@ -33,7 +33,7 @@ export class JobInfoDisplay extends IJobInfoDisplay {
             .map((tag) => `#${tag}`)
             .filter((text) => text.length > 1)
             .join(' ')
-        : '기술 태그 없음',
+        : '기술스택 없음',
     };
   }
 

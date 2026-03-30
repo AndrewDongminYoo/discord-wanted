@@ -52,11 +52,11 @@ export class JobInfoDisplay extends IJobInfoDisplay {
     if (reward) {
       const recommenderAmount = this.formatCurrency(
         reward.reward_recommender,
-        reward.reward_recommender_unit,
+        reward.reward_recommender_unit
       );
       const recommendeeAmount = this.formatCurrency(
         reward.reward_recommendee,
-        reward.reward_recommendee_unit,
+        reward.reward_recommendee_unit
       );
 
       return `추천인: ${recommenderAmount}, 지원자: ${recommendeeAmount}`;

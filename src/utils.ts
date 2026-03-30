@@ -16,7 +16,7 @@ if (!DISCORD_TOKEN) {
  */
 export async function DiscordRequest(
   endpoint: string,
-  options?: AxiosRequestConfig,
+  options?: AxiosRequestConfig
 ): Promise<AxiosResponse> {
   // 루트 API URL에 엔드포인트 추가
   const url = 'https://discord.com/api/v10/' + endpoint;
@@ -25,7 +25,7 @@ export async function DiscordRequest(
   return axios({
     url,
     headers: {
-      Authorization: `Bot ${DISCORD_TOKEN}`,
+      'Authorization': `Bot ${DISCORD_TOKEN}`,
       'Content-Type': 'application/json; charset=UTF-8',
       'User-Agent': 'DiscordBot (https://github.com/AndrewDongminYoo/discord-wanted, 1.0.0)',
     },

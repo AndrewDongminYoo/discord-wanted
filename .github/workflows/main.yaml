@@ -16,6 +16,7 @@ on:
 
 jobs:
   semantic-pull-request:
+    if: ${{ !contains(fromJSON('["dependabot[bot]", "renovate[bot]", "snyk-bot", "allcontributors[bot]"]'), github.actor) }}
     runs-on: ubuntu-latest
 
     steps:
@@ -32,6 +33,7 @@ jobs:
           wip: false
 
   spell-check:
+    if: ${{ !contains(fromJSON('["dependabot[bot]", "renovate[bot]", "snyk-bot", "allcontributors[bot]"]'), github.actor) }}
     defaults:
       run:
         working-directory: .

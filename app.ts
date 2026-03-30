@@ -188,6 +188,7 @@ app.post('/interactions', verifyKeyMiddleware(PUBLIC_KEY), async (req: Request, 
       let career;
       let techStack: StackName = 'Java';
       let sort: Sort['id'] = 'popular';
+      let jobCategory: number | undefined;
 
       options.forEach((option) => {
         if (option.name === 'location') {
@@ -197,10 +198,12 @@ app.post('/interactions', verifyKeyMiddleware(PUBLIC_KEY), async (req: Request, 
           if (!Number.isNaN(temp) && temp <= 10 && temp >= 0) {
             career = `${temp}` as '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10';
           }
-        } else if (option.name === 'job-id') {
+        } else if (option.name === 'tech-stack') {
           techStack = option.value as StackName;
         } else if (option.name === 'sort') {
           sort = option.value as Sort['id'];
+        } else if (option.name === 'job-category') {
+          jobCategory = Number.parseInt(option.value, 10);
         }
       });
 
@@ -210,6 +213,7 @@ app.post('/interactions', verifyKeyMiddleware(PUBLIC_KEY), async (req: Request, 
           techStack: [techStack],
           sort,
           location,
+          jobCategory,
         });
         const embeds = jobs.map((job) => buildJobEmbed(job, 0x0075ff));
 

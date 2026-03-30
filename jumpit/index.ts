@@ -33,17 +33,16 @@ interface UrlOption {
   techStack: StackName[];
   sort?: Sort['id'];
   location?: number;
+  jobCategory?: number;
 }
 
-/**
- * Saramin API URL을 동적으로 생성하는 함수
- * @param career - 경력 조건 (예: '0' - 신입)
- * @param techStack - 기술 스택 (예: ['Java', 'Spring'])
- * @param sort - 정렬 방식 (예: 'popular' for 인기순)
- * @param highlight - 하이라이트 여부 (기본값: false)
- * @returns Saramin API URL 문자열
- */
-function buildUrl({ career, techStack = [], sort = 'popular', location }: UrlOption): string {
+function buildUrl({
+  career,
+  techStack = [],
+  sort = 'popular',
+  location,
+  jobCategory,
+}: UrlOption): string {
   const queryParams: string[] = [];
   if (career) {
     const temp = Number(career);
@@ -55,6 +54,9 @@ function buildUrl({ career, techStack = [], sort = 'popular', location }: UrlOpt
 
   if (location) {
     queryParams.push(`locationTag=${location}`);
+  }
+  if (jobCategory) {
+    queryParams.push(`jobCategory=${jobCategory}`);
   }
   queryParams.push(`sort=${sort}`);
 
@@ -71,11 +73,6 @@ export async function fetchSaraminJobs(options: UrlOption): Promise<JobInfoDispl
 
   try {
     const response = await saramin.get<JumpItResponse>(url);
-    console.debug('🚀 - JumpItResponse.code:', response.data.code);
-    console.debug('🚀 - JumpItResponse.message:', response.data.message);
-    console.debug('🚀 - JumpItResponse.status:', response.data.status);
-    console.debug('🚀 - JumpItResponse.result:', response.data.result);
-
     const jobs: JumpItResult = response.data.result;
 
     return jobs.positions.map((position: Position) => new JobInfoDisplay(position));

@@ -10,7 +10,8 @@
   "scripts": {
     "start": "serverless offline",
     "logs": "serverless logs -f app --tail",
-    "deploy": "serverless deploy"
+    "deploy": "serverless deploy",
+    "register": "yarn tsx commands.ts"
   },
   "author": "Dongmin Yu",
   "license": "MIT",

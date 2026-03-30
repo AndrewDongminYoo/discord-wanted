@@ -85,19 +85,7 @@ export async function fetchJobs(jobIds: JobIds[], years: Years[], locationKey: s
 
   const jobs: WantedResponse = response.data;
 
-  return jobs.data.map((job: JobData) => {
-    const jobInfo = new JobInfoDisplay(job);
-
-    // 유용한 정보 출력
-    console.debug('유용한 정보:');
-    console.debug(jobInfo.usefulInfo());
-
-    // 덜 유용한 추가 정보 출력
-    console.debug('추가 정보:');
-    console.debug(jobInfo.additionalInfo());
-
-    return jobInfo;
-  });
+  return jobs.data.map((job: JobData) => new JobInfoDisplay(job));
 }
 
 // 예시로 함수 호출: 실제로는 디스코드로부터 입력받은 인수로 호출될 것

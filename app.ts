@@ -22,14 +22,12 @@ const app = express();
 const PORT = process.env.PORT ?? 3000;
 
 const PUBLIC_KEY = process.env.PUBLIC_KEY;
-console.debug('🚀 - PUBLIC_KEY:', PUBLIC_KEY);
 
 if (!PUBLIC_KEY) {
   throw new Error('PUBLIC_KEY is not defined in environment variables.');
 }
 
 const APPLICATION_ID = process.env.APPLICATION_ID;
-console.debug('🚀 - APPLICATION_ID:', APPLICATION_ID);
 
 if (!APPLICATION_ID) {
   throw new Error('APPLICATION_ID is not defined in environment variables.');

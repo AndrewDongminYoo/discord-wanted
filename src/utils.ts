@@ -114,12 +114,3 @@ export function getRandomEmoji(): string {
   ];
   return emojiList[Math.floor(Math.random() * emojiList.length)];
 }
-
-/**
- * 문자열의 첫 글자를 대문자로 합니다.
- * @param {string} str - 입력 문자열
- * @returns string
- */
-export function capitalize(str: string): string {
-  return str.charAt(0).toUpperCase() + str.slice(1);
-}

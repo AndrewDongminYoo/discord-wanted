@@ -86,10 +86,9 @@ export async function InstallGlobalCommands(appId: string, commands: Commands[])
     await DiscordRequest(endpoint, { method: 'PUT', data: commands });
   } catch (error) {
     if (error instanceof AxiosError) {
-      const errorData = error?.response?.data || error?.message;
-      console.error('Error sending request:', errorData);
-      throw new Error(JSON.stringify(errorData));
+      console.error('Error sending request:', error.toJSON());
     }
+    throw error;
   }
 }
 

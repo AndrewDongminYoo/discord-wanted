@@ -187,7 +187,7 @@ app.post('/interactions', verifyKeyMiddleware(PUBLIC_KEY), async (req: Request, 
       let location = 1;
       let career;
       let techStack: StackName = 'Java';
-      let sort: Sort['id'] = 'reg_dt';
+      let sort: Sort['id'] = 'popular';
 
       options.forEach((option) => {
         if (option.name === 'location') {

@@ -174,7 +174,7 @@ export const jobCategory: JobCategory[] = [
   },
   {
     id: 16,
-    name: 'IOS 개발자',
+    name: 'iOS 개발자',
     recommendTechStacks: [
       {
         name: 'Swift',
@@ -592,142 +592,66 @@ export const jobCategory: JobCategory[] = [
 export interface Tag {
   id: string;
   name: string;
-  emoticon: string;
 }
 
 export const tags: Tag[] = [
-  {
-    id: 'FOUR_DOT_FIVE_DAYS',
-    name: '#4.5일제',
-    emoticon: '🍯',
-  },
-  {
-    id: 'WORK_AT_HOME_COMPANY',
-    name: '#재택근무',
-    emoticon: '🏠',
-  },
-  {
-    id: 'FLEXIBLE_WORK',
-    name: '#유연근무제',
-    emoticon: '⏰',
-  },
-  {
-    id: 'DIFFERENCE_WORK_TIME',
-    name: '#시차출근제',
-    emoticon: '🕙',
-  },
-  {
-    id: 'INCENTIVE_COMPANY',
-    name: '#인센티브',
-    emoticon: '💵',
-  },
-  {
-    id: 'CODE_REVIEW',
-    name: '#코드리뷰',
-    emoticon: '👾',
-  },
-  {
-    id: 'SHORTS_SLIPPERS',
-    name: '#반바지/슬리퍼 OK',
-    emoticon: '👖',
-  },
-  {
-    id: 'FREE_DRESS',
-    name: '#자유복장',
-    emoticon: '👕',
-  },
-  {
-    id: 'SNACK',
-    name: '#맛있는간식냠냠',
-    emoticon: '☕',
-  },
-  {
-    id: 'MACBOOK',
-    name: '#맥북으로개발',
-    emoticon: '💻',
-  },
-  {
-    id: 'NICKNAME',
-    name: '#닉네임사용',
-    emoticon: '👩‍',
-  },
-  {
-    id: 'HORIZONTAL_CULTURE',
-    name: '#수평적조직',
-    emoticon: '🙌',
-  },
-  {
-    id: 'WITH_ANIMAL',
-    name: '#반려동물',
-    emoticon: '🐶',
-  },
-  {
-    id: 'INVESTMENT_MORE_100',
-    name: '#누적투자금100억이상',
-    emoticon: '💰',
-  },
-  {
-    id: 'STOCK_OPTION',
-    name: '#스톡옵션제공',
-    emoticon: '📈',
-  },
-  {
-    id: 'FREE_BOOK',
-    name: '#도서구입비지원',
-    emoticon: '📗',
-  },
-  {
-    // cSpell:ignore TEXI
-    id: 'TEXI_FARE',
-    name: '#택시비지원',
-    emoticon: '🚕',
-  },
-  {
-    id: 'MILITARY',
-    name: '#병역특례',
-    emoticon: '👨',
-  },
-  {
-    id: 'MAJOR',
-    name: '#전공우대',
-    emoticon: '🎓',
-  },
+  { id: '275', name: '#재택근무' },
+  { id: '276', name: '#유연근무제' },
+  { id: '277', name: '#워라밸' },
+  { id: '278', name: '#성과급/상여금' },
+  { id: '281', name: '#급성장중' },
+  { id: '283', name: '#자유로운 연차' },
+  { id: '284', name: '#패밀리데이' },
+  { id: '285', name: '#휴가비 지원' },
+  { id: '286', name: '#프리한 복장' },
+  { id: '287', name: '#점심지원' },
+  { id: '288', name: '#간식 제공' },
+  { id: '289', name: '#사내 카페' },
+  { id: '290', name: '#주거복지' },
+  { id: '291', name: '#육아휴직' },
+  { id: '292', name: '#장기근속 포상' },
+  { id: 'com_103', name: '#M&A 투자유치' },
+  { id: 'com_104', name: '#IPO 투자유치' },
+  { id: 'com_105', name: '#Pre IPO 투자유치' },
+  { id: 'com_110', name: '#시리즈C 투자유치' },
+  { id: 'com_111', name: '#시리즈B 투자유치' },
+  { id: 'com_113', name: '#시리즈A 투자유치' },
+  { id: 'com_114', name: '#Pre A 투자유치' },
+  { id: 'com_116', name: '#Seed 투자유치' },
+  { id: 'com_117', name: '#계열사' },
+  { id: 'com_124', name: '#스타트업 인기TOP100' },
+  { id: 'com_126', name: '#역세권 기업' },
+  { id: 'com_129', name: '#매출액 1000억 기업' },
+  { id: 'com_130', name: '#대기업' },
+  { id: 'com_131', name: '#스타트업' },
+  { id: 'com_136', name: '#예비 유니콘' },
+  { id: 'com_137', name: '#아기 유니콘' },
+  { id: 'com_138', name: '#코스피' },
+  { id: 'com_139', name: '#코스닥' },
+  { id: 'com_140', name: '#코넥스' },
+  { id: 'com_141', name: '#연봉상승률 30% 이상' },
+  { id: 'com_142', name: '#연봉상승률 20% 이상' },
+  { id: 'com_143', name: '#연봉상승률 15% 이상' },
+  { id: 'com_144', name: '#연봉상승률 10% 이상' },
+  { id: 'com_145', name: '#평균연봉 상위 10%' },
+  { id: 'com_146', name: '#평균연봉 7,000 이상' },
+  { id: 'com_147', name: '#평균연봉 6,000 이상' },
+  { id: 'com_156', name: '#영업이익 20% 지속성장' },
+  { id: 'com_158', name: '#영업이익률 20% 이상' },
 ] as const;
 
 export interface Sort {
-  id: 'rsp_rate' | 'reg_dt' | 'popular' | 'relation';
+  id: 'reg_dt' | 'popular' | 'relation';
   name: string;
-  default: boolean;
-  searchDefault: boolean;
 }
 
 export const sort: Sort[] = [
-  {
-    id: 'rsp_rate',
-    name: '응답률순',
-    default: true,
-    searchDefault: false,
-  },
-  {
-    id: 'reg_dt',
-    name: '최신순',
-    default: false,
-    searchDefault: false,
-  },
-  {
-    id: 'popular',
-    name: '인기순',
-    default: false,
-    searchDefault: false,
-  },
+  { id: 'popular', name: '인기순' },
+  { id: 'reg_dt', name: '최신순' },
 ] as const;
 
 export const searchKeywordPositionSort: Sort[] = [
-  ...sort,
-  {
-    id: 'relation',
-    name: '관련도순',
-    default: false,
-    searchDefault: true,
-  },
+  { id: 'reg_dt', name: '최신순' },
+  { id: 'popular', name: '인기순' },
+  { id: 'relation', name: '관련도순' },
 ] as const;

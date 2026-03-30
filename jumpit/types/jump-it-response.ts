@@ -18,24 +18,24 @@ export interface JumpItResult {
 
 export interface Position {
   id: number;
-  jobCategory: string;
-  logo: string;
-  imagePath: string;
+  jobCategory?: string;
+  logo?: string;
+  imagePath?: string;
   title: string;
   companyName: string;
-  techStacks: StackName[];
-  scrapCount: number;
-  viewCount: number;
-  newcomer: boolean;
+  techStacks?: StackName[];
+  scrapCount?: number;
+  viewCount?: number;
+  newcomer?: boolean;
   minCareer: number;
   maxCareer: number;
   locations: string[];
-  alwaysOpen: boolean;
-  closedAt: Date;
-  serialNumber: string;
-  encodedSerialNumber: string;
+  alwaysOpen?: boolean;
+  closedAt?: Date;
+  serialNumber?: string;
+  encodedSerialNumber?: string;
   celebration: number;
-  applied: boolean;
-  scraped: boolean;
-  hiddenPosition: boolean;
+  applied?: boolean;
+  scraped?: boolean;
+  hiddenPosition?: boolean;
 }

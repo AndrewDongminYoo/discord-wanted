@@ -28,7 +28,7 @@ export class JobInfoDisplay extends IJobInfoDisplay {
     return {
       bookmark: scraped ? '북마크 O' : '북마크 X',
       titleImage: imagePath,
-      skillTags: techStacks.length
+      skillTags: techStacks
         ? techStacks
             .map((tag) => `#${tag}`)
             .filter((text) => text.length > 1)

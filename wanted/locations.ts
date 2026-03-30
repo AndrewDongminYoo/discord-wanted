@@ -547,28 +547,26 @@ export namespace Locations {
   export const all = 'all';
 }
 
-export function isValidLocation(location: string): boolean {
-  // 모든 enum의 값들을 배열로 추출하여 확인하는 로직
-  const allLocationValues: string[] = [
-    ...Object.values(Locations.Seoul),
-    ...Object.values(Locations.Busan),
-    ...Object.values(Locations.Daegu),
-    ...Object.values(Locations.Incheon),
-    ...Object.values(Locations.Gwangju),
-    ...Object.values(Locations.Daejeon),
-    ...Object.values(Locations.Ulsan),
-    ...Object.values(Locations.Sejong),
-    ...Object.values(Locations.Gyeonggi),
-    ...Object.values(Locations.Gangwon),
-    ...Object.values(Locations.ChungcheongBuk),
-    ...Object.values(Locations.ChungcheongNamDo),
-    ...Object.values(Locations.JeollaBuk),
-    ...Object.values(Locations.JeollaNamDo),
-    ...Object.values(Locations.GyeongsangBuk),
-    ...Object.values(Locations.GyeongsangNamDo),
-    ...Object.values(Locations.Jeju),
-  ];
+const validLocationSet = new Set<string>([
+  ...Object.values(Locations.Seoul),
+  ...Object.values(Locations.Busan),
+  ...Object.values(Locations.Daegu),
+  ...Object.values(Locations.Incheon),
+  ...Object.values(Locations.Gwangju),
+  ...Object.values(Locations.Daejeon),
+  ...Object.values(Locations.Ulsan),
+  ...Object.values(Locations.Sejong),
+  ...Object.values(Locations.Gyeonggi),
+  ...Object.values(Locations.Gangwon),
+  ...Object.values(Locations.ChungcheongBuk),
+  ...Object.values(Locations.ChungcheongNamDo),
+  ...Object.values(Locations.JeollaBuk),
+  ...Object.values(Locations.JeollaNamDo),
+  ...Object.values(Locations.GyeongsangBuk),
+  ...Object.values(Locations.GyeongsangNamDo),
+  ...Object.values(Locations.Jeju),
+]);
 
-  // 입력된 location이 enum 값 중 하나와 일치하는지 확인
-  return allLocationValues.includes(location);
+export function isValidLocation(location: string): boolean {
+  return validLocationSet.has(location);
 }

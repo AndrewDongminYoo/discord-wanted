@@ -6,6 +6,7 @@
     "forceConsistentCasingInFileNames": true,
     "lib": ["es2018"],
     "module": "CommonJS",
+    "esModuleInterop": true,
     "noEmitOnError": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,

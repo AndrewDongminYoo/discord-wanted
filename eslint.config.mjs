@@ -19,7 +19,8 @@ import tseslint from 'typescript-eslint';
  *   - 일반적인 프로그래밍 오류를 잡기 위한 규칙 활성화(예: no-console, no-undef-init)
  *   - var보다 const를 사용하도록 요구
  */
-export default [
+const config = [
+  { ignores: ['.serverless/', 'dist/', 'coverage/'] },
   { files: ['**/*.ts'] },
   { languageOptions: { globals: globals.node, ecmaVersion: 2021 } },
   {
@@ -183,3 +184,5 @@ export default [
     ...tseslint.configs.disableTypeChecked,
   },
 ];
+
+export default config;

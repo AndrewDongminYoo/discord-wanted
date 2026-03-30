@@ -31,9 +31,5 @@ package:
   individually: true
   exclude:
     - node_modules/**
-  include:
     - .env
-
-custom:
-  dotenv:
-    path: .env
+    - .env.*

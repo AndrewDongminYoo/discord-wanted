@@ -2,12 +2,12 @@
   "filterData": {
     "job_sort": [
       {
-        "display": "추천순",
-        "key": "job.recommend_order"
-      },
-      {
         "display": "최신순",
         "key": "job.latest_order"
+      },
+      {
+        "display": "추천순",
+        "key": "job.recommend_order"
       },
       {
         "display": "인기순",
@@ -70,261 +70,6 @@
         "key": "all",
         "order": 0,
         "locations": []
-      },
-      {
-        "display": "대만",
-        "key": "tw",
-        "order": 5,
-        "locations": [
-          {
-            "display": "All",
-            "key": "all",
-            "order": 0,
-            "districts": []
-          },
-          {
-            "display": "Taipei City ",
-            "key": "taipei-city",
-            "order": 1,
-            "districts": []
-          },
-          {
-            "display": "New Taipei City ",
-            "key": "new-taipei-city",
-            "order": 2,
-            "districts": []
-          },
-          {
-            "display": "Taoyuan City ",
-            "key": "taoyuan-city",
-            "order": 3,
-            "districts": []
-          },
-          {
-            "display": "Taichung City ",
-            "key": "taichung-city",
-            "order": 4,
-            "districts": []
-          },
-          {
-            "display": "Tainan City ",
-            "key": "tainan-city",
-            "order": 5,
-            "districts": []
-          },
-          {
-            "display": "Kaohsiung City ",
-            "key": "kaohsiung-city",
-            "order": 6,
-            "districts": []
-          },
-          {
-            "display": "Keelung City ",
-            "key": "keelung-city",
-            "order": 7,
-            "districts": []
-          },
-          {
-            "display": "Hsin-chu City ",
-            "key": "hsin-chu-city",
-            "order": 8,
-            "districts": []
-          },
-          {
-            "display": "Hsin-chu County ",
-            "key": "hsin-chu-country",
-            "order": 9,
-            "districts": []
-          },
-          {
-            "display": "Miaoli County ",
-            "key": "miaoli-country",
-            "order": 10,
-            "districts": []
-          },
-          {
-            "display": "Chaiyi City ",
-            "key": "chaiyi-city",
-            "order": 11,
-            "districts": []
-          },
-          {
-            "display": "Changhua County ",
-            "key": "changhua-country",
-            "order": 12,
-            "districts": []
-          },
-          {
-            "display": "Nantou County ",
-            "key": "nantou-country",
-            "order": 13,
-            "districts": []
-          },
-          {
-            "display": "Yunlin County ",
-            "key": "yunlin-country",
-            "order": 14,
-            "districts": []
-          },
-          {
-            "display": "Chaiyi County ",
-            "key": "chaiyi-country",
-            "order": 15,
-            "districts": []
-          },
-          {
-            "display": "Pingtung County ",
-            "key": "pingtung-country",
-            "order": 16,
-            "districts": []
-          },
-          {
-            "display": "Yalin County ",
-            "key": "yalin-country",
-            "order": 17,
-            "districts": []
-          },
-          {
-            "display": "Hualien County ",
-            "key": "hualien-country",
-            "order": 18,
-            "districts": []
-          },
-          {
-            "display": "Taitung County ",
-            "key": "taitung-country",
-            "order": 19,
-            "districts": []
-          },
-          {
-            "display": "Wuhu County ",
-            "key": "wuhu-country",
-            "order": 20,
-            "districts": []
-          },
-          {
-            "display": "Jinmen County ",
-            "key": "jinmen-country",
-            "order": 21,
-            "districts": []
-          },
-          {
-            "display": "Matsu ",
-            "key": "matsu",
-            "order": 22,
-            "districts": []
-          }
-        ]
-      },
-      {
-        "display": "싱가폴",
-        "key": "sg",
-        "order": 4,
-        "locations": [
-          {
-            "display": "All",
-            "key": "all",
-            "order": 0,
-            "districts": []
-          }
-        ]
-      },
-      {
-        "display": "일본",
-        "key": "jp",
-        "order": 2,
-        "locations": [
-          {
-            "display": "All",
-            "key": "all",
-            "order": 0,
-            "districts": []
-          },
-          {
-            "display": "Tokyo",
-            "key": "tokyo",
-            "order": 1,
-            "districts": []
-          },
-          {
-            "display": "Kanagawa",
-            "key": "kanagawa",
-            "order": 2,
-            "districts": []
-          },
-          {
-            "display": "Chiba",
-            "key": "chiba",
-            "order": 3,
-            "districts": []
-          },
-          {
-            "display": "Aichi",
-            "key": "aichi",
-            "order": 4,
-            "districts": []
-          },
-          {
-            "display": "Osaka",
-            "key": "osaka",
-            "order": 5,
-            "districts": []
-          },
-          {
-            "display": "Hyogo",
-            "key": "hyogo",
-            "order": 6,
-            "districts": []
-          },
-          {
-            "display": "Kyoto",
-            "key": "kyoto",
-            "order": 7,
-            "districts": []
-          },
-          {
-            "display": "Fukuoka",
-            "key": "hukuoka",
-            "order": 8,
-            "districts": []
-          },
-          {
-            "display": "Okinawa",
-            "key": "okinawa",
-            "order": 9,
-            "districts": []
-          },
-          {
-            "display": "Hokkaido",
-            "key": "hokkaido",
-            "order": 10,
-            "districts": []
-          },
-          {
-            "display": "Saitama",
-            "key": "saitama",
-            "order": 11,
-            "districts": []
-          },
-          {
-            "display": "Hioshima",
-            "key": "hioshima",
-            "order": 12,
-            "districts": []
-          },
-          {
-            "display": "Miyagi",
-            "key": "miyagi",
-            "order": 13,
-            "districts": []
-          },
-          {
-            "display": "Etc",
-            "key": "etc",
-            "order": 99,
-            "districts": []
-          }
-        ]
       },
       {
         "display": "한국",
@@ -1689,10 +1434,101 @@
         ]
       },
       {
-        "display": "기타",
-        "key": "others",
-        "order": 99,
-        "locations": []
+        "display": "일본",
+        "key": "jp",
+        "order": 2,
+        "locations": [
+          {
+            "display": "All",
+            "key": "all",
+            "order": 0,
+            "districts": []
+          },
+          {
+            "display": "Tokyo",
+            "key": "tokyo",
+            "order": 1,
+            "districts": []
+          },
+          {
+            "display": "Kanagawa",
+            "key": "kanagawa",
+            "order": 2,
+            "districts": []
+          },
+          {
+            "display": "Chiba",
+            "key": "chiba",
+            "order": 3,
+            "districts": []
+          },
+          {
+            "display": "Aichi",
+            "key": "aichi",
+            "order": 4,
+            "districts": []
+          },
+          {
+            "display": "Osaka",
+            "key": "osaka",
+            "order": 5,
+            "districts": []
+          },
+          {
+            "display": "Hyogo",
+            "key": "hyogo",
+            "order": 6,
+            "districts": []
+          },
+          {
+            "display": "Kyoto",
+            "key": "kyoto",
+            "order": 7,
+            "districts": []
+          },
+          {
+            "display": "Fukuoka",
+            "key": "hukuoka",
+            "order": 8,
+            "districts": []
+          },
+          {
+            "display": "Okinawa",
+            "key": "okinawa",
+            "order": 9,
+            "districts": []
+          },
+          {
+            "display": "Hokkaido",
+            "key": "hokkaido",
+            "order": 10,
+            "districts": []
+          },
+          {
+            "display": "Saitama",
+            "key": "saitama",
+            "order": 11,
+            "districts": []
+          },
+          {
+            "display": "Hioshima",
+            "key": "hioshima",
+            "order": 12,
+            "districts": []
+          },
+          {
+            "display": "Miyagi",
+            "key": "miyagi",
+            "order": 13,
+            "districts": []
+          },
+          {
+            "display": "Etc",
+            "key": "etc",
+            "order": 99,
+            "districts": []
+          }
+        ]
       }
     ],
     "employee_count": [
@@ -2223,14 +2059,70 @@
         ]
       }
     ],
-    "jobSorts": [
+    "employment_types": [
       {
-        "display": "추천순",
-        "key": "job.recommend_order"
+        "display": "정규직",
+        "key": "job.employment_type.regular",
+        "order": 0
       },
+      {
+        "display": "계약직",
+        "key": "job.employment_type.contract",
+        "order": 1
+      },
+      {
+        "display": "인턴",
+        "key": "job.employment_type.intern",
+        "order": 2
+      }
+    ],
+    "additional_apply_types": [
+      {
+        "display": "병역특례",
+        "key": "job.additional_apply_type.alternative_military",
+        "order": 0
+      },
+      {
+        "display": "외국인",
+        "key": "job.additional_apply_type.foreigner",
+        "order": 1
+      },
+      {
+        "display": "장애인 우대",
+        "key": "job.additional_apply_type.disabled_person",
+        "order": 2
+      }
+    ],
+    "preferred_languages": [
+      {
+        "display": "영어",
+        "key": "job.preferred_languages.en",
+        "order": 0
+      },
+      {
+        "display": "일본어",
+        "key": "job.preferred_languages.ja",
+        "order": 1
+      },
+      {
+        "display": "중국어",
+        "key": "job.preferred_languages.zh",
+        "order": 2
+      },
+      {
+        "display": "기타",
+        "key": "job.preferred_languages.etc",
+        "order": 3
+      }
+    ],
+    "jobSorts": [
       {
         "display": "최신순",
         "key": "job.latest_order"
+      },
+      {
+        "display": "추천순",
+        "key": "job.recommend_order"
       },
       {
         "display": "인기순",
@@ -3602,8 +3494,8 @@
       ]
     },
     "jobSort": {
-      "display": "추천순",
-      "key": "job.recommend_order"
+      "display": "최신순",
+      "key": "job.latest_order"
     },
     "year": [
       {
@@ -3611,8 +3503,8 @@
         "key": "0"
       },
       {
-        "display": "5년",
-        "key": "5"
+        "display": "4년",
+        "key": "4"
       }
     ],
     "locations": [
@@ -3637,12 +3529,21 @@
         "image": "https://static.wanted.co.kr/images/tags/675ed3b6.jpg",
         "tags": [
           {
+            "id": 872,
+            "image": "https://static.wanted.co.kr/images/tags/468d23ec-43fa-11e6-90dd-0a30d591bfc5.jpg",
+            "title": "서버 개발자",
+            "counts": {
+              "job": 911,
+              "user": 79827
+            }
+          },
+          {
             "id": 10110,
             "image": "https://static.wanted.co.kr/images/tags/9e2b6c64.jpg",
             "title": "소프트웨어 엔지니어",
             "counts": {
-              "job": 1250,
-              "user": 27417
+              "job": 840,
+              "user": 57519
             }
           },
           {
@@ -3650,17 +3551,8 @@
             "image": "https://static.wanted.co.kr/images/tags/512ec544-43fa-11e6-90dd-0a30d591bfc5.jpg",
             "title": "웹 개발자",
             "counts": {
-              "job": 1066,
-              "user": 95036
-            }
-          },
-          {
-            "id": 872,
-            "image": "https://static.wanted.co.kr/images/tags/468d23ec-43fa-11e6-90dd-0a30d591bfc5.jpg",
-            "title": "서버 개발자",
-            "counts": {
-              "job": 994,
-              "user": 57496
+              "job": 721,
+              "user": 123816
             }
           },
           {
@@ -3668,35 +3560,8 @@
             "image": "https://static.wanted.co.kr/images/tags/55d008e2-43fa-11e6-90dd-0a30d591bfc5.jpg",
             "title": "프론트엔드 개발자",
             "counts": {
-              "job": 869,
-              "user": 56365
-            }
-          },
-          {
-            "id": 660,
-            "image": "https://static.wanted.co.kr/images/tags/773638bc-43fa-11e6-945a-0a30d591bfc5.jpg",
-            "title": "자바 개발자",
-            "counts": {
-              "job": 661,
-              "user": 63120
-            }
-          },
-          {
-            "id": 900,
-            "image": "https://static.wanted.co.kr/images/tags/ac80b132-43fa-11e6-80ef-0a30d591bfc5.jpg",
-            "title": "C,C++ 개발자",
-            "counts": {
-              "job": 499,
-              "user": 25410
-            }
-          },
-          {
-            "id": 899,
-            "image": "https://static.wanted.co.kr/images/tags/c9f29c76-43fa-11e6-90dd-0a30d591bfc5.jpg",
-            "title": "파이썬 개발자",
-            "counts": {
-              "job": 382,
-              "user": 25889
+              "job": 529,
+              "user": 73219
             }
           },
           {
@@ -3704,8 +3569,8 @@
             "image": "https://static.wanted.co.kr/images/tags/ebfb705e.jpg",
             "title": "머신러닝 엔지니어",
             "counts": {
-              "job": 340,
-              "user": 17939
+              "job": 498,
+              "user": 27239
             }
           },
           {
@@ -3713,8 +3578,35 @@
             "image": "https://static.wanted.co.kr/images/tags/9b6c1db4-43fa-11e6-b947-0a30d591bfc5.jpg",
             "title": "DevOps / 시스템 관리자",
             "counts": {
-              "job": 299,
-              "user": 13136
+              "job": 433,
+              "user": 19423
+            }
+          },
+          {
+            "id": 660,
+            "image": "https://static.wanted.co.kr/images/tags/773638bc-43fa-11e6-945a-0a30d591bfc5.jpg",
+            "title": "자바 개발자",
+            "counts": {
+              "job": 432,
+              "user": 84386
+            }
+          },
+          {
+            "id": 899,
+            "image": "https://static.wanted.co.kr/images/tags/c9f29c76-43fa-11e6-90dd-0a30d591bfc5.jpg",
+            "title": "파이썬 개발자",
+            "counts": {
+              "job": 385,
+              "user": 36772
+            }
+          },
+          {
+            "id": 900,
+            "image": "https://static.wanted.co.kr/images/tags/ac80b132-43fa-11e6-80ef-0a30d591bfc5.jpg",
+            "title": "C,C++ 개발자",
+            "counts": {
+              "job": 375,
+              "user": 31791
             }
           },
           {
@@ -3722,8 +3614,8 @@
             "image": "https://static.wanted.co.kr/images/tags/92c96586-43fa-11e6-aa6b-0a30d591bfc5.jpg",
             "title": "데이터 엔지니어",
             "counts": {
-              "job": 288,
-              "user": 20415
+              "job": 374,
+              "user": 28304
             }
           },
           {
@@ -3731,8 +3623,8 @@
             "image": "https://static.wanted.co.kr/images/tags/ddb56fa4-43fa-11e6-90dd-0a30d591bfc5.jpg",
             "title": "Node.js 개발자",
             "counts": {
-              "job": 272,
-              "user": 15397
+              "job": 266,
+              "user": 20016
             }
           },
           {
@@ -3740,62 +3632,8 @@
             "image": "https://static.wanted.co.kr/images/tags/b6181050-43fa-11e6-945a-0a30d591bfc5.jpg",
             "title": "시스템,네트워크 관리자",
             "counts": {
-              "job": 271,
-              "user": 18098
-            }
-          },
-          {
-            "id": 677,
-            "image": "https://static.wanted.co.kr/images/tags/63b50034-43fa-11e6-aa6b-0a30d591bfc5.jpg",
-            "title": "안드로이드 개발자",
-            "counts": {
-              "job": 249,
-              "user": 22990
-            }
-          },
-          {
-            "id": 678,
-            "image": "https://static.wanted.co.kr/images/tags/0c9e1334-43fb-11e6-aa6b-0a30d591bfc5.jpg",
-            "title": "iOS 개발자",
-            "counts": {
-              "job": 205,
-              "user": 14141
-            }
-          },
-          {
-            "id": 658,
-            "image": "https://static.wanted.co.kr/images/tags/47046ea6-43fb-11e6-90dd-0a30d591bfc5.jpg",
-            "title": "임베디드 개발자",
-            "counts": {
-              "job": 199,
-              "user": 9082
-            }
-          },
-          {
-            "id": 1026,
-            "image": "https://static.wanted.co.kr/images/tags/0ad4c3f8.jpg",
-            "title": "기술지원",
-            "counts": {
-              "job": 183,
-              "user": 11009
-            }
-          },
-          {
-            "id": 676,
-            "image": "https://static.wanted.co.kr/images/tags/385b71ec-43fb-11e6-90dd-0a30d591bfc5.jpg",
-            "title": "QA,테스트 엔지니어",
-            "counts": {
-              "job": 182,
-              "user": 12501
-            }
-          },
-          {
-            "id": 877,
-            "image": "https://static.wanted.co.kr/images/tags/881cf3aa-43fa-11e6-945a-0a30d591bfc5.jpg",
-            "title": "개발 매니저",
-            "counts": {
-              "job": 181,
-              "user": 13896
+              "job": 220,
+              "user": 23277
             }
           },
           {
@@ -3803,26 +3641,35 @@
             "image": "https://static.wanted.co.kr/images/tags/d7c9679e.jpg",
             "title": "데이터 사이언티스트",
             "counts": {
-              "job": 179,
-              "user": 19693
+              "job": 203,
+              "user": 25896
             }
           },
           {
-            "id": 671,
-            "image": "https://static.wanted.co.kr/images/tags/fa0832d6-43fa-11e6-b947-0a30d591bfc5.jpg",
-            "title": "보안 엔지니어",
+            "id": 877,
+            "image": "https://static.wanted.co.kr/images/tags/881cf3aa-43fa-11e6-945a-0a30d591bfc5.jpg",
+            "title": "개발 매니저",
             "counts": {
-              "job": 139,
-              "user": 11572
+              "job": 198,
+              "user": 17669
             }
           },
           {
-            "id": 1025,
-            "image": "https://static.wanted.co.kr/images/tags/6b6111e6.jpg",
-            "title": "빅데이터 엔지니어",
+            "id": 658,
+            "image": "https://static.wanted.co.kr/images/tags/47046ea6-43fb-11e6-90dd-0a30d591bfc5.jpg",
+            "title": "임베디드 개발자",
             "counts": {
-              "job": 131,
-              "user": 11363
+              "job": 187,
+              "user": 12120
+            }
+          },
+          {
+            "id": 676,
+            "image": "https://static.wanted.co.kr/images/tags/385b71ec-43fb-11e6-90dd-0a30d591bfc5.jpg",
+            "title": "QA,테스트 엔지니어",
+            "counts": {
+              "job": 153,
+              "user": 16373
             }
           },
           {
@@ -3830,71 +3677,17 @@
             "image": "https://static.wanted.co.kr/images/tags/082e8a54-0318-11e7-8094-0213e6175ee7.jpg",
             "title": "하드웨어 엔지니어",
             "counts": {
-              "job": 128,
-              "user": 7865
+              "job": 129,
+              "user": 10198
             }
           },
           {
-            "id": 876,
-            "image": "https://static.wanted.co.kr/images/tags/ff75299a-43fa-11e6-945a-0a30d591bfc5.jpg",
-            "title": "프로덕트 매니저",
+            "id": 1025,
+            "image": "https://static.wanted.co.kr/images/tags/6b6111e6.jpg",
+            "title": "빅데이터 엔지니어",
             "counts": {
-              "job": 120,
-              "user": 10939
-            }
-          },
-          {
-            "id": 1027,
-            "image": "https://static.wanted.co.kr/images/tags/ed3d7974.jpg",
-            "title": "블록체인 플랫폼 엔지니어",
-            "counts": {
-              "job": 88,
-              "user": 3242
-            }
-          },
-          {
-            "id": 10111,
-            "image": "https://static.wanted.co.kr/images/tags/5cb28ea5.jpg",
-            "title": "크로스플랫폼 앱 개발자",
-            "counts": {
-              "job": 83,
-              "user": 2401
-            }
-          },
-          {
-            "id": 10231,
-            "image": "https://static.wanted.co.kr/images/tags/839b8688-7ce9-11ec-8b72-acde48001122.jpg",
-            "title": "DBA",
-            "counts": {
-              "job": 83,
-              "user": 2224
-            }
-          },
-          {
-            "id": 893,
-            "image": "https://static.wanted.co.kr/images/tags/e52b0f50-43fa-11e6-90dd-0a30d591bfc5.jpg",
-            "title": "PHP 개발자",
-            "counts": {
-              "job": 58,
-              "user": 8467
-            }
-          },
-          {
-            "id": 661,
-            "image": "https://static.wanted.co.kr/images/tags/8000714c-43fa-11e6-80ef-0a30d591bfc5.jpg",
-            "title": ".NET 개발자",
-            "counts": {
-              "job": 55,
-              "user": 12006
-            }
-          },
-          {
-            "id": 896,
-            "image": "https://static.wanted.co.kr/images/tags/9839253a-43e9-11e6-90dd-0a30d591bfc5.jpg",
-            "title": "영상,음성 엔지니어",
-            "counts": {
-              "job": 48,
-              "user": 3481
+              "job": 127,
+              "user": 15223
             }
           },
           {
@@ -3902,17 +3695,98 @@
             "image": "https://static.wanted.co.kr/images/tags/f4b038fa-902c-11e6-ac23-0a30d591bfc5.png",
             "title": "웹 퍼블리셔",
             "counts": {
-              "job": 46,
-              "user": 12186
+              "job": 106,
+              "user": 14035
             }
           },
           {
-            "id": 10230,
-            "image": "https://static.wanted.co.kr/images/tags/959be0e4-7ce9-11ec-8b72-acde48001122.jpg",
-            "title": "ERP전문가",
+            "id": 1026,
+            "image": "https://static.wanted.co.kr/images/tags/0ad4c3f8.jpg",
+            "title": "기술지원",
             "counts": {
-              "job": 45,
-              "user": 1588
+              "job": 103,
+              "user": 13611
+            }
+          },
+          {
+            "id": 677,
+            "image": "https://static.wanted.co.kr/images/tags/63b50034-43fa-11e6-aa6b-0a30d591bfc5.jpg",
+            "title": "안드로이드 개발자",
+            "counts": {
+              "job": 89,
+              "user": 26081
+            }
+          },
+          {
+            "id": 661,
+            "image": "https://static.wanted.co.kr/images/tags/8000714c-43fa-11e6-80ef-0a30d591bfc5.jpg",
+            "title": ".NET 개발자",
+            "counts": {
+              "job": 86,
+              "user": 13772
+            }
+          },
+          {
+            "id": 893,
+            "image": "https://static.wanted.co.kr/images/tags/e52b0f50-43fa-11e6-90dd-0a30d591bfc5.jpg",
+            "title": "PHP 개발자",
+            "counts": {
+              "job": 80,
+              "user": 9437
+            }
+          },
+          {
+            "id": 876,
+            "image": "https://static.wanted.co.kr/images/tags/ff75299a-43fa-11e6-945a-0a30d591bfc5.jpg",
+            "title": "프로덕트 매니저",
+            "counts": {
+              "job": 77,
+              "user": 13768
+            }
+          },
+          {
+            "id": 678,
+            "image": "https://static.wanted.co.kr/images/tags/0c9e1334-43fb-11e6-aa6b-0a30d591bfc5.jpg",
+            "title": "iOS 개발자",
+            "counts": {
+              "job": 67,
+              "user": 16255
+            }
+          },
+          {
+            "id": 10111,
+            "image": "https://static.wanted.co.kr/images/tags/5cb28ea5.jpg",
+            "title": "크로스플랫폼 앱 개발자",
+            "counts": {
+              "job": 59,
+              "user": 4474
+            }
+          },
+          {
+            "id": 1027,
+            "image": "https://static.wanted.co.kr/images/tags/ed3d7974.jpg",
+            "title": "블록체인 플랫폼 엔지니어",
+            "counts": {
+              "job": 53,
+              "user": 4032
+            }
+          },
+          {
+            "id": 10231,
+            "image": "https://static.wanted.co.kr/images/tags/839b8688-7ce9-11ec-8b72-acde48001122.jpg",
+            "title": "DBA",
+            "counts": {
+              "job": 36,
+              "user": 4983
+            }
+          },
+          {
+            "id": 896,
+            "image": "https://static.wanted.co.kr/images/tags/9839253a-43e9-11e6-90dd-0a30d591bfc5.jpg",
+            "title": "영상,음성 엔지니어",
+            "counts": {
+              "job": 34,
+              "user": 4341
             }
           },
           {
@@ -3920,17 +3794,8 @@
             "image": "https://static.wanted.co.kr/images/tags/ee2e96da-43fa-11e6-80ef-0a30d591bfc5.jpg",
             "title": "그래픽스 엔지니어",
             "counts": {
-              "job": 30,
-              "user": 1956
-            }
-          },
-          {
-            "id": 10112,
-            "image": "https://static.wanted.co.kr/images/tags/af0691aa.jpg",
-            "title": "VR 엔지니어",
-            "counts": {
-              "job": 28,
-              "user": 1109
+              "job": 29,
+              "user": 2719
             }
           },
           {
@@ -3938,17 +3803,17 @@
             "image": "https://static.wanted.co.kr/images/tags/f3c39c8a-43fa-11e6-945a-0a30d591bfc5.jpg",
             "title": "CTO,Chief Technology Officer",
             "counts": {
-              "job": 24,
-              "user": 4393
+              "job": 26,
+              "user": 5370
             }
           },
           {
-            "id": 1022,
-            "image": "https://static.wanted.co.kr/images/tags/7346b754.jpg",
-            "title": "BI 엔지니어",
+            "id": 10230,
+            "image": "https://static.wanted.co.kr/images/tags/959be0e4-7ce9-11ec-8b72-acde48001122.jpg",
+            "title": "ERP전문가",
             "counts": {
-              "job": 15,
-              "user": 2669
+              "job": 24,
+              "user": 3079
             }
           },
           {
@@ -3956,8 +3821,44 @@
             "image": "https://static.wanted.co.kr/images/tags/d06f06b6-43fa-11e6-945a-0a30d591bfc5.jpg",
             "title": "루비온레일즈 개발자",
             "counts": {
+              "job": 22,
+              "user": 1780
+            }
+          },
+          {
+            "id": 1022,
+            "image": "https://static.wanted.co.kr/images/tags/7346b754.jpg",
+            "title": "BI 엔지니어",
+            "counts": {
+              "job": 9,
+              "user": 3426
+            }
+          },
+          {
+            "id": 10112,
+            "image": "https://static.wanted.co.kr/images/tags/af0691aa.jpg",
+            "title": "VR 엔지니어",
+            "counts": {
               "job": 7,
-              "user": 1487
+              "user": 1771
+            }
+          },
+          {
+            "id": 10536,
+            "image": null,
+            "title": "테크니컬 라이터",
+            "counts": {
+              "job": 7,
+              "user": 367
+            }
+          },
+          {
+            "id": 10531,
+            "image": null,
+            "title": "RPA 엔지니어",
+            "counts": {
+              "job": 4,
+              "user": 419
             }
           },
           {
@@ -3965,15 +3866,15 @@
             "image": "https://static.wanted.co.kr/images/tags/d0cce80e-4282-11e6-adae-029e8c03f357.jpg",
             "title": "CIO,Chief Information Officer",
             "counts": {
-              "job": 4,
-              "user": 1981
+              "job": 3,
+              "user": 2444
             }
           }
         ],
         "title": "개발",
         "counts": {
-          "job": 4448,
-          "user": 334127
+          "job": 4202,
+          "user": 407499
         }
       },
       {
@@ -3981,21 +3882,21 @@
         "image": "https://static.wanted.co.kr/images/tags/a5cfdc9e.jpg",
         "tags": [
           {
-            "id": 559,
-            "image": "https://static.wanted.co.kr/images/tags/c1a668d0-4289-11e6-870e-029e8c03f357.jpg",
-            "title": "PM·PO",
-            "counts": {
-              "job": 687,
-              "user": 34980
-            }
-          },
-          {
             "id": 564,
             "image": "https://static.wanted.co.kr/images/tags/734d1fe4-43e2-11e6-90dd-0a30d591bfc5.jpg",
             "title": "사업개발·기획자",
             "counts": {
-              "job": 664,
-              "user": 41454
+              "job": 931,
+              "user": 52879
+            }
+          },
+          {
+            "id": 559,
+            "image": "https://static.wanted.co.kr/images/tags/c1a668d0-4289-11e6-870e-029e8c03f357.jpg",
+            "title": "PM·PO",
+            "counts": {
+              "job": 742,
+              "user": 46631
             }
           },
           {
@@ -4003,8 +3904,8 @@
             "image": "https://static.wanted.co.kr/images/tags/64320d72-43eb-11e6-90dd-0a30d591bfc5.jpg",
             "title": "서비스 기획자",
             "counts": {
-              "job": 616,
-              "user": 36008
+              "job": 702,
+              "user": 45820
             }
           },
           {
@@ -4012,17 +3913,8 @@
             "image": "https://static.wanted.co.kr/images/tags/66a5754c-43e3-11e6-945a-0a30d591bfc5.jpg",
             "title": "전략 기획자",
             "counts": {
-              "job": 397,
-              "user": 34408
-            }
-          },
-          {
-            "id": 552,
-            "image": "https://static.wanted.co.kr/images/tags/6340bbb0-43e2-11e6-90dd-0a30d591bfc5.jpg",
-            "title": "경영지원",
-            "counts": {
-              "job": 323,
-              "user": 53507
+              "job": 430,
+              "user": 43643
             }
           },
           {
@@ -4030,8 +3922,8 @@
             "image": "https://static.wanted.co.kr/images/tags/7e2cb988-43e2-11e6-b947-0a30d591bfc5.jpg",
             "title": "운영 매니저",
             "counts": {
-              "job": 244,
-              "user": 23441
+              "job": 257,
+              "user": 29346
             }
           },
           {
@@ -4039,26 +3931,17 @@
             "image": "https://static.wanted.co.kr/images/tags/2ae0d434.jpg",
             "title": "회계·경리",
             "counts": {
-              "job": 235,
-              "user": 50515
+              "job": 227,
+              "user": 63394
             }
           },
           {
-            "id": 656,
-            "image": "https://static.wanted.co.kr/images/tags/6d972c2a-43e2-11e6-aa6b-0a30d591bfc5.jpg",
-            "title": "데이터 분석가",
+            "id": 552,
+            "image": "https://static.wanted.co.kr/images/tags/6340bbb0-43e2-11e6-90dd-0a30d591bfc5.jpg",
+            "title": "경영지원",
             "counts": {
-              "job": 135,
-              "user": 16953
-            }
-          },
-          {
-            "id": 10232,
-            "image": "https://static.wanted.co.kr/images/tags/d771d724-7ceb-11ec-8b72-acde48001122.jpg",
-            "title": "상품기획자(BM)",
-            "counts": {
-              "job": 133,
-              "user": 3577
+              "job": 184,
+              "user": 71878
             }
           },
           {
@@ -4066,8 +3949,26 @@
             "image": "https://static.wanted.co.kr/images/tags/edbd386e-0254-11e7-b0b5-0219382c3fab.jpg",
             "title": "총무",
             "counts": {
-              "job": 106,
-              "user": 27012
+              "job": 166,
+              "user": 33054
+            }
+          },
+          {
+            "id": 656,
+            "image": "https://static.wanted.co.kr/images/tags/6d972c2a-43e2-11e6-aa6b-0a30d591bfc5.jpg",
+            "title": "데이터 분석가",
+            "counts": {
+              "job": 158,
+              "user": 21668
+            }
+          },
+          {
+            "id": 10232,
+            "image": "https://static.wanted.co.kr/images/tags/d771d724-7ceb-11ec-8b72-acde48001122.jpg",
+            "title": "상품기획자(BM)",
+            "counts": {
+              "job": 155,
+              "user": 6618
             }
           },
           {
@@ -4075,8 +3976,8 @@
             "image": "https://static.wanted.co.kr/images/tags/7ce8d9c3.jpg",
             "title": "해외 사업개발·기획자",
             "counts": {
-              "job": 105,
-              "user": 6187
+              "job": 154,
+              "user": 9198
             }
           },
           {
@@ -4084,8 +3985,8 @@
             "image": "https://static.wanted.co.kr/images/tags/f1022cac.jpg",
             "title": "자금담당",
             "counts": {
-              "job": 105,
-              "user": 7322
+              "job": 62,
+              "user": 10883
             }
           },
           {
@@ -4093,8 +3994,8 @@
             "image": "https://static.wanted.co.kr/images/tags/329c437e-0315-11e7-8094-0213e6175ee7.jpg",
             "title": "컨설턴트",
             "counts": {
-              "job": 79,
-              "user": 16762
+              "job": 47,
+              "user": 19816
             }
           },
           {
@@ -4102,89 +4003,8 @@
             "image": "https://static.wanted.co.kr/images/tags/3170d28f.jpg",
             "title": "사무보조",
             "counts": {
-              "job": 51,
-              "user": 13707
-            }
-          },
-          {
-            "id": 567,
-            "image": "https://static.wanted.co.kr/images/tags/a99c6ef0-4fcd-11e6-852d-0a30d591bfc5.jpg",
-            "title": "조직관리",
-            "counts": {
-              "job": 40,
-              "user": 13051
-            }
-          },
-          {
-            "id": 10233,
-            "image": "https://static.wanted.co.kr/images/tags/19cb38c2-7cec-11ec-8b72-acde48001122.jpg",
-            "title": "정보보호 담당자",
-            "counts": {
-              "job": 34,
-              "user": 1258
-            }
-          },
-          {
-            "id": 557,
-            "image": "https://static.wanted.co.kr/images/tags/02902182-4fce-11e6-844a-0a30d591bfc5.jpg",
-            "title": "오피스 관리",
-            "counts": {
-              "job": 32,
-              "user": 10743
-            }
-          },
-          {
-            "id": 569,
-            "image": "https://static.wanted.co.kr/images/tags/b83760a4-0257-11e7-b0b5-0219382c3fab.jpg",
-            "title": "리스크 관리 전문가",
-            "counts": {
-              "job": 26,
-              "user": 4233
-            }
-          },
-          {
-            "id": 561,
-            "image": "https://static.wanted.co.kr/images/tags/b3857dd2.jpg",
-            "title": "구매담당",
-            "counts": {
-              "job": 25,
-              "user": 12802
-            }
-          },
-          {
-            "id": 568,
-            "image": "https://static.wanted.co.kr/images/tags/691e7b76-43e2-11e6-945a-0a30d591bfc5.jpg",
-            "title": "경영 혁신가",
-            "counts": {
-              "job": 25,
-              "user": 6985
-            }
-          },
-          {
-            "id": 10234,
-            "image": "https://static.wanted.co.kr/images/tags/8215aef8-7cec-11ec-8b72-acde48001122.jpg",
-            "title": "ISMS(정보보호체계)",
-            "counts": {
-              "job": 22,
-              "user": 549
-            }
-          },
-          {
-            "id": 10117,
-            "image": "https://static.wanted.co.kr/images/tags/f9eff092.jpg",
-            "title": "전시 기획자",
-            "counts": {
-              "job": 19,
-              "user": 1653
-            }
-          },
-          {
-            "id": 792,
-            "image": "https://static.wanted.co.kr/images/tags/8ccf65da-43e2-11e6-90dd-0a30d591bfc5.jpg",
-            "title": "CFO,Chief Financial Officer",
-            "counts": {
-              "job": 17,
-              "user": 3419
+              "job": 46,
+              "user": 20007
             }
           },
           {
@@ -4192,26 +4012,26 @@
             "image": "https://static.wanted.co.kr/images/tags/f0e9849c.jpg",
             "title": "비서",
             "counts": {
-              "job": 14,
-              "user": 10992
+              "job": 40,
+              "user": 11963
             }
           },
           {
-            "id": 10119,
-            "image": "https://static.wanted.co.kr/images/tags/1055d9b3.jpg",
-            "title": "공연 기획자",
+            "id": 557,
+            "image": "https://static.wanted.co.kr/images/tags/02902182-4fce-11e6-844a-0a30d591bfc5.jpg",
+            "title": "오피스 관리",
             "counts": {
-              "job": 14,
-              "user": 1585
+              "job": 38,
+              "user": 12729
             }
           },
           {
-            "id": 10118,
-            "image": "https://static.wanted.co.kr/images/tags/096c4282.jpg",
-            "title": "세미나/포럼 기획자",
+            "id": 569,
+            "image": "https://static.wanted.co.kr/images/tags/b83760a4-0257-11e7-b0b5-0219382c3fab.jpg",
+            "title": "리스크 관리 전문가",
             "counts": {
-              "job": 13,
-              "user": 1397
+              "job": 38,
+              "user": 5051
             }
           },
           {
@@ -4219,17 +4039,17 @@
             "image": "https://static.wanted.co.kr/images/tags/922f8bd6-43e2-11e6-90dd-0a30d591bfc5.jpg",
             "title": "COO,Chief Operation Officer",
             "counts": {
-              "job": 10,
-              "user": 4326
+              "job": 35,
+              "user": 5351
             }
           },
           {
-            "id": 558,
-            "image": "https://static.wanted.co.kr/images/tags/79e6764c-43e3-11e6-945a-0a30d591bfc5.jpg",
-            "title": "지역 관리 매니저",
+            "id": 561,
+            "image": "https://static.wanted.co.kr/images/tags/b3857dd2.jpg",
+            "title": "구매담당",
             "counts": {
-              "job": 9,
-              "user": 5208
+              "job": 32,
+              "user": 15513
             }
           },
           {
@@ -4237,26 +4057,71 @@
             "image": "https://static.wanted.co.kr/images/tags/9708ef26-43e2-11e6-aa6b-0a30d591bfc5.jpg",
             "title": "CSO,Chief Strategy Officer",
             "counts": {
-              "job": 9,
-              "user": 3059
+              "job": 30,
+              "user": 3835
             }
           },
           {
-            "id": 10120,
-            "image": "https://static.wanted.co.kr/images/tags/50791e1b.jpg",
-            "title": "애자일코치",
+            "id": 558,
+            "image": "https://static.wanted.co.kr/images/tags/79e6764c-43e3-11e6-945a-0a30d591bfc5.jpg",
+            "title": "지역 관리 매니저",
+            "counts": {
+              "job": 21,
+              "user": 5801
+            }
+          },
+          {
+            "id": 567,
+            "image": "https://static.wanted.co.kr/images/tags/a99c6ef0-4fcd-11e6-852d-0a30d591bfc5.jpg",
+            "title": "조직관리",
+            "counts": {
+              "job": 13,
+              "user": 15807
+            }
+          },
+          {
+            "id": 792,
+            "image": "https://static.wanted.co.kr/images/tags/8ccf65da-43e2-11e6-90dd-0a30d591bfc5.jpg",
+            "title": "CFO,Chief Financial Officer",
+            "counts": {
+              "job": 13,
+              "user": 4329
+            }
+          },
+          {
+            "id": 568,
+            "image": "https://static.wanted.co.kr/images/tags/691e7b76-43e2-11e6-945a-0a30d591bfc5.jpg",
+            "title": "경영 혁신가",
+            "counts": {
+              "job": 9,
+              "user": 7919
+            }
+          },
+          {
+            "id": 10118,
+            "image": "https://static.wanted.co.kr/images/tags/096c4282.jpg",
+            "title": "세미나/포럼 기획자",
+            "counts": {
+              "job": 9,
+              "user": 2013
+            }
+          },
+          {
+            "id": 10119,
+            "image": "https://static.wanted.co.kr/images/tags/1055d9b3.jpg",
+            "title": "공연 기획자",
+            "counts": {
+              "job": 9,
+              "user": 2333
+            }
+          },
+          {
+            "id": 10117,
+            "image": "https://static.wanted.co.kr/images/tags/f9eff092.jpg",
+            "title": "전시 기획자",
             "counts": {
               "job": 3,
-              "user": 347
-            }
-          },
-          {
-            "id": 560,
-            "image": "https://static.wanted.co.kr/images/tags/8a0aa216-0254-11e7-8ad5-0219382c3fab.jpg",
-            "title": "지점장",
-            "counts": {
-              "job": 2,
-              "user": 3079
+              "user": 2441
             }
           },
           {
@@ -4264,8 +4129,8 @@
             "image": "https://static.wanted.co.kr/images/tags/7250c300.jpg",
             "title": "안내원",
             "counts": {
-              "job": 1,
-              "user": 3058
+              "job": 2,
+              "user": 3357
             }
           },
           {
@@ -4273,8 +4138,26 @@
             "image": "https://static.wanted.co.kr/images/tags/8824dda8-43e2-11e6-90dd-0a30d591bfc5.jpg",
             "title": "CEO,Chief Executive Officer",
             "counts": {
+              "job": 2,
+              "user": 9205
+            }
+          },
+          {
+            "id": 560,
+            "image": "https://static.wanted.co.kr/images/tags/8a0aa216-0254-11e7-8ad5-0219382c3fab.jpg",
+            "title": "지점장",
+            "counts": {
               "job": 1,
-              "user": 7822
+              "user": 3406
+            }
+          },
+          {
+            "id": 10120,
+            "image": "https://static.wanted.co.kr/images/tags/50791e1b.jpg",
+            "title": "애자일코치",
+            "counts": {
+              "job": 1,
+              "user": 488
             }
           },
           {
@@ -4283,14 +4166,14 @@
             "title": "사내 심리상담가",
             "counts": {
               "job": 1,
-              "user": 487
+              "user": 715
             }
           }
         ],
         "title": "경영·비즈니스",
         "counts": {
-          "job": 1940,
-          "user": 256292
+          "job": 2640,
+          "user": 311411
         }
       },
       {
@@ -4302,44 +4185,8 @@
             "image": "https://static.wanted.co.kr/images/tags/4198a60e-43eb-11e6-90dd-0a30d591bfc5.jpg",
             "title": "마케터",
             "counts": {
-              "job": 747,
-              "user": 64042
-            }
-          },
-          {
-            "id": 1030,
-            "image": "https://static.wanted.co.kr/images/tags/562aab1c.jpg",
-            "title": "디지털 마케터",
-            "counts": {
-              "job": 535,
-              "user": 46673
-            }
-          },
-          {
-            "id": 1635,
-            "image": "https://static.wanted.co.kr/images/tags/e46fa238.jpg",
-            "title": "콘텐츠 마케터",
-            "counts": {
-              "job": 504,
-              "user": 34224
-            }
-          },
-          {
-            "id": 10138,
-            "image": "https://static.wanted.co.kr/images/tags/45f471b6.jpg",
-            "title": "퍼포먼스 마케터",
-            "counts": {
-              "job": 418,
-              "user": 12308
-            }
-          },
-          {
-            "id": 707,
-            "image": "https://static.wanted.co.kr/images/tags/52e45912-43eb-11e6-90dd-0a30d591bfc5.jpg",
-            "title": "브랜드 마케터",
-            "counts": {
-              "job": 349,
-              "user": 46390
+              "job": 1064,
+              "user": 84095
             }
           },
           {
@@ -4347,17 +4194,44 @@
             "image": "https://static.wanted.co.kr/images/tags/47aad33c-43eb-11e6-80ef-0a30d591bfc5.jpg",
             "title": "마케팅 전략 기획자",
             "counts": {
-              "job": 327,
-              "user": 34797
+              "job": 836,
+              "user": 43499
             }
           },
           {
-            "id": 763,
-            "image": "https://static.wanted.co.kr/images/tags/b702e312-43f7-11e6-90dd-0a30d591bfc5.jpg",
-            "title": "광고 기획자(AE)",
+            "id": 1635,
+            "image": "https://static.wanted.co.kr/images/tags/e46fa238.jpg",
+            "title": "콘텐츠 마케터",
             "counts": {
-              "job": 257,
-              "user": 25603
+              "job": 735,
+              "user": 48558
+            }
+          },
+          {
+            "id": 1030,
+            "image": "https://static.wanted.co.kr/images/tags/562aab1c.jpg",
+            "title": "디지털 마케터",
+            "counts": {
+              "job": 579,
+              "user": 57073
+            }
+          },
+          {
+            "id": 707,
+            "image": "https://static.wanted.co.kr/images/tags/52e45912-43eb-11e6-90dd-0a30d591bfc5.jpg",
+            "title": "브랜드 마케터",
+            "counts": {
+              "job": 555,
+              "user": 58782
+            }
+          },
+          {
+            "id": 10138,
+            "image": "https://static.wanted.co.kr/images/tags/45f471b6.jpg",
+            "title": "퍼포먼스 마케터",
+            "counts": {
+              "job": 504,
+              "user": 20094
             }
           },
           {
@@ -4365,8 +4239,8 @@
             "image": "https://static.wanted.co.kr/images/tags/b991785c-ccbc-11e6-b4e9-0a30d591bfc5.jpg",
             "title": "글로벌 마케팅",
             "counts": {
-              "job": 171,
-              "user": 18087
+              "job": 415,
+              "user": 23330
             }
           },
           {
@@ -4374,8 +4248,17 @@
             "image": "https://static.wanted.co.kr/images/tags/afe92e26-43eb-11e6-90dd-0a30d591bfc5.jpg",
             "title": "소셜 마케터",
             "counts": {
-              "job": 118,
-              "user": 26665
+              "job": 367,
+              "user": 30082
+            }
+          },
+          {
+            "id": 763,
+            "image": "https://static.wanted.co.kr/images/tags/b702e312-43f7-11e6-90dd-0a30d591bfc5.jpg",
+            "title": "광고 기획자(AE)",
+            "counts": {
+              "job": 338,
+              "user": 32042
             }
           },
           {
@@ -4383,8 +4266,8 @@
             "image": "https://static.wanted.co.kr/images/tags/a9af67d2-43eb-11e6-90dd-0a30d591bfc5.jpg",
             "title": "PR 전문가",
             "counts": {
-              "job": 93,
-              "user": 13645
+              "job": 129,
+              "user": 15659
             }
           },
           {
@@ -4392,62 +4275,8 @@
             "image": "https://static.wanted.co.kr/images/tags/3af6d230-43eb-11e6-90dd-0a30d591bfc5.jpg",
             "title": "그로스 해커",
             "counts": {
-              "job": 72,
-              "user": 5080
-            }
-          },
-          {
-            "id": 1032,
-            "image": "https://static.wanted.co.kr/images/tags/b822bf9e.jpg",
-            "title": "마케팅 디렉터",
-            "counts": {
-              "job": 72,
-              "user": 13977
-            }
-          },
-          {
-            "id": 708,
-            "image": "https://static.wanted.co.kr/images/tags/877473f6-43eb-11e6-80ef-0a30d591bfc5.jpg",
-            "title": "카피라이터",
-            "counts": {
-              "job": 56,
-              "user": 10055
-            }
-          },
-          {
-            "id": 1033,
-            "image": "https://static.wanted.co.kr/images/tags/ffa906e8.jpg",
-            "title": "모바일마케팅",
-            "counts": {
-              "job": 54,
-              "user": 11158
-            }
-          },
-          {
-            "id": 722,
-            "image": "https://static.wanted.co.kr/images/tags/8d86465c-43eb-11e6-aa6b-0a30d591bfc5.jpg",
-            "title": "키워드광고",
-            "counts": {
-              "job": 38,
-              "user": 7906
-            }
-          },
-          {
-            "id": 720,
-            "image": "https://static.wanted.co.kr/images/tags/9ad988d0-428a-11e6-870e-029e8c03f357.jpg",
-            "title": "제휴",
-            "counts": {
-              "job": 36,
-              "user": 7348
-            }
-          },
-          {
-            "id": 709,
-            "image": "https://static.wanted.co.kr/images/tags/4dde7fc4-43eb-11e6-90dd-0a30d591bfc5.jpg",
-            "title": "마켓 리서처",
-            "counts": {
-              "job": 29,
-              "user": 9043
+              "job": 104,
+              "user": 5946
             }
           },
           {
@@ -4455,8 +4284,71 @@
             "image": "https://static.wanted.co.kr/images/tags/9c71cc9a-43eb-11e6-945a-0a30d591bfc5.jpg",
             "title": "BTL 마케터",
             "counts": {
-              "job": 25,
-              "user": 11035
+              "job": 89,
+              "user": 12296
+            }
+          },
+          {
+            "id": 1032,
+            "image": "https://static.wanted.co.kr/images/tags/b822bf9e.jpg",
+            "title": "마케팅 디렉터",
+            "counts": {
+              "job": 89,
+              "user": 16527
+            }
+          },
+          {
+            "id": 720,
+            "image": "https://static.wanted.co.kr/images/tags/9ad988d0-428a-11e6-870e-029e8c03f357.jpg",
+            "title": "제휴",
+            "counts": {
+              "job": 79,
+              "user": 8339
+            }
+          },
+          {
+            "id": 1033,
+            "image": "https://static.wanted.co.kr/images/tags/ffa906e8.jpg",
+            "title": "모바일마케팅",
+            "counts": {
+              "job": 60,
+              "user": 13719
+            }
+          },
+          {
+            "id": 10527,
+            "image": null,
+            "title": "CRM 마케터",
+            "counts": {
+              "job": 52,
+              "user": 1719
+            }
+          },
+          {
+            "id": 722,
+            "image": "https://static.wanted.co.kr/images/tags/8d86465c-43eb-11e6-aa6b-0a30d591bfc5.jpg",
+            "title": "키워드광고",
+            "counts": {
+              "job": 21,
+              "user": 9261
+            }
+          },
+          {
+            "id": 708,
+            "image": "https://static.wanted.co.kr/images/tags/877473f6-43eb-11e6-80ef-0a30d591bfc5.jpg",
+            "title": "카피라이터",
+            "counts": {
+              "job": 20,
+              "user": 11866
+            }
+          },
+          {
+            "id": 709,
+            "image": "https://static.wanted.co.kr/images/tags/4dde7fc4-43eb-11e6-90dd-0a30d591bfc5.jpg",
+            "title": "마켓 리서처",
+            "counts": {
+              "job": 9,
+              "user": 9958
             }
           },
           {
@@ -4464,8 +4356,8 @@
             "image": "https://static.wanted.co.kr/images/tags/9557eae8-43eb-11e6-90dd-0a30d591bfc5.jpg",
             "title": "ATL 마케터",
             "counts": {
-              "job": 12,
-              "user": 8364
+              "job": 6,
+              "user": 9009
             }
           },
           {
@@ -4473,8 +4365,8 @@
             "image": "https://static.wanted.co.kr/images/tags/a3efa19a-43eb-11e6-80ef-0a30d591bfc5.jpg",
             "title": "CMO,Chief Marketing Officer",
             "counts": {
-              "job": 10,
-              "user": 3611
+              "job": 5,
+              "user": 4188
             }
           },
           {
@@ -4482,8 +4374,8 @@
             "image": "https://static.wanted.co.kr/images/tags/906eab12-4282-11e6-adae-029e8c03f357.jpg",
             "title": "CBO,Chief Brand Officer",
             "counts": {
-              "job": 6,
-              "user": 2046
+              "job": 1,
+              "user": 2436
             }
           },
           {
@@ -4491,15 +4383,15 @@
             "image": "https://static.wanted.co.kr/images/tags/a9a5dc62.jpg",
             "title": "Sports 전문가",
             "counts": {
-              "job": 3,
-              "user": 3181
+              "job": 1,
+              "user": 3932
             }
           }
         ],
         "title": "마케팅·광고",
         "counts": {
-          "job": 1518,
-          "user": 167797
+          "job": 2536,
+          "user": 199812
         }
       },
       {
@@ -4507,21 +4399,12 @@
         "image": "https://static.wanted.co.kr/images/tags/8d39d3a6.jpg",
         "tags": [
           {
-            "id": 599,
-            "image": "https://static.wanted.co.kr/images/tags/c5ec179e-43e9-11e6-90dd-0a30d591bfc5.jpg",
-            "title": "UX 디자이너",
+            "id": 592,
+            "image": "https://static.wanted.co.kr/images/tags/8108a67e-43e9-11e6-90dd-0a30d591bfc5.jpg",
+            "title": "그래픽 디자이너",
             "counts": {
               "job": 456,
-              "user": 35194
-            }
-          },
-          {
-            "id": 597,
-            "image": "https://static.wanted.co.kr/images/tags/c08d07d6-43e9-11e6-aa6b-0a30d591bfc5.jpg",
-            "title": "UI,GUI 디자이너",
-            "counts": {
-              "job": 407,
-              "user": 35098
+              "user": 66981
             }
           },
           {
@@ -4529,17 +4412,26 @@
             "image": "https://static.wanted.co.kr/images/tags/9d0bbe4c-43e9-11e6-90dd-0a30d591bfc5.jpg",
             "title": "웹 디자이너",
             "counts": {
-              "job": 404,
-              "user": 41937
+              "job": 384,
+              "user": 50777
             }
           },
           {
-            "id": 592,
-            "image": "https://static.wanted.co.kr/images/tags/8108a67e-43e9-11e6-90dd-0a30d591bfc5.jpg",
-            "title": "그래픽 디자이너",
+            "id": 599,
+            "image": "https://static.wanted.co.kr/images/tags/c5ec179e-43e9-11e6-90dd-0a30d591bfc5.jpg",
+            "title": "UX 디자이너",
             "counts": {
-              "job": 292,
-              "user": 54332
+              "job": 290,
+              "user": 45420
+            }
+          },
+          {
+            "id": 597,
+            "image": "https://static.wanted.co.kr/images/tags/c08d07d6-43e9-11e6-aa6b-0a30d591bfc5.jpg",
+            "title": "UI,GUI 디자이너",
+            "counts": {
+              "job": 277,
+              "user": 43516
             }
           },
           {
@@ -4547,35 +4439,8 @@
             "image": "https://static.wanted.co.kr/images/tags/b76b9f82-43e9-11e6-945a-0a30d591bfc5.jpg",
             "title": "제품 디자이너",
             "counts": {
-              "job": 148,
-              "user": 17666
-            }
-          },
-          {
-            "id": 1029,
-            "image": "https://static.wanted.co.kr/images/tags/cc1c36e0.jpg",
-            "title": "광고 디자이너",
-            "counts": {
-              "job": 142,
-              "user": 16944
-            }
-          },
-          {
-            "id": 595,
-            "image": "https://static.wanted.co.kr/images/tags/8644c992-43e9-11e6-90dd-0a30d591bfc5.jpg",
-            "title": "모바일 디자이너",
-            "counts": {
-              "job": 139,
-              "user": 14456
-            }
-          },
-          {
-            "id": 879,
-            "image": "https://static.wanted.co.kr/images/tags/bc84a270-43e9-11e6-90dd-0a30d591bfc5.jpg",
-            "title": "BI/BX 디자이너",
-            "counts": {
-              "job": 104,
-              "user": 18506
+              "job": 202,
+              "user": 22078
             }
           },
           {
@@ -4583,89 +4448,35 @@
             "image": "https://static.wanted.co.kr/images/tags/8edaa342-43e9-11e6-80ef-0a30d591bfc5.jpg",
             "title": "영상,모션 디자이너",
             "counts": {
-              "job": 86,
-              "user": 14037
+              "job": 145,
+              "user": 17697
             }
           },
           {
-            "id": 10130,
-            "image": "https://static.wanted.co.kr/images/tags/a897260c.jpg",
-            "title": "패키지 디자이너",
+            "id": 10532,
+            "image": null,
+            "title": "콘텐츠 디자이너",
             "counts": {
-              "job": 84,
-              "user": 7635
+              "job": 137,
+              "user": 5168
             }
           },
           {
-            "id": 929,
-            "image": "https://static.wanted.co.kr/images/tags/a1784abe-4fc3-11e6-852d-0a30d591bfc5.jpg",
-            "title": "3D 디자이너",
+            "id": 595,
+            "image": "https://static.wanted.co.kr/images/tags/8644c992-43e9-11e6-90dd-0a30d591bfc5.jpg",
+            "title": "모바일 디자이너",
             "counts": {
-              "job": 68,
-              "user": 13738
+              "job": 130,
+              "user": 17287
             }
           },
           {
-            "id": 928,
-            "image": "https://static.wanted.co.kr/images/tags/516ced3e-637f-11e6-831d-0a30d591bfc5.jpg",
-            "title": "2D 디자이너",
+            "id": 879,
+            "image": "https://static.wanted.co.kr/images/tags/bc84a270-43e9-11e6-90dd-0a30d591bfc5.jpg",
+            "title": "BI/BX 디자이너",
             "counts": {
-              "job": 49,
-              "user": 25422
-            }
-          },
-          {
-            "id": 953,
-            "image": "https://static.wanted.co.kr/images/tags/d5c8b328-ccbc-11e6-84e1-0a30d591bfc5.jpg",
-            "title": "패션 디자이너",
-            "counts": {
-              "job": 45,
-              "user": 16725
-            }
-          },
-          {
-            "id": 593,
-            "image": "https://static.wanted.co.kr/images/tags/8a7fe870-43e9-11e6-90dd-0a30d591bfc5.jpg",
-            "title": "아트 디렉터",
-            "counts": {
-              "job": 44,
-              "user": 14726
-            }
-          },
-          {
-            "id": 596,
-            "image": "https://static.wanted.co.kr/images/tags/b3119ea0-43e9-11e6-90dd-0a30d591bfc5.jpg",
-            "title": "일러스트레이터",
-            "counts": {
-              "job": 37,
-              "user": 19973
-            }
-          },
-          {
-            "id": 606,
-            "image": "https://static.wanted.co.kr/images/tags/7bb4eab6-43e9-11e6-90dd-0a30d591bfc5.jpg",
-            "title": "공간 디자이너",
-            "counts": {
-              "job": 33,
-              "user": 14125
-            }
-          },
-          {
-            "id": 601,
-            "image": "https://static.wanted.co.kr/images/tags/a2574dc6-43e9-11e6-80ef-0a30d591bfc5.jpg",
-            "title": "인테리어 디자이너",
-            "counts": {
-              "job": 29,
-              "user": 15140
-            }
-          },
-          {
-            "id": 600,
-            "image": "https://static.wanted.co.kr/images/tags/611b7e9e-637f-11e6-831d-0a30d591bfc5.jpg",
-            "title": "산업 디자이너",
-            "counts": {
-              "job": 28,
-              "user": 9817
+              "job": 127,
+              "user": 23874
             }
           },
           {
@@ -4673,35 +4484,71 @@
             "image": "https://static.wanted.co.kr/images/tags/ccf551f2-ccbc-11e6-95de-0a30d591bfc5.jpg",
             "title": "출판, 편집 디자이너",
             "counts": {
-              "job": 27,
-              "user": 21480
+              "job": 127,
+              "user": 25411
             }
           },
           {
-            "id": 951,
-            "image": "https://static.wanted.co.kr/images/tags/c3503360-ccbc-11e6-84e1-0a30d591bfc5.jpg",
-            "title": "캐릭터 디자이너",
+            "id": 596,
+            "image": "https://static.wanted.co.kr/images/tags/b3119ea0-43e9-11e6-90dd-0a30d591bfc5.jpg",
+            "title": "일러스트레이터",
             "counts": {
-              "job": 25,
-              "user": 11785
+              "job": 113,
+              "user": 23584
             }
           },
           {
-            "id": 10129,
-            "image": "https://static.wanted.co.kr/images/tags/974fce01.jpg",
-            "title": "전시 디자이너",
+            "id": 1029,
+            "image": "https://static.wanted.co.kr/images/tags/cc1c36e0.jpg",
+            "title": "광고 디자이너",
             "counts": {
-              "job": 13,
-              "user": 3154
+              "job": 113,
+              "user": 21652
             }
           },
           {
-            "id": 10127,
-            "image": "https://static.wanted.co.kr/images/tags/999a9a57.jpg",
-            "title": "가구 디자이너",
+            "id": 929,
+            "image": "https://static.wanted.co.kr/images/tags/a1784abe-4fc3-11e6-852d-0a30d591bfc5.jpg",
+            "title": "3D 디자이너",
             "counts": {
-              "job": 12,
-              "user": 2354
+              "job": 102,
+              "user": 17542
+            }
+          },
+          {
+            "id": 601,
+            "image": "https://static.wanted.co.kr/images/tags/a2574dc6-43e9-11e6-80ef-0a30d591bfc5.jpg",
+            "title": "인테리어 디자이너",
+            "counts": {
+              "job": 92,
+              "user": 18212
+            }
+          },
+          {
+            "id": 10130,
+            "image": "https://static.wanted.co.kr/images/tags/a897260c.jpg",
+            "title": "패키지 디자이너",
+            "counts": {
+              "job": 76,
+              "user": 12450
+            }
+          },
+          {
+            "id": 953,
+            "image": "https://static.wanted.co.kr/images/tags/d5c8b328-ccbc-11e6-84e1-0a30d591bfc5.jpg",
+            "title": "패션 디자이너",
+            "counts": {
+              "job": 42,
+              "user": 19182
+            }
+          },
+          {
+            "id": 606,
+            "image": "https://static.wanted.co.kr/images/tags/7bb4eab6-43e9-11e6-90dd-0a30d591bfc5.jpg",
+            "title": "공간 디자이너",
+            "counts": {
+              "job": 32,
+              "user": 17804
             }
           },
           {
@@ -4709,17 +4556,53 @@
             "image": "https://static.wanted.co.kr/images/tags/4be65f25.jpg",
             "title": "VMD",
             "counts": {
-              "job": 9,
-              "user": 3894
+              "job": 24,
+              "user": 6176
             }
           },
           {
-            "id": 605,
-            "image": "https://static.wanted.co.kr/images/tags/0f9eaedc.jpg",
-            "title": "조경 디자이너",
+            "id": 593,
+            "image": "https://static.wanted.co.kr/images/tags/8a7fe870-43e9-11e6-90dd-0a30d591bfc5.jpg",
+            "title": "아트 디렉터",
             "counts": {
-              "job": 5,
-              "user": 2924
+              "job": 23,
+              "user": 17576
+            }
+          },
+          {
+            "id": 928,
+            "image": "https://static.wanted.co.kr/images/tags/516ced3e-637f-11e6-831d-0a30d591bfc5.jpg",
+            "title": "2D 디자이너",
+            "counts": {
+              "job": 21,
+              "user": 29798
+            }
+          },
+          {
+            "id": 600,
+            "image": "https://static.wanted.co.kr/images/tags/611b7e9e-637f-11e6-831d-0a30d591bfc5.jpg",
+            "title": "산업 디자이너",
+            "counts": {
+              "job": 17,
+              "user": 11524
+            }
+          },
+          {
+            "id": 10530,
+            "image": null,
+            "title": "UX 리서처",
+            "counts": {
+              "job": 17,
+              "user": 1482
+            }
+          },
+          {
+            "id": 951,
+            "image": "https://static.wanted.co.kr/images/tags/c3503360-ccbc-11e6-84e1-0a30d591bfc5.jpg",
+            "title": "캐릭터 디자이너",
+            "counts": {
+              "job": 14,
+              "user": 15055
             }
           },
           {
@@ -4727,143 +4610,42 @@
             "image": "https://static.wanted.co.kr/images/tags/5109ee46.jpg",
             "title": "패브릭 디자이너",
             "counts": {
-              "job": 5,
-              "user": 1678
+              "job": 6,
+              "user": 2270
+            }
+          },
+          {
+            "id": 10129,
+            "image": "https://static.wanted.co.kr/images/tags/974fce01.jpg",
+            "title": "전시 디자이너",
+            "counts": {
+              "job": 4,
+              "user": 5206
+            }
+          },
+          {
+            "id": 10127,
+            "image": "https://static.wanted.co.kr/images/tags/999a9a57.jpg",
+            "title": "가구 디자이너",
+            "counts": {
+              "job": 2,
+              "user": 3540
+            }
+          },
+          {
+            "id": 605,
+            "image": "https://static.wanted.co.kr/images/tags/0f9eaedc.jpg",
+            "title": "조경 디자이너",
+            "counts": {
+              "job": 0,
+              "user": 3589
             }
           }
         ],
         "title": "디자인",
         "counts": {
-          "job": 1106,
-          "user": 195551
-        }
-      },
-      {
-        "id": 530,
-        "image": "https://static.wanted.co.kr/images/tags/3c36ce46.jpg",
-        "tags": [
-          {
-            "id": 1036,
-            "image": "https://static.wanted.co.kr/images/tags/b76d0598.jpg",
-            "title": "기업영업",
-            "counts": {
-              "job": 405,
-              "user": 25872
-            }
-          },
-          {
-            "id": 766,
-            "image": "https://static.wanted.co.kr/images/tags/b1863c0e-43f7-11e6-90dd-0a30d591bfc5.jpg",
-            "title": "외부영업",
-            "counts": {
-              "job": 332,
-              "user": 34016
-            }
-          },
-          {
-            "id": 954,
-            "image": "https://static.wanted.co.kr/images/tags/dfea25ee-ccbc-11e6-84e1-0a30d591bfc5.jpg",
-            "title": "영업 관리자",
-            "counts": {
-              "job": 318,
-              "user": 53422
-            }
-          },
-          {
-            "id": 770,
-            "image": "https://static.wanted.co.kr/images/tags/bdb973d8-43f7-11e6-945a-0a30d591bfc5.jpg",
-            "title": "기술영업",
-            "counts": {
-              "job": 244,
-              "user": 20498
-            }
-          },
-          {
-            "id": 768,
-            "image": "https://static.wanted.co.kr/images/tags/c7b628c0-03a7-11e7-8094-0213e6175ee7.jpg",
-            "title": "주요고객사 담당자",
-            "counts": {
-              "job": 223,
-              "user": 17316
-            }
-          },
-          {
-            "id": 955,
-            "image": "https://static.wanted.co.kr/images/tags/eaff77cc-ccbc-11e6-84e1-0a30d591bfc5.jpg",
-            "title": "해외영업",
-            "counts": {
-              "job": 176,
-              "user": 25263
-            }
-          },
-          {
-            "id": 1035,
-            "image": "https://static.wanted.co.kr/images/tags/6772b2ae.jpg",
-            "title": "솔루션 컨설턴트",
-            "counts": {
-              "job": 94,
-              "user": 8624
-            }
-          },
-          {
-            "id": 1633,
-            "image": "https://static.wanted.co.kr/images/tags/efbb3cce.jpg",
-            "title": "미디어 세일즈",
-            "counts": {
-              "job": 59,
-              "user": 5065
-            }
-          },
-          {
-            "id": 1037,
-            "image": "https://static.wanted.co.kr/images/tags/021d8d7e.jpg",
-            "title": "고객성공매니저",
-            "counts": {
-              "job": 41,
-              "user": 7457
-            }
-          },
-          {
-            "id": 767,
-            "image": "https://static.wanted.co.kr/images/tags/a547e99a-03a7-11e7-a81b-0aba6235ef6f.jpg",
-            "title": "내부영업",
-            "counts": {
-              "job": 34,
-              "user": 18687
-            }
-          },
-          {
-            "id": 772,
-            "image": "https://static.wanted.co.kr/images/tags/b0a2ba68.jpg",
-            "title": "의료기기 영업",
-            "counts": {
-              "job": 32,
-              "user": 4578
-            }
-          },
-          {
-            "id": 773,
-            "image": "https://static.wanted.co.kr/images/tags/c25e9a12-43f7-11e6-90dd-0a30d591bfc5.jpg",
-            "title": "세일즈 엔지니어",
-            "counts": {
-              "job": 27,
-              "user": 5808
-            }
-          },
-          {
-            "id": 771,
-            "image": "https://static.wanted.co.kr/images/tags/55d45eec-03a8-11e7-9be6-0219382c3fab.jpg",
-            "title": "제약영업",
-            "counts": {
-              "job": 15,
-              "user": 7012
-            }
-          }
-        ],
-        "title": "영업",
-        "counts": {
-          "job": 812,
-          "user": 149108
+          "job": 1582,
+          "user": 231476
         }
       },
       {
@@ -4875,17 +4657,8 @@
             "image": "https://static.wanted.co.kr/images/tags/07b18d3c-4726-11e6-b9ca-0a30d591bfc5.jpg",
             "title": "MD",
             "counts": {
-              "job": 309,
-              "user": 22573
-            }
-          },
-          {
-            "id": 10126,
-            "image": "https://static.wanted.co.kr/images/tags/1028a03b.jpg",
-            "title": "서비스 운영",
-            "counts": {
-              "job": 270,
-              "user": 21572
+              "job": 388,
+              "user": 25977
             }
           },
           {
@@ -4893,8 +4666,8 @@
             "image": "https://static.wanted.co.kr/images/tags/dc946f10.jpg",
             "title": "CS 매니저",
             "counts": {
-              "job": 263,
-              "user": 29822
+              "job": 313,
+              "user": 33423
             }
           },
           {
@@ -4902,8 +4675,8 @@
             "image": "https://static.wanted.co.kr/images/tags/ed0fbc08-4fc5-11e6-be31-0a30d591bfc5.jpg",
             "title": "리테일 MD",
             "counts": {
-              "job": 146,
-              "user": 9016
+              "job": 217,
+              "user": 10242
             }
           },
           {
@@ -4911,26 +4684,17 @@
             "image": "https://static.wanted.co.kr/images/tags/d8f6a8fe-43e4-11e6-90dd-0a30d591bfc5.jpg",
             "title": "CS 어드바이저",
             "counts": {
-              "job": 108,
-              "user": 15574
+              "job": 186,
+              "user": 17026
             }
           },
           {
-            "id": 759,
-            "image": "https://static.wanted.co.kr/images/tags/3fa49738-43e4-11e6-90dd-0a30d591bfc5.jpg",
-            "title": "패션 MD",
+            "id": 10126,
+            "image": "https://static.wanted.co.kr/images/tags/1028a03b.jpg",
+            "title": "서비스 운영",
             "counts": {
-              "job": 95,
-              "user": 10517
-            }
-          },
-          {
-            "id": 901,
-            "image": "https://static.wanted.co.kr/images/tags/e8af3a40-43e4-11e6-90dd-0a30d591bfc5.jpg",
-            "title": "CRM 전문가",
-            "counts": {
-              "job": 73,
-              "user": 5495
+              "job": 167,
+              "user": 27121
             }
           },
           {
@@ -4938,8 +4702,26 @@
             "image": "https://static.wanted.co.kr/images/tags/7a0d5b08-03a1-11e7-8ad5-0219382c3fab.jpg",
             "title": "매장 관리자",
             "counts": {
-              "job": 46,
-              "user": 27599
+              "job": 125,
+              "user": 29752
+            }
+          },
+          {
+            "id": 759,
+            "image": "https://static.wanted.co.kr/images/tags/3fa49738-43e4-11e6-90dd-0a30d591bfc5.jpg",
+            "title": "패션 MD",
+            "counts": {
+              "job": 101,
+              "user": 11978
+            }
+          },
+          {
+            "id": 901,
+            "image": "https://static.wanted.co.kr/images/tags/e8af3a40-43e4-11e6-90dd-0a30d591bfc5.jpg",
+            "title": "CRM 전문가",
+            "counts": {
+              "job": 90,
+              "user": 5985
             }
           },
           {
@@ -4947,26 +4729,8 @@
             "image": "https://static.wanted.co.kr/images/tags/201efdc4-ccbd-11e6-84e1-0a30d591bfc5.jpg",
             "title": "인바운드 텔레마케터",
             "counts": {
-              "job": 44,
-              "user": 8602
-            }
-          },
-          {
-            "id": 754,
-            "image": "https://static.wanted.co.kr/images/tags/86eaba14-03a1-11e7-a97f-0213e6175ee7.jpg",
-            "title": "매장점원",
-            "counts": {
-              "job": 29,
-              "user": 25907
-            }
-          },
-          {
-            "id": 902,
-            "image": "https://static.wanted.co.kr/images/tags/16f65c24-ccbd-11e6-b4e9-0a30d591bfc5.jpg",
-            "title": "아웃바운드 텔레마케터",
-            "counts": {
-              "job": 24,
-              "user": 3913
+              "job": 23,
+              "user": 9403
             }
           },
           {
@@ -4974,17 +4738,26 @@
             "image": "https://static.wanted.co.kr/images/tags/7f65e6aa-03a7-11e7-8ad5-0219382c3fab.jpg",
             "title": "가맹점 관리자",
             "counts": {
-              "job": 21,
-              "user": 7692
+              "job": 17,
+              "user": 8155
             }
           },
           {
-            "id": 639,
-            "image": "https://static.wanted.co.kr/images/tags/aa115ff6.jpg",
-            "title": "이벤트 기획자",
+            "id": 902,
+            "image": "https://static.wanted.co.kr/images/tags/16f65c24-ccbd-11e6-b4e9-0a30d591bfc5.jpg",
+            "title": "아웃바운드 텔레마케터",
             "counts": {
               "job": 13,
-              "user": 6652
+              "user": 4220
+            }
+          },
+          {
+            "id": 754,
+            "image": "https://static.wanted.co.kr/images/tags/86eaba14-03a1-11e7-a97f-0213e6175ee7.jpg",
+            "title": "매장점원",
+            "counts": {
+              "job": 9,
+              "user": 27797
             }
           },
           {
@@ -4992,8 +4765,8 @@
             "image": "https://static.wanted.co.kr/images/tags/0569f716.jpg",
             "title": "AS 기술자",
             "counts": {
-              "job": 11,
-              "user": 5610
+              "job": 7,
+              "user": 6347
             }
           },
           {
@@ -5001,8 +4774,17 @@
             "image": "https://static.wanted.co.kr/images/tags/63fead51.jpg",
             "title": "리셉션",
             "counts": {
-              "job": 8,
-              "user": 2959
+              "job": 5,
+              "user": 3679
+            }
+          },
+          {
+            "id": 639,
+            "image": "https://static.wanted.co.kr/images/tags/aa115ff6.jpg",
+            "title": "이벤트 기획자",
+            "counts": {
+              "job": 4,
+              "user": 7001
             }
           },
           {
@@ -5010,8 +4792,8 @@
             "image": "https://static.wanted.co.kr/images/tags/a84979c0.jpg",
             "title": "여행 에이전트",
             "counts": {
-              "job": 7,
-              "user": 10242
+              "job": 4,
+              "user": 10796
             }
           },
           {
@@ -5019,8 +4801,8 @@
             "image": "https://static.wanted.co.kr/images/tags/5ec37a3a-03a6-11e7-a894-0aba6235ef6f.jpg",
             "title": "비주얼머천다이저",
             "counts": {
-              "job": 6,
-              "user": 3184
+              "job": 3,
+              "user": 3280
             }
           },
           {
@@ -5028,8 +4810,8 @@
             "image": "https://static.wanted.co.kr/images/tags/003c9f64.jpg",
             "title": "헬스케어매니저",
             "counts": {
-              "job": 4,
-              "user": 3201
+              "job": 2,
+              "user": 3551
             }
           },
           {
@@ -5038,7 +4820,7 @@
             "title": "승무원",
             "counts": {
               "job": 1,
-              "user": 9211
+              "user": 10246
             }
           },
           {
@@ -5047,7 +4829,7 @@
             "title": "피부관리사",
             "counts": {
               "job": 1,
-              "user": 4839
+              "user": 5529
             }
           },
           {
@@ -5056,7 +4838,7 @@
             "title": "플로리스트",
             "counts": {
               "job": 0,
-              "user": 2019
+              "user": 2137
             }
           },
           {
@@ -5065,7 +4847,7 @@
             "title": "헤어 디자이너",
             "counts": {
               "job": 0,
-              "user": 3520
+              "user": 4067
             }
           },
           {
@@ -5074,16 +4856,7 @@
             "title": "미용사",
             "counts": {
               "job": 0,
-              "user": 3072
-            }
-          },
-          {
-            "id": 10124,
-            "image": "https://static.wanted.co.kr/images/tags/30e57a62.jpg",
-            "title": "애견 미용사",
-            "counts": {
-              "job": 0,
-              "user": 655
+              "user": 3848
             }
           },
           {
@@ -5092,14 +4865,142 @@
             "title": "캐디",
             "counts": {
               "job": 0,
-              "user": 59
+              "user": 518
             }
           }
         ],
         "title": "고객서비스·리테일",
         "counts": {
-          "job": 678,
-          "user": 158920
+          "job": 1052,
+          "user": 176797
+        }
+      },
+      {
+        "id": 530,
+        "image": "https://static.wanted.co.kr/images/tags/3c36ce46.jpg",
+        "tags": [
+          {
+            "id": 954,
+            "image": "https://static.wanted.co.kr/images/tags/dfea25ee-ccbc-11e6-84e1-0a30d591bfc5.jpg",
+            "title": "영업 관리자",
+            "counts": {
+              "job": 533,
+              "user": 62562
+            }
+          },
+          {
+            "id": 768,
+            "image": "https://static.wanted.co.kr/images/tags/c7b628c0-03a7-11e7-8094-0213e6175ee7.jpg",
+            "title": "주요고객사 담당자",
+            "counts": {
+              "job": 353,
+              "user": 20403
+            }
+          },
+          {
+            "id": 955,
+            "image": "https://static.wanted.co.kr/images/tags/eaff77cc-ccbc-11e6-84e1-0a30d591bfc5.jpg",
+            "title": "해외영업",
+            "counts": {
+              "job": 298,
+              "user": 30093
+            }
+          },
+          {
+            "id": 1036,
+            "image": "https://static.wanted.co.kr/images/tags/b76d0598.jpg",
+            "title": "기업영업",
+            "counts": {
+              "job": 293,
+              "user": 30910
+            }
+          },
+          {
+            "id": 766,
+            "image": "https://static.wanted.co.kr/images/tags/b1863c0e-43f7-11e6-90dd-0a30d591bfc5.jpg",
+            "title": "외부영업",
+            "counts": {
+              "job": 193,
+              "user": 38389
+            }
+          },
+          {
+            "id": 770,
+            "image": "https://static.wanted.co.kr/images/tags/bdb973d8-43f7-11e6-945a-0a30d591bfc5.jpg",
+            "title": "기술영업",
+            "counts": {
+              "job": 163,
+              "user": 25073
+            }
+          },
+          {
+            "id": 1035,
+            "image": "https://static.wanted.co.kr/images/tags/6772b2ae.jpg",
+            "title": "솔루션 컨설턴트",
+            "counts": {
+              "job": 118,
+              "user": 9931
+            }
+          },
+          {
+            "id": 1037,
+            "image": "https://static.wanted.co.kr/images/tags/021d8d7e.jpg",
+            "title": "고객성공매니저",
+            "counts": {
+              "job": 77,
+              "user": 8331
+            }
+          },
+          {
+            "id": 1633,
+            "image": "https://static.wanted.co.kr/images/tags/efbb3cce.jpg",
+            "title": "미디어 세일즈",
+            "counts": {
+              "job": 52,
+              "user": 6060
+            }
+          },
+          {
+            "id": 773,
+            "image": "https://static.wanted.co.kr/images/tags/c25e9a12-43f7-11e6-90dd-0a30d591bfc5.jpg",
+            "title": "세일즈 엔지니어",
+            "counts": {
+              "job": 39,
+              "user": 6522
+            }
+          },
+          {
+            "id": 772,
+            "image": "https://static.wanted.co.kr/images/tags/b0a2ba68.jpg",
+            "title": "의료기기 영업",
+            "counts": {
+              "job": 34,
+              "user": 5458
+            }
+          },
+          {
+            "id": 767,
+            "image": "https://static.wanted.co.kr/images/tags/a547e99a-03a7-11e7-a81b-0aba6235ef6f.jpg",
+            "title": "내부영업",
+            "counts": {
+              "job": 24,
+              "user": 20618
+            }
+          },
+          {
+            "id": 771,
+            "image": "https://static.wanted.co.kr/images/tags/55d45eec-03a8-11e7-9be6-0219382c3fab.jpg",
+            "title": "제약영업",
+            "counts": {
+              "job": 6,
+              "user": 7988
+            }
+          }
+        ],
+        "title": "영업",
+        "counts": {
+          "job": 854,
+          "user": 169541
         }
       },
       {
@@ -5107,12 +5008,21 @@
         "image": "https://static.wanted.co.kr/images/tags/43a5dd52.jpg",
         "tags": [
           {
+            "id": 723,
+            "image": "https://static.wanted.co.kr/images/tags/93a36738-43e9-11e6-90dd-0a30d591bfc5.jpg",
+            "title": "영상 편집가",
+            "counts": {
+              "job": 201,
+              "user": 22683
+            }
+          },
+          {
             "id": 727,
             "image": "https://static.wanted.co.kr/images/tags/35754d1c-43f7-11e6-90dd-0a30d591bfc5.jpg",
             "title": "PD",
             "counts": {
-              "job": 109,
-              "user": 23075
+              "job": 187,
+              "user": 27986
             }
           },
           {
@@ -5120,26 +5030,17 @@
             "image": "https://static.wanted.co.kr/images/tags/7f4f5bcc.jpg",
             "title": "콘텐츠 크리에이터",
             "counts": {
-              "job": 104,
-              "user": 20863
+              "job": 140,
+              "user": 24606
             }
           },
           {
-            "id": 723,
-            "image": "https://static.wanted.co.kr/images/tags/93a36738-43e9-11e6-90dd-0a30d591bfc5.jpg",
-            "title": "영상 편집가",
+            "id": 10535,
+            "image": null,
+            "title": "콘텐츠 에디터",
             "counts": {
-              "job": 95,
-              "user": 18714
-            }
-          },
-          {
-            "id": 725,
-            "image": "https://static.wanted.co.kr/images/tags/1a223b92-43f7-11e6-90dd-0a30d591bfc5.jpg",
-            "title": "에디터",
-            "counts": {
-              "job": 57,
-              "user": 15327
+              "job": 43,
+              "user": 2157
             }
           },
           {
@@ -5147,26 +5048,8 @@
             "image": null,
             "title": "비디오 제작",
             "counts": {
-              "job": 57,
-              "user": 10165
-            }
-          },
-          {
-            "id": 10235,
-            "image": "https://static.wanted.co.kr/images/tags/ecd68f64-7cec-11ec-8b72-acde48001122.jpg",
-            "title": "연예,엔터테인먼트",
-            "counts": {
-              "job": 29,
-              "user": 5128
-            }
-          },
-          {
-            "id": 724,
-            "image": "https://static.wanted.co.kr/images/tags/2d8d4388-4709-11e6-96e3-0a30d591bfc5.jpg",
-            "title": "작가",
-            "counts": {
-              "job": 28,
-              "user": 11367
+              "job": 38,
+              "user": 13255
             }
           },
           {
@@ -5174,8 +5057,26 @@
             "image": "https://static.wanted.co.kr/images/tags/6319a2d8.jpg",
             "title": "통·번역",
             "counts": {
-              "job": 26,
-              "user": 6027
+              "job": 27,
+              "user": 6789
+            }
+          },
+          {
+            "id": 10235,
+            "image": "https://static.wanted.co.kr/images/tags/ecd68f64-7cec-11ec-8b72-acde48001122.jpg",
+            "title": "연예,엔터테인먼트",
+            "counts": {
+              "job": 17,
+              "user": 8981
+            }
+          },
+          {
+            "id": 725,
+            "image": "https://static.wanted.co.kr/images/tags/1a223b92-43f7-11e6-90dd-0a30d591bfc5.jpg",
+            "title": "에디터",
+            "counts": {
+              "job": 14,
+              "user": 16939
             }
           },
           {
@@ -5183,26 +5084,17 @@
             "image": "https://static.wanted.co.kr/images/tags/35585180-03a0-11e7-8ad5-0219382c3fab.jpg",
             "title": "사진작가",
             "counts": {
-              "job": 17,
-              "user": 8009
+              "job": 14,
+              "user": 9057
             }
           },
           {
-            "id": 1636,
-            "image": "https://static.wanted.co.kr/images/tags/db453c18.jpg",
-            "title": "라이센스 관리자",
+            "id": 724,
+            "image": "https://static.wanted.co.kr/images/tags/2d8d4388-4709-11e6-96e3-0a30d591bfc5.jpg",
+            "title": "작가",
             "counts": {
-              "job": 11,
-              "user": 1600
-            }
-          },
-          {
-            "id": 726,
-            "image": "https://static.wanted.co.kr/images/tags/49662d0a-03a0-11e7-bd2d-0aba6235ef6f.jpg",
-            "title": "저널리스트",
-            "counts": {
-              "job": 9,
-              "user": 6705
+              "job": 10,
+              "user": 13062
             }
           },
           {
@@ -5210,17 +5102,8 @@
             "image": "https://static.wanted.co.kr/images/tags/f2bacafc-ccbc-11e6-b4e9-0a30d591bfc5.jpg",
             "title": "출판 기획자",
             "counts": {
-              "job": 9,
-              "user": 6192
-            }
-          },
-          {
-            "id": 728,
-            "image": "https://static.wanted.co.kr/images/tags/070cda72.jpg",
-            "title": "리포터",
-            "counts": {
-              "job": 4,
-              "user": 3473
+              "job": 5,
+              "user": 7079
             }
           },
           {
@@ -5228,8 +5111,53 @@
             "image": "https://static.wanted.co.kr/images/tags/f9036db0-ccbc-11e6-af0f-0a30d591bfc5.jpg",
             "title": "음향 엔지니어",
             "counts": {
-              "job": 2,
-              "user": 5218
+              "job": 5,
+              "user": 5833
+            }
+          },
+          {
+            "id": 1636,
+            "image": "https://static.wanted.co.kr/images/tags/db453c18.jpg",
+            "title": "라이센스 관리자",
+            "counts": {
+              "job": 5,
+              "user": 1824
+            }
+          },
+          {
+            "id": 726,
+            "image": "https://static.wanted.co.kr/images/tags/49662d0a-03a0-11e7-bd2d-0aba6235ef6f.jpg",
+            "title": "저널리스트",
+            "counts": {
+              "job": 1,
+              "user": 7372
+            }
+          },
+          {
+            "id": 10533,
+            "image": null,
+            "title": "사운드 디자이너",
+            "counts": {
+              "job": 1,
+              "user": 389
+            }
+          },
+          {
+            "id": 10534,
+            "image": null,
+            "title": "조명 엔지니어",
+            "counts": {
+              "job": 1,
+              "user": 134
+            }
+          },
+          {
+            "id": 728,
+            "image": "https://static.wanted.co.kr/images/tags/070cda72.jpg",
+            "title": "리포터",
+            "counts": {
+              "job": 0,
+              "user": 3738
             }
           },
           {
@@ -5237,15 +5165,15 @@
             "image": "https://static.wanted.co.kr/images/tags/11b382dc.jpg",
             "title": "큐레이터",
             "counts": {
-              "job": 1,
-              "user": 3506
+              "job": 0,
+              "user": 3853
             }
           }
         ],
         "title": "미디어",
         "counts": {
-          "job": 240,
-          "user": 83684
+          "job": 481,
+          "user": 96073
         }
       },
       {
@@ -5257,17 +5185,8 @@
             "image": "https://static.wanted.co.kr/images/tags/162c5f6a-03ad-11e7-a97f-0213e6175ee7.jpg",
             "title": "전자 엔지니어",
             "counts": {
-              "job": 74,
-              "user": 10019
-            }
-          },
-          {
-            "id": 10145,
-            "image": "https://static.wanted.co.kr/images/tags/e24b9ec5.jpg",
-            "title": "로봇·자동화",
-            "counts": {
-              "job": 66,
-              "user": 3013
+              "job": 78,
+              "user": 13480
             }
           },
           {
@@ -5275,17 +5194,17 @@
             "image": null,
             "title": "기계 엔지니어",
             "counts": {
-              "job": 65,
-              "user": 19055
+              "job": 78,
+              "user": 24276
             }
           },
           {
-            "id": 10132,
-            "image": "https://static.wanted.co.kr/images/tags/564719af.jpg",
-            "title": "CAD·3D 설계자",
+            "id": 10145,
+            "image": "https://static.wanted.co.kr/images/tags/e24b9ec5.jpg",
+            "title": "로봇·자동화",
             "counts": {
-              "job": 48,
-              "user": 8296
+              "job": 70,
+              "user": 4968
             }
           },
           {
@@ -5293,26 +5212,8 @@
             "image": "https://static.wanted.co.kr/images/tags/ecfdcad4.jpg",
             "title": "전기 엔지니어",
             "counts": {
-              "job": 41,
-              "user": 10346
-            }
-          },
-          {
-            "id": 817,
-            "image": "https://static.wanted.co.kr/images/tags/f19c4a7a.jpg",
-            "title": "제어 엔지니어",
-            "counts": {
-              "job": 38,
-              "user": 4421
-            }
-          },
-          {
-            "id": 856,
-            "image": "https://static.wanted.co.kr/images/tags/1ce5a226-03ad-11e7-a97f-0213e6175ee7.jpg",
-            "title": "제품 엔지니어",
-            "counts": {
-              "job": 31,
-              "user": 5450
+              "job": 48,
+              "user": 13227
             }
           },
           {
@@ -5320,44 +5221,26 @@
             "image": "https://static.wanted.co.kr/images/tags/bf8529d0.jpg",
             "title": "전기기계 공학자",
             "counts": {
-              "job": 29,
-              "user": 3584
+              "job": 47,
+              "user": 4804
             }
           },
           {
-            "id": 826,
-            "image": "https://static.wanted.co.kr/images/tags/dbfe5c62.jpg",
-            "title": "장비 엔지니어",
+            "id": 817,
+            "image": "https://static.wanted.co.kr/images/tags/f19c4a7a.jpg",
+            "title": "제어 엔지니어",
             "counts": {
-              "job": 25,
-              "user": 6211
+              "job": 35,
+              "user": 5837
             }
           },
           {
-            "id": 857,
-            "image": "https://static.wanted.co.kr/images/tags/3b89119a-03ad-11e7-a81b-0aba6235ef6f.jpg",
-            "title": "프로젝트 엔지니어",
+            "id": 10132,
+            "image": "https://static.wanted.co.kr/images/tags/564719af.jpg",
+            "title": "CAD·3D 설계자",
             "counts": {
-              "job": 17,
-              "user": 3857
-            }
-          },
-          {
-            "id": 828,
-            "image": "https://static.wanted.co.kr/images/tags/e0d1d1e4.jpg",
-            "title": "설비 엔지니어",
-            "counts": {
-              "job": 14,
-              "user": 6343
-            }
-          },
-          {
-            "id": 804,
-            "image": "https://static.wanted.co.kr/images/tags/e7843d4a.jpg",
-            "title": "자동차 공학자",
-            "counts": {
-              "job": 13,
-              "user": 5990
+              "job": 26,
+              "user": 12395
             }
           },
           {
@@ -5365,17 +5248,44 @@
             "image": "https://static.wanted.co.kr/images/tags/bc112a6e-4283-11e6-a15c-029e8c03f357.jpg",
             "title": "QA 엔지니어",
             "counts": {
-              "job": 13,
-              "user": 3563
+              "job": 21,
+              "user": 4264
             }
           },
           {
-            "id": 836,
-            "image": null,
-            "title": "산업 엔지니어",
+            "id": 856,
+            "image": "https://static.wanted.co.kr/images/tags/1ce5a226-03ad-11e7-a97f-0213e6175ee7.jpg",
+            "title": "제품 엔지니어",
             "counts": {
-              "job": 6,
-              "user": 1621
+              "job": 14,
+              "user": 6802
+            }
+          },
+          {
+            "id": 828,
+            "image": "https://static.wanted.co.kr/images/tags/e0d1d1e4.jpg",
+            "title": "설비 엔지니어",
+            "counts": {
+              "job": 13,
+              "user": 8253
+            }
+          },
+          {
+            "id": 819,
+            "image": "https://static.wanted.co.kr/images/tags/15245b62.jpg",
+            "title": "도면 작성가",
+            "counts": {
+              "job": 7,
+              "user": 6106
+            }
+          },
+          {
+            "id": 826,
+            "image": "https://static.wanted.co.kr/images/tags/dbfe5c62.jpg",
+            "title": "장비 엔지니어",
+            "counts": {
+              "job": 7,
+              "user": 8060
             }
           },
           {
@@ -5383,17 +5293,44 @@
             "image": null,
             "title": "인허가 담당 엔지니어",
             "counts": {
-              "job": 5,
-              "user": 886
+              "job": 6,
+              "user": 1199
             }
           },
           {
-            "id": 855,
-            "image": null,
-            "title": "공정 엔지니어",
+            "id": 857,
+            "image": "https://static.wanted.co.kr/images/tags/3b89119a-03ad-11e7-a81b-0aba6235ef6f.jpg",
+            "title": "프로젝트 엔지니어",
+            "counts": {
+              "job": 6,
+              "user": 4721
+            }
+          },
+          {
+            "id": 802,
+            "image": "https://static.wanted.co.kr/images/tags/8ca5981e.jpg",
+            "title": "항공우주 공학자",
             "counts": {
               "job": 5,
-              "user": 5262
+              "user": 2604
+            }
+          },
+          {
+            "id": 804,
+            "image": "https://static.wanted.co.kr/images/tags/e7843d4a.jpg",
+            "title": "자동차 공학자",
+            "counts": {
+              "job": 5,
+              "user": 7170
+            }
+          },
+          {
+            "id": 812,
+            "image": "https://static.wanted.co.kr/images/tags/54d88952.jpg",
+            "title": "시운전 엔지니어",
+            "counts": {
+              "job": 5,
+              "user": 1567
             }
           },
           {
@@ -5402,25 +5339,34 @@
             "title": "도면 담당자",
             "counts": {
               "job": 4,
-              "user": 4574
+              "user": 5289
             }
           },
           {
-            "id": 824,
-            "image": "https://static.wanted.co.kr/images/tags/a7003e62.jpg",
-            "title": "환경 엔지니어",
-            "counts": {
-              "job": 4,
-              "user": 2969
-            }
-          },
-          {
-            "id": 861,
+            "id": 855,
             "image": null,
-            "title": "전자계전 엔지니어",
+            "title": "공정 엔지니어",
             "counts": {
               "job": 4,
-              "user": 1343
+              "user": 7036
+            }
+          },
+          {
+            "id": 840,
+            "image": null,
+            "title": "생산공학 엔지니어",
+            "counts": {
+              "job": 3,
+              "user": 1602
+            }
+          },
+          {
+            "id": 853,
+            "image": null,
+            "title": "플랜트 엔지니어",
+            "counts": {
+              "job": 3,
+              "user": 3221
             }
           },
           {
@@ -5428,62 +5374,8 @@
             "image": null,
             "title": "RF 엔지니어",
             "counts": {
-              "job": 4,
-              "user": 1104
-            }
-          },
-          {
-            "id": 809,
-            "image": "https://static.wanted.co.kr/images/tags/b55787ea.jpg",
-            "title": "화학공학 엔지니어",
-            "counts": {
               "job": 3,
-              "user": 2658
-            }
-          },
-          {
-            "id": 812,
-            "image": "https://static.wanted.co.kr/images/tags/54d88952.jpg",
-            "title": "시운전 엔지니어",
-            "counts": {
-              "job": 3,
-              "user": 1284
-            }
-          },
-          {
-            "id": 815,
-            "image": "https://static.wanted.co.kr/images/tags/0e856cfc-03ad-11e7-8de0-0213e6175ee7.jpg",
-            "title": "건설 엔지니어",
-            "counts": {
-              "job": 3,
-              "user": 3767
-            }
-          },
-          {
-            "id": 819,
-            "image": "https://static.wanted.co.kr/images/tags/15245b62.jpg",
-            "title": "도면 작성가",
-            "counts": {
-              "job": 3,
-              "user": 5265
-            }
-          },
-          {
-            "id": 802,
-            "image": "https://static.wanted.co.kr/images/tags/8ca5981e.jpg",
-            "title": "항공우주 공학자",
-            "counts": {
-              "job": 2,
-              "user": 2140
-            }
-          },
-          {
-            "id": 825,
-            "image": "https://static.wanted.co.kr/images/tags/b9e3ed26.jpg",
-            "title": "환경 안전기사",
-            "counts": {
-              "job": 2,
-              "user": 1502
+              "user": 1437
             }
           },
           {
@@ -5492,34 +5384,16 @@
             "title": "I&C 엔지니어",
             "counts": {
               "job": 2,
-              "user": 991
+              "user": 1069
             }
           },
           {
-            "id": 842,
+            "id": 848,
             "image": null,
-            "title": "재료공학자",
+            "title": "원자력·에너지",
             "counts": {
               "job": 2,
-              "user": 2142
-            }
-          },
-          {
-            "id": 853,
-            "image": null,
-            "title": "플랜트 엔지니어",
-            "counts": {
-              "job": 2,
-              "user": 2574
-            }
-          },
-          {
-            "id": 854,
-            "image": null,
-            "title": "플라스틱 엔지니어",
-            "counts": {
-              "job": 2,
-              "user": 823
+              "user": 1242
             }
           },
           {
@@ -5528,61 +5402,7 @@
             "title": "QC 엔지니어",
             "counts": {
               "job": 2,
-              "user": 1964
-            }
-          },
-          {
-            "id": 811,
-            "image": "https://static.wanted.co.kr/images/tags/dfb9d85c.jpg",
-            "title": "토목기사",
-            "counts": {
-              "job": 1,
-              "user": 2854
-            }
-          },
-          {
-            "id": 831,
-            "image": "https://static.wanted.co.kr/images/tags/2c0d268e.jpg",
-            "title": "지리정보시스템",
-            "counts": {
-              "job": 1,
-              "user": 451
-            }
-          },
-          {
-            "id": 841,
-            "image": null,
-            "title": "해양공학자",
-            "counts": {
-              "job": 1,
-              "user": 596
-            }
-          },
-          {
-            "id": 848,
-            "image": null,
-            "title": "원자력·에너지",
-            "counts": {
-              "job": 1,
-              "user": 872
-            }
-          },
-          {
-            "id": 858,
-            "image": null,
-            "title": "사업수주 엔지니어",
-            "counts": {
-              "job": 1,
-              "user": 583
-            }
-          },
-          {
-            "id": 865,
-            "image": null,
-            "title": "회전기계 엔지니어",
-            "counts": {
-              "job": 1,
-              "user": 948
+              "user": 2313
             }
           },
           {
@@ -5590,8 +5410,71 @@
             "image": null,
             "title": "구조공학 엔지니어",
             "counts": {
+              "job": 2,
+              "user": 2442
+            }
+          },
+          {
+            "id": 806,
+            "image": "https://static.wanted.co.kr/images/tags/ba3e599e.jpg",
+            "title": "생물의학자",
+            "counts": {
               "job": 1,
-              "user": 1989
+              "user": 205
+            }
+          },
+          {
+            "id": 809,
+            "image": "https://static.wanted.co.kr/images/tags/b55787ea.jpg",
+            "title": "화학공학 엔지니어",
+            "counts": {
+              "job": 1,
+              "user": 3618
+            }
+          },
+          {
+            "id": 820,
+            "image": "https://static.wanted.co.kr/images/tags/76b1c7be.jpg",
+            "title": "시추 엔지니어",
+            "counts": {
+              "job": 1,
+              "user": 197
+            }
+          },
+          {
+            "id": 824,
+            "image": "https://static.wanted.co.kr/images/tags/a7003e62.jpg",
+            "title": "환경 엔지니어",
+            "counts": {
+              "job": 1,
+              "user": 3974
+            }
+          },
+          {
+            "id": 842,
+            "image": null,
+            "title": "재료공학자",
+            "counts": {
+              "job": 1,
+              "user": 2822
+            }
+          },
+          {
+            "id": 852,
+            "image": null,
+            "title": "배관설계 엔지니어",
+            "counts": {
+              "job": 1,
+              "user": 2027
+            }
+          },
+          {
+            "id": 861,
+            "image": null,
+            "title": "전자계전 엔지니어",
+            "counts": {
+              "job": 1,
+              "user": 1658
             }
           },
           {
@@ -5600,7 +5483,7 @@
             "title": "농업 공학자",
             "counts": {
               "job": 0,
-              "user": 265
+              "user": 326
             }
           },
           {
@@ -5609,16 +5492,7 @@
             "title": "유전 공학자",
             "counts": {
               "job": 0,
-              "user": 83
-            }
-          },
-          {
-            "id": 806,
-            "image": "https://static.wanted.co.kr/images/tags/ba3e599e.jpg",
-            "title": "생물의학자",
-            "counts": {
-              "job": 0,
-              "user": 163
+              "user": 108
             }
           },
           {
@@ -5627,7 +5501,7 @@
             "title": "보일러 엔지니어",
             "counts": {
               "job": 0,
-              "user": 649
+              "user": 739
             }
           },
           {
@@ -5636,16 +5510,34 @@
             "title": "세라믹 엔지니어",
             "counts": {
               "job": 0,
-              "user": 403
+              "user": 484
             }
           },
           {
-            "id": 820,
-            "image": "https://static.wanted.co.kr/images/tags/76b1c7be.jpg",
-            "title": "시추 엔지니어",
+            "id": 811,
+            "image": "https://static.wanted.co.kr/images/tags/dfb9d85c.jpg",
+            "title": "토목기사",
             "counts": {
               "job": 0,
-              "user": 162
+              "user": 3449
+            }
+          },
+          {
+            "id": 815,
+            "image": "https://static.wanted.co.kr/images/tags/0e856cfc-03ad-11e7-8de0-0213e6175ee7.jpg",
+            "title": "건설 엔지니어",
+            "counts": {
+              "job": 0,
+              "user": 4848
+            }
+          },
+          {
+            "id": 825,
+            "image": "https://static.wanted.co.kr/images/tags/b9e3ed26.jpg",
+            "title": "환경 안전기사",
+            "counts": {
+              "job": 0,
+              "user": 1984
             }
           },
           {
@@ -5654,7 +5546,16 @@
             "title": "소방안전 기술자",
             "counts": {
               "job": 0,
-              "user": 1233
+              "user": 1548
+            }
+          },
+          {
+            "id": 831,
+            "image": "https://static.wanted.co.kr/images/tags/2c0d268e.jpg",
+            "title": "지리정보시스템",
+            "counts": {
+              "job": 0,
+              "user": 595
             }
           },
           {
@@ -5663,7 +5564,7 @@
             "title": "지리학자",
             "counts": {
               "job": 0,
-              "user": 110
+              "user": 144
             }
           },
           {
@@ -5672,7 +5573,7 @@
             "title": "지질공학자",
             "counts": {
               "job": 0,
-              "user": 209
+              "user": 267
             }
           },
           {
@@ -5681,7 +5582,7 @@
             "title": "보건안전 엔지니어",
             "counts": {
               "job": 0,
-              "user": 703
+              "user": 848
             }
           },
           {
@@ -5690,16 +5591,25 @@
             "title": "고압설계 엔지니어",
             "counts": {
               "job": 0,
-              "user": 607
+              "user": 706
             }
           },
           {
-            "id": 840,
+            "id": 836,
             "image": null,
-            "title": "생산공학 엔지니어",
+            "title": "산업 엔지니어",
             "counts": {
               "job": 0,
-              "user": 1383
+              "user": 1917
+            }
+          },
+          {
+            "id": 841,
+            "image": null,
+            "title": "해양공학자",
+            "counts": {
+              "job": 0,
+              "user": 715
             }
           },
           {
@@ -5708,7 +5618,7 @@
             "title": "금속 공학자",
             "counts": {
               "job": 0,
-              "user": 1003
+              "user": 1174
             }
           },
           {
@@ -5717,7 +5627,7 @@
             "title": "광산 기술자",
             "counts": {
               "job": 0,
-              "user": 170
+              "user": 201
             }
           },
           {
@@ -5726,7 +5636,7 @@
             "title": "광산 안전 기술자",
             "counts": {
               "job": 0,
-              "user": 132
+              "user": 161
             }
           },
           {
@@ -5735,7 +5645,7 @@
             "title": "선박 공학자",
             "counts": {
               "job": 0,
-              "user": 1120
+              "user": 1301
             }
           },
           {
@@ -5744,16 +5654,25 @@
             "title": "석유공학 엔지니어",
             "counts": {
               "job": 0,
-              "user": 802
+              "user": 950
             }
           },
           {
-            "id": 852,
+            "id": 854,
             "image": null,
-            "title": "배관설계 엔지니어",
+            "title": "플라스틱 엔지니어",
             "counts": {
               "job": 0,
-              "user": 1718
+              "user": 1003
+            }
+          },
+          {
+            "id": 858,
+            "image": null,
+            "title": "사업수주 엔지니어",
+            "counts": {
+              "job": 0,
+              "user": 662
             }
           },
           {
@@ -5762,7 +5681,16 @@
             "title": "저수처리 엔지니어",
             "counts": {
               "job": 0,
-              "user": 314
+              "user": 372
+            }
+          },
+          {
+            "id": 865,
+            "image": null,
+            "title": "회전기계 엔지니어",
+            "counts": {
+              "job": 0,
+              "user": 1123
             }
           },
           {
@@ -5771,14 +5699,369 @@
             "title": "터빈공학자",
             "counts": {
               "job": 0,
-              "user": 398
+              "user": 507
             }
           }
         ],
         "title": "엔지니어링·설계",
         "counts": {
-          "job": 232,
-          "user": 86623
+          "job": 415,
+          "user": 107067
+        }
+      },
+      {
+        "id": 522,
+        "image": "https://static.wanted.co.kr/images/tags/539a0896.jpg",
+        "tags": [
+          {
+            "id": 701,
+            "image": "https://static.wanted.co.kr/images/tags/aa5ec0e6-039f-11e7-a97f-0213e6175ee7.jpg",
+            "title": "생산 관리자",
+            "counts": {
+              "job": 146,
+              "user": 45376
+            }
+          },
+          {
+            "id": 704,
+            "image": "https://static.wanted.co.kr/images/tags/7b021e52.jpg",
+            "title": "품질 관리자",
+            "counts": {
+              "job": 140,
+              "user": 36531
+            }
+          },
+          {
+            "id": 700,
+            "image": "https://static.wanted.co.kr/images/tags/3ed70ee8-031b-11e7-b0b5-0219382c3fab.jpg",
+            "title": "기계·설비·설계",
+            "counts": {
+              "job": 64,
+              "user": 21455
+            }
+          },
+          {
+            "id": 699,
+            "image": null,
+            "title": "자재관리·구매",
+            "counts": {
+              "job": 33,
+              "user": 16619
+            }
+          },
+          {
+            "id": 703,
+            "image": "https://static.wanted.co.kr/images/tags/b97afe64-039f-11e7-bedb-0213e6175ee7.jpg",
+            "title": "공정 관리자",
+            "counts": {
+              "job": 20,
+              "user": 16297
+            }
+          },
+          {
+            "id": 10113,
+            "image": "https://static.wanted.co.kr/images/tags/08515c8a.jpg",
+            "title": "섬유·의류·패션",
+            "counts": {
+              "job": 9,
+              "user": 6371
+            }
+          },
+          {
+            "id": 705,
+            "image": "https://static.wanted.co.kr/images/tags/57bf5d4e.jpg",
+            "title": "안전 관리자",
+            "counts": {
+              "job": 8,
+              "user": 10598
+            }
+          },
+          {
+            "id": 698,
+            "image": "https://static.wanted.co.kr/images/tags/27a85ab4.jpg",
+            "title": "제조 엔지니어",
+            "counts": {
+              "job": 5,
+              "user": 15947
+            }
+          },
+          {
+            "id": 702,
+            "image": "https://static.wanted.co.kr/images/tags/cc0e419e-039f-11e7-8502-0aba6235ef6f.jpg",
+            "title": "생산직 종사자",
+            "counts": {
+              "job": 5,
+              "user": 58373
+            }
+          },
+          {
+            "id": 706,
+            "image": "https://static.wanted.co.kr/images/tags/40e73766.jpg",
+            "title": "제조 테스트 엔지니어",
+            "counts": {
+              "job": 4,
+              "user": 6099
+            }
+          },
+          {
+            "id": 696,
+            "image": "https://static.wanted.co.kr/images/tags/3542960a-031a-11e7-a81b-0aba6235ef6f.jpg",
+            "title": "화학자",
+            "counts": {
+              "job": 3,
+              "user": 6079
+            }
+          },
+          {
+            "id": 697,
+            "image": "https://static.wanted.co.kr/images/tags/cad900f0-43f8-11e6-aa6b-0a30d591bfc5.jpg",
+            "title": "기계제작 기술자",
+            "counts": {
+              "job": 2,
+              "user": 7006
+            }
+          },
+          {
+            "id": 10114,
+            "image": "https://static.wanted.co.kr/images/tags/5a0d0904.jpg",
+            "title": "반도체·디스플레이",
+            "counts": {
+              "job": 2,
+              "user": 10033
+            }
+          },
+          {
+            "id": 695,
+            "image": "https://static.wanted.co.kr/images/tags/fe7fc226.jpg",
+            "title": "조립 기술자",
+            "counts": {
+              "job": 0,
+              "user": 12050
+            }
+          }
+        ],
+        "title": "제조·생산",
+        "counts": {
+          "job": 369,
+          "user": 176198
+        }
+      },
+      {
+        "id": 508,
+        "image": "https://static.wanted.co.kr/images/tags/9f8f0364.jpg",
+        "tags": [
+          {
+            "id": 534,
+            "image": "https://static.wanted.co.kr/images/tags/87875206-0253-11e7-a97f-0213e6175ee7.jpg",
+            "title": "회계담당",
+            "counts": {
+              "job": 137,
+              "user": 13037
+            }
+          },
+          {
+            "id": 1048,
+            "image": "https://static.wanted.co.kr/images/tags/3df6ce34.jpg",
+            "title": "재무 담당자",
+            "counts": {
+              "job": 96,
+              "user": 11096
+            }
+          },
+          {
+            "id": 538,
+            "image": "https://static.wanted.co.kr/images/tags/8b164b12-43f8-11e6-b947-0a30d591bfc5.jpg",
+            "title": "재무 분석가",
+            "counts": {
+              "job": 68,
+              "user": 7291
+            }
+          },
+          {
+            "id": 882,
+            "image": "https://static.wanted.co.kr/images/tags/30d52d3a-43e4-11e6-90dd-0a30d591bfc5.jpg",
+            "title": "애널리스트",
+            "counts": {
+              "job": 32,
+              "user": 6334
+            }
+          },
+          {
+            "id": 920,
+            "image": "https://static.wanted.co.kr/images/tags/498615c6-4fcc-11e6-852d-0a30d591bfc5.jpg",
+            "title": "IR",
+            "counts": {
+              "job": 23,
+              "user": 2873
+            }
+          },
+          {
+            "id": 10056,
+            "image": "https://static.wanted.co.kr/images/tags/a8794f7c.jpg",
+            "title": "투자·증권",
+            "counts": {
+              "job": 21,
+              "user": 9565
+            }
+          },
+          {
+            "id": 542,
+            "image": "https://static.wanted.co.kr/images/tags/f03d9ae4-4282-11e6-adae-029e8c03f357.jpg",
+            "title": "공인회계사",
+            "counts": {
+              "job": 15,
+              "user": 2541
+            }
+          },
+          {
+            "id": 933,
+            "image": "https://static.wanted.co.kr/images/tags/6d34b3ca.jpg",
+            "title": "트레이더",
+            "counts": {
+              "job": 13,
+              "user": 3071
+            }
+          },
+          {
+            "id": 547,
+            "image": "https://static.wanted.co.kr/images/tags/f03871ee.jpg",
+            "title": "내부통제 담당자",
+            "counts": {
+              "job": 12,
+              "user": 3641
+            }
+          },
+          {
+            "id": 938,
+            "image": "https://static.wanted.co.kr/images/tags/3c10b1a4-03ad-11e7-a97f-0213e6175ee7.jpg",
+            "title": "준법감시인",
+            "counts": {
+              "job": 10,
+              "user": 1860
+            }
+          },
+          {
+            "id": 1049,
+            "image": "https://static.wanted.co.kr/images/tags/8f3c656a.jpg",
+            "title": "청구 담당자",
+            "counts": {
+              "job": 8,
+              "user": 2600
+            }
+          },
+          {
+            "id": 743,
+            "image": "https://static.wanted.co.kr/images/tags/7977af20.jpg",
+            "title": "부동산 중개사",
+            "counts": {
+              "job": 7,
+              "user": 2811
+            }
+          },
+          {
+            "id": 936,
+            "image": "https://static.wanted.co.kr/images/tags/29c5a7c0-03ad-11e7-8d2c-0213e6175ee7.jpg",
+            "title": "자산운용가",
+            "counts": {
+              "job": 7,
+              "user": 7435
+            }
+          },
+          {
+            "id": 937,
+            "image": "https://static.wanted.co.kr/images/tags/368e3dbe-03ad-11e7-8de0-0213e6175ee7.jpg",
+            "title": "투자은행가",
+            "counts": {
+              "job": 5,
+              "user": 6171
+            }
+          },
+          {
+            "id": 681,
+            "image": "https://static.wanted.co.kr/images/tags/fe711756.jpg",
+            "title": "보험 에이전트",
+            "counts": {
+              "job": 4,
+              "user": 3322
+            }
+          },
+          {
+            "id": 1047,
+            "image": "https://static.wanted.co.kr/images/tags/eef21f82.jpg",
+            "title": "세무사",
+            "counts": {
+              "job": 4,
+              "user": 1800
+            }
+          },
+          {
+            "id": 934,
+            "image": "https://static.wanted.co.kr/images/tags/909e107c.jpg",
+            "title": "금융공학자",
+            "counts": {
+              "job": 2,
+              "user": 2256
+            }
+          },
+          {
+            "id": 684,
+            "image": "https://static.wanted.co.kr/images/tags/6199a4be.jpg",
+            "title": "언더라이터",
+            "counts": {
+              "job": 1,
+              "user": 1447
+            }
+          },
+          {
+            "id": 682,
+            "image": "https://static.wanted.co.kr/images/tags/58383642.jpg",
+            "title": "손해 사정관",
+            "counts": {
+              "job": 0,
+              "user": 2180
+            }
+          },
+          {
+            "id": 683,
+            "image": "https://static.wanted.co.kr/images/tags/d1ad9884.jpg",
+            "title": "계리사",
+            "counts": {
+              "job": 0,
+              "user": 1151
+            }
+          },
+          {
+            "id": 742,
+            "image": "https://static.wanted.co.kr/images/tags/e437590e.jpg",
+            "title": "부동산 자산 관리자",
+            "counts": {
+              "job": 0,
+              "user": 3305
+            }
+          },
+          {
+            "id": 745,
+            "image": "https://static.wanted.co.kr/images/tags/4732fcd6.jpg",
+            "title": "감정평가사",
+            "counts": {
+              "job": 0,
+              "user": 813
+            }
+          },
+          {
+            "id": 935,
+            "image": "https://static.wanted.co.kr/images/tags/eba51e1c.jpg",
+            "title": "자산관리사",
+            "counts": {
+              "job": 0,
+              "user": 5328
+            }
+          }
+        ],
+        "title": "금융",
+        "counts": {
+          "job": 313,
+          "user": 62517
         }
       },
       {
@@ -5790,26 +6073,8 @@
             "image": "https://static.wanted.co.kr/images/tags/312da9a6-43f8-11e6-90dd-0a30d591bfc5.jpg",
             "title": "인사담당",
             "counts": {
-              "job": 123,
-              "user": 41630
-            }
-          },
-          {
-            "id": 644,
-            "image": "https://static.wanted.co.kr/images/tags/4f297912-43f8-11e6-90dd-0a30d591bfc5.jpg",
-            "title": "리크루터",
-            "counts": {
-              "job": 66,
-              "user": 14923
-            }
-          },
-          {
-            "id": 649,
-            "image": "https://static.wanted.co.kr/images/tags/a4958ae0-4fcd-11e6-852d-0a30d591bfc5.jpg",
-            "title": "조직문화",
-            "counts": {
-              "job": 62,
-              "user": 15842
+              "job": 193,
+              "user": 49591
             }
           },
           {
@@ -5817,8 +6082,8 @@
             "image": "https://static.wanted.co.kr/images/tags/74384016-637f-11e6-831d-0a30d591bfc5.png",
             "title": "평가·보상",
             "counts": {
-              "job": 55,
-              "user": 10902
+              "job": 101,
+              "user": 14021
             }
           },
           {
@@ -5826,8 +6091,8 @@
             "image": "https://static.wanted.co.kr/images/tags/17088366-43f8-11e6-945a-0a30d591bfc5.jpg",
             "title": "HRD",
             "counts": {
-              "job": 33,
-              "user": 18738
+              "job": 101,
+              "user": 22530
             }
           },
           {
@@ -5835,8 +6100,17 @@
             "image": "https://static.wanted.co.kr/images/tags/7f4f55d8.jpg",
             "title": "급여담당",
             "counts": {
-              "job": 29,
-              "user": 13583
+              "job": 98,
+              "user": 16612
+            }
+          },
+          {
+            "id": 644,
+            "image": "https://static.wanted.co.kr/images/tags/4f297912-43f8-11e6-90dd-0a30d591bfc5.jpg",
+            "title": "리크루터",
+            "counts": {
+              "job": 84,
+              "user": 18169
             }
           },
           {
@@ -5844,8 +6118,17 @@
             "image": "https://static.wanted.co.kr/images/tags/9be27680.jpg",
             "title": "HRBP",
             "counts": {
-              "job": 20,
-              "user": 6163
+              "job": 60,
+              "user": 8293
+            }
+          },
+          {
+            "id": 649,
+            "image": "https://static.wanted.co.kr/images/tags/a4958ae0-4fcd-11e6-852d-0a30d591bfc5.jpg",
+            "title": "조직문화",
+            "counts": {
+              "job": 49,
+              "user": 20132
             }
           },
           {
@@ -5853,17 +6136,8 @@
             "image": "https://static.wanted.co.kr/images/tags/b88414f6.jpg",
             "title": "노무·노사",
             "counts": {
-              "job": 15,
-              "user": 8207
-            }
-          },
-          {
-            "id": 1041,
-            "image": "https://static.wanted.co.kr/images/tags/97c67da8.jpg",
-            "title": "헤드헌터",
-            "counts": {
-              "job": 13,
-              "user": 3690
+              "job": 24,
+              "user": 9838
             }
           },
           {
@@ -5871,26 +6145,8 @@
             "image": "https://static.wanted.co.kr/images/tags/58a1d2e4-4283-11e6-a15c-029e8c03f357.jpg",
             "title": "HR 컨설턴트",
             "counts": {
-              "job": 8,
-              "user": 8536
-            }
-          },
-          {
-            "id": 611,
-            "image": "https://static.wanted.co.kr/images/tags/b720a1d8.jpg",
-            "title": "기술 교육",
-            "counts": {
-              "job": 4,
-              "user": 2394
-            }
-          },
-          {
-            "id": 1044,
-            "image": "https://static.wanted.co.kr/images/tags/ef352cc4.jpg",
-            "title": "사내 강사",
-            "counts": {
-              "job": 2,
-              "user": 9958
+              "job": 17,
+              "user": 9699
             }
           },
           {
@@ -5898,8 +6154,35 @@
             "image": "https://static.wanted.co.kr/images/tags/36b3ba26-4283-11e6-a15c-029e8c03f357.jpg",
             "title": "E-러닝",
             "counts": {
-              "job": 1,
-              "user": 3536
+              "job": 17,
+              "user": 3736
+            }
+          },
+          {
+            "id": 611,
+            "image": "https://static.wanted.co.kr/images/tags/b720a1d8.jpg",
+            "title": "기술 교육",
+            "counts": {
+              "job": 14,
+              "user": 2728
+            }
+          },
+          {
+            "id": 1044,
+            "image": "https://static.wanted.co.kr/images/tags/ef352cc4.jpg",
+            "title": "사내 강사",
+            "counts": {
+              "job": 14,
+              "user": 10261
+            }
+          },
+          {
+            "id": 1041,
+            "image": "https://static.wanted.co.kr/images/tags/97c67da8.jpg",
+            "title": "헤드헌터",
+            "counts": {
+              "job": 9,
+              "user": 4201
             }
           },
           {
@@ -5908,7 +6191,7 @@
             "title": "교사",
             "counts": {
               "job": 0,
-              "user": 11849
+              "user": 11868
             }
           },
           {
@@ -5917,14 +6200,270 @@
             "title": "교수",
             "counts": {
               "job": 0,
-              "user": 1503
+              "user": 1586
             }
           }
         ],
         "title": "HR",
         "counts": {
-          "job": 173,
-          "user": 95787
+          "job": 254,
+          "user": 106419
+        }
+      },
+      {
+        "id": 10566,
+        "image": null,
+        "tags": [
+          {
+            "id": 671,
+            "image": "https://static.wanted.co.kr/images/tags/fa0832d6-43fa-11e6-b947-0a30d591bfc5.jpg",
+            "title": "보안 엔지니어",
+            "counts": {
+              "job": 169,
+              "user": 13731
+            }
+          },
+          {
+            "id": 10233,
+            "image": "https://static.wanted.co.kr/images/tags/19cb38c2-7cec-11ec-8b72-acde48001122.jpg",
+            "title": "정보보호 담당자",
+            "counts": {
+              "job": 92,
+              "user": 3329
+            }
+          },
+          {
+            "id": 10569,
+            "image": null,
+            "title": "보안관제",
+            "counts": {
+              "job": 28,
+              "user": 613
+            }
+          },
+          {
+            "id": 10568,
+            "image": null,
+            "title": "개인정보 담당자",
+            "counts": {
+              "job": 24,
+              "user": 812
+            }
+          },
+          {
+            "id": 10567,
+            "image": null,
+            "title": "정보보호 컨설팅",
+            "counts": {
+              "job": 23,
+              "user": 876
+            }
+          },
+          {
+            "id": 10571,
+            "image": null,
+            "title": "모의해킹/취약점 진단",
+            "counts": {
+              "job": 16,
+              "user": 852
+            }
+          },
+          {
+            "id": 10570,
+            "image": null,
+            "title": "CISO/CPO",
+            "counts": {
+              "job": 8,
+              "user": 389
+            }
+          }
+        ],
+        "title": "정보보호",
+        "counts": {
+          "job": 170,
+          "user": 2937
+        }
+      },
+      {
+        "id": 509,
+        "image": "https://static.wanted.co.kr/images/tags/974967d0.jpg",
+        "tags": [
+          {
+            "id": 10143,
+            "image": "https://static.wanted.co.kr/images/tags/52b43ffc.jpg",
+            "title": "건축시공·감리",
+            "counts": {
+              "job": 18,
+              "user": 10783
+            }
+          },
+          {
+            "id": 575,
+            "image": "https://static.wanted.co.kr/images/tags/6fc39f94.jpg",
+            "title": "유지보수 관리자",
+            "counts": {
+              "job": 15,
+              "user": 11944
+            }
+          },
+          {
+            "id": 10142,
+            "image": "https://static.wanted.co.kr/images/tags/a3529322.jpg",
+            "title": "실내건축",
+            "counts": {
+              "job": 9,
+              "user": 9312
+            }
+          },
+          {
+            "id": 10144,
+            "image": "https://static.wanted.co.kr/images/tags/c2223e20.jpg",
+            "title": "건설 안전·품질·검사",
+            "counts": {
+              "job": 8,
+              "user": 9136
+            }
+          },
+          {
+            "id": 577,
+            "image": "https://static.wanted.co.kr/images/tags/db158410.jpg",
+            "title": "전기 기술자",
+            "counts": {
+              "job": 6,
+              "user": 10813
+            }
+          },
+          {
+            "id": 572,
+            "image": "https://static.wanted.co.kr/images/tags/d43af124.jpg",
+            "title": "현장 소장",
+            "counts": {
+              "job": 4,
+              "user": 7515
+            }
+          },
+          {
+            "id": 584,
+            "image": "https://static.wanted.co.kr/images/tags/2dfbd79c.jpg",
+            "title": "견적 기술자",
+            "counts": {
+              "job": 4,
+              "user": 4090
+            }
+          },
+          {
+            "id": 604,
+            "image": "https://static.wanted.co.kr/images/tags/1216fbdc-4284-11e6-a15c-029e8c03f357.jpg",
+            "title": "건축가",
+            "counts": {
+              "job": 3,
+              "user": 10437
+            }
+          },
+          {
+            "id": 574,
+            "image": "https://static.wanted.co.kr/images/tags/ee8c2b02.jpg",
+            "title": "정비공",
+            "counts": {
+              "job": 1,
+              "user": 2068
+            }
+          },
+          {
+            "id": 576,
+            "image": "https://static.wanted.co.kr/images/tags/8dae9f1c.jpg",
+            "title": "관리인",
+            "counts": {
+              "job": 1,
+              "user": 15185
+            }
+          },
+          {
+            "id": 578,
+            "image": "https://static.wanted.co.kr/images/tags/ca4acd48.jpg",
+            "title": "인스톨러",
+            "counts": {
+              "job": 1,
+              "user": 711
+            }
+          },
+          {
+            "id": 571,
+            "image": "https://static.wanted.co.kr/images/tags/5a12d500.jpg",
+            "title": "목수",
+            "counts": {
+              "job": 0,
+              "user": 5668
+            }
+          },
+          {
+            "id": 573,
+            "image": "https://static.wanted.co.kr/images/tags/1e6be40c.jpg",
+            "title": "중장비 기술자",
+            "counts": {
+              "job": 0,
+              "user": 5346
+            }
+          },
+          {
+            "id": 579,
+            "image": "https://static.wanted.co.kr/images/tags/76e60f54.jpg",
+            "title": "페인터",
+            "counts": {
+              "job": 0,
+              "user": 1739
+            }
+          },
+          {
+            "id": 580,
+            "image": "https://static.wanted.co.kr/images/tags/67ff458c.jpg",
+            "title": "플랜트 관리자",
+            "counts": {
+              "job": 0,
+              "user": 3104
+            }
+          },
+          {
+            "id": 581,
+            "image": "https://static.wanted.co.kr/images/tags/aa10a0c6.jpg",
+            "title": "용접기사",
+            "counts": {
+              "job": 0,
+              "user": 3533
+            }
+          },
+          {
+            "id": 582,
+            "image": "https://static.wanted.co.kr/images/tags/417c01b0.jpg",
+            "title": "배관공",
+            "counts": {
+              "job": 0,
+              "user": 4989
+            }
+          },
+          {
+            "id": 583,
+            "image": "https://static.wanted.co.kr/images/tags/ac420272.jpg",
+            "title": "연관공",
+            "counts": {
+              "job": 0,
+              "user": 832
+            }
+          },
+          {
+            "id": 585,
+            "image": "https://static.wanted.co.kr/images/tags/40ea813c.jpg",
+            "title": "측량·계측",
+            "counts": {
+              "job": 0,
+              "user": 2177
+            }
+          }
+        ],
+        "title": "건설·시설",
+        "counts": {
+          "job": 144,
+          "user": 93705
         }
       },
       {
@@ -5937,34 +6476,7 @@
             "title": "게임 기획자",
             "counts": {
               "job": 45,
-              "user": 7197
-            }
-          },
-          {
-            "id": 881,
-            "image": "https://static.wanted.co.kr/images/tags/766c06ca-43e9-11e6-945a-0a30d591bfc5.jpg",
-            "title": "게임 아티스트",
-            "counts": {
-              "job": 38,
-              "user": 3580
-            }
-          },
-          {
-            "id": 961,
-            "image": "https://static.wanted.co.kr/images/tags/bf719a06-cce2-11e6-8d76-0a30d591bfc5.jpg",
-            "title": "게임 클라이언트 개발자",
-            "counts": {
-              "job": 35,
-              "user": 3626
-            }
-          },
-          {
-            "id": 878,
-            "image": "https://static.wanted.co.kr/images/tags/6e370016-43fa-11e6-945a-0a30d591bfc5.jpg",
-            "title": "유니티 개발자",
-            "counts": {
-              "job": 34,
-              "user": 3600
+              "user": 8457
             }
           },
           {
@@ -5972,8 +6484,17 @@
             "image": "https://static.wanted.co.kr/images/tags/710b4bd2-43e9-11e6-945a-0a30d591bfc5.jpg",
             "title": "게임 그래픽 디자이너",
             "counts": {
-              "job": 34,
-              "user": 4166
+              "job": 40,
+              "user": 4820
+            }
+          },
+          {
+            "id": 961,
+            "image": "https://static.wanted.co.kr/images/tags/bf719a06-cce2-11e6-8d76-0a30d591bfc5.jpg",
+            "title": "게임 클라이언트 개발자",
+            "counts": {
+              "job": 33,
+              "user": 4436
             }
           },
           {
@@ -5981,17 +6502,26 @@
             "image": "https://static.wanted.co.kr/images/tags/3e2a03e8-ccc4-11e6-95de-0a30d591bfc5.jpg",
             "title": "게임 서버 개발자",
             "counts": {
-              "job": 28,
-              "user": 1531
+              "job": 24,
+              "user": 1717
             }
           },
           {
-            "id": 962,
-            "image": "https://static.wanted.co.kr/images/tags/c7812702-cce2-11e6-bef4-0a30d591bfc5.jpg",
-            "title": "모바일 게임 개발자",
+            "id": 881,
+            "image": "https://static.wanted.co.kr/images/tags/766c06ca-43e9-11e6-945a-0a30d591bfc5.jpg",
+            "title": "게임 아티스트",
             "counts": {
-              "job": 24,
-              "user": 2766
+              "job": 23,
+              "user": 4279
+            }
+          },
+          {
+            "id": 878,
+            "image": "https://static.wanted.co.kr/images/tags/6e370016-43fa-11e6-945a-0a30d591bfc5.jpg",
+            "title": "유니티 개발자",
+            "counts": {
+              "job": 19,
+              "user": 4230
             }
           },
           {
@@ -6000,7 +6530,16 @@
             "title": "언리얼 개발자",
             "counts": {
               "job": 18,
-              "user": 1653
+              "user": 2069
+            }
+          },
+          {
+            "id": 962,
+            "image": "https://static.wanted.co.kr/images/tags/c7812702-cce2-11e6-bef4-0a30d591bfc5.jpg",
+            "title": "모바일 게임 개발자",
+            "counts": {
+              "job": 14,
+              "user": 3240
             }
           },
           {
@@ -6008,734 +6547,15 @@
             "image": "https://static.wanted.co.kr/images/tags/02aa97b2-ccbd-11e6-84e1-0a30d591bfc5.jpg",
             "title": "게임운영자(GM)",
             "counts": {
-              "job": 5,
-              "user": 3227
+              "job": 6,
+              "user": 3573
             }
           }
         ],
         "title": "게임 제작",
         "counts": {
-          "job": 150,
-          "user": 21256
-        }
-      },
-      {
-        "id": 508,
-        "image": "https://static.wanted.co.kr/images/tags/9f8f0364.jpg",
-        "tags": [
-          {
-            "id": 534,
-            "image": "https://static.wanted.co.kr/images/tags/87875206-0253-11e7-a97f-0213e6175ee7.jpg",
-            "title": "회계담당",
-            "counts": {
-              "job": 59,
-              "user": 9965
-            }
-          },
-          {
-            "id": 1048,
-            "image": "https://static.wanted.co.kr/images/tags/3df6ce34.jpg",
-            "title": "재무 담당자",
-            "counts": {
-              "job": 54,
-              "user": 8864
-            }
-          },
-          {
-            "id": 10056,
-            "image": "https://static.wanted.co.kr/images/tags/a8794f7c.jpg",
-            "title": "투자·증권",
-            "counts": {
-              "job": 31,
-              "user": 7124
-            }
-          },
-          {
-            "id": 920,
-            "image": "https://static.wanted.co.kr/images/tags/498615c6-4fcc-11e6-852d-0a30d591bfc5.jpg",
-            "title": "IR",
-            "counts": {
-              "job": 23,
-              "user": 2175
-            }
-          },
-          {
-            "id": 538,
-            "image": "https://static.wanted.co.kr/images/tags/8b164b12-43f8-11e6-b947-0a30d591bfc5.jpg",
-            "title": "재무 분석가",
-            "counts": {
-              "job": 18,
-              "user": 6190
-            }
-          },
-          {
-            "id": 936,
-            "image": "https://static.wanted.co.kr/images/tags/29c5a7c0-03ad-11e7-8d2c-0213e6175ee7.jpg",
-            "title": "자산운용가",
-            "counts": {
-              "job": 9,
-              "user": 6004
-            }
-          },
-          {
-            "id": 547,
-            "image": "https://static.wanted.co.kr/images/tags/f03871ee.jpg",
-            "title": "내부통제 담당자",
-            "counts": {
-              "job": 8,
-              "user": 2915
-            }
-          },
-          {
-            "id": 882,
-            "image": "https://static.wanted.co.kr/images/tags/30d52d3a-43e4-11e6-90dd-0a30d591bfc5.jpg",
-            "title": "애널리스트",
-            "counts": {
-              "job": 8,
-              "user": 5617
-            }
-          },
-          {
-            "id": 938,
-            "image": "https://static.wanted.co.kr/images/tags/3c10b1a4-03ad-11e7-a97f-0213e6175ee7.jpg",
-            "title": "준법감시인",
-            "counts": {
-              "job": 8,
-              "user": 1484
-            }
-          },
-          {
-            "id": 934,
-            "image": "https://static.wanted.co.kr/images/tags/909e107c.jpg",
-            "title": "금융공학자",
-            "counts": {
-              "job": 7,
-              "user": 1902
-            }
-          },
-          {
-            "id": 1047,
-            "image": "https://static.wanted.co.kr/images/tags/eef21f82.jpg",
-            "title": "세무사",
-            "counts": {
-              "job": 6,
-              "user": 1527
-            }
-          },
-          {
-            "id": 933,
-            "image": "https://static.wanted.co.kr/images/tags/6d34b3ca.jpg",
-            "title": "트레이더",
-            "counts": {
-              "job": 5,
-              "user": 2681
-            }
-          },
-          {
-            "id": 743,
-            "image": "https://static.wanted.co.kr/images/tags/7977af20.jpg",
-            "title": "부동산 중개사",
-            "counts": {
-              "job": 4,
-              "user": 2537
-            }
-          },
-          {
-            "id": 542,
-            "image": "https://static.wanted.co.kr/images/tags/f03d9ae4-4282-11e6-adae-029e8c03f357.jpg",
-            "title": "공인회계사",
-            "counts": {
-              "job": 2,
-              "user": 2222
-            }
-          },
-          {
-            "id": 682,
-            "image": "https://static.wanted.co.kr/images/tags/58383642.jpg",
-            "title": "손해 사정관",
-            "counts": {
-              "job": 2,
-              "user": 1773
-            }
-          },
-          {
-            "id": 742,
-            "image": "https://static.wanted.co.kr/images/tags/e437590e.jpg",
-            "title": "부동산 자산 관리자",
-            "counts": {
-              "job": 2,
-              "user": 2772
-            }
-          },
-          {
-            "id": 935,
-            "image": "https://static.wanted.co.kr/images/tags/eba51e1c.jpg",
-            "title": "자산관리사",
-            "counts": {
-              "job": 2,
-              "user": 4603
-            }
-          },
-          {
-            "id": 937,
-            "image": "https://static.wanted.co.kr/images/tags/368e3dbe-03ad-11e7-8de0-0213e6175ee7.jpg",
-            "title": "투자은행가",
-            "counts": {
-              "job": 2,
-              "user": 5246
-            }
-          },
-          {
-            "id": 1049,
-            "image": "https://static.wanted.co.kr/images/tags/8f3c656a.jpg",
-            "title": "청구 담당자",
-            "counts": {
-              "job": 2,
-              "user": 1986
-            }
-          },
-          {
-            "id": 681,
-            "image": "https://static.wanted.co.kr/images/tags/fe711756.jpg",
-            "title": "보험 에이전트",
-            "counts": {
-              "job": 1,
-              "user": 2966
-            }
-          },
-          {
-            "id": 683,
-            "image": "https://static.wanted.co.kr/images/tags/d1ad9884.jpg",
-            "title": "계리사",
-            "counts": {
-              "job": 1,
-              "user": 946
-            }
-          },
-          {
-            "id": 684,
-            "image": "https://static.wanted.co.kr/images/tags/6199a4be.jpg",
-            "title": "언더라이터",
-            "counts": {
-              "job": 1,
-              "user": 1264
-            }
-          },
-          {
-            "id": 745,
-            "image": "https://static.wanted.co.kr/images/tags/4732fcd6.jpg",
-            "title": "감정평가사",
-            "counts": {
-              "job": 0,
-              "user": 694
-            }
-          }
-        ],
-        "title": "금융",
-        "counts": {
-          "job": 126,
-          "user": 53686
-        }
-      },
-      {
-        "id": 522,
-        "image": "https://static.wanted.co.kr/images/tags/539a0896.jpg",
-        "tags": [
-          {
-            "id": 704,
-            "image": "https://static.wanted.co.kr/images/tags/7b021e52.jpg",
-            "title": "품질 관리자",
-            "counts": {
-              "job": 54,
-              "user": 28317
-            }
-          },
-          {
-            "id": 701,
-            "image": "https://static.wanted.co.kr/images/tags/aa5ec0e6-039f-11e7-a97f-0213e6175ee7.jpg",
-            "title": "생산 관리자",
-            "counts": {
-              "job": 49,
-              "user": 36209
-            }
-          },
-          {
-            "id": 699,
-            "image": null,
-            "title": "자재관리·구매",
-            "counts": {
-              "job": 30,
-              "user": 13064
-            }
-          },
-          {
-            "id": 703,
-            "image": "https://static.wanted.co.kr/images/tags/b97afe64-039f-11e7-bedb-0213e6175ee7.jpg",
-            "title": "공정 관리자",
-            "counts": {
-              "job": 16,
-              "user": 12939
-            }
-          },
-          {
-            "id": 700,
-            "image": "https://static.wanted.co.kr/images/tags/3ed70ee8-031b-11e7-b0b5-0219382c3fab.jpg",
-            "title": "기계·설비·설계",
-            "counts": {
-              "job": 15,
-              "user": 16790
-            }
-          },
-          {
-            "id": 696,
-            "image": "https://static.wanted.co.kr/images/tags/3542960a-031a-11e7-a81b-0aba6235ef6f.jpg",
-            "title": "화학자",
-            "counts": {
-              "job": 10,
-              "user": 4880
-            }
-          },
-          {
-            "id": 698,
-            "image": "https://static.wanted.co.kr/images/tags/27a85ab4.jpg",
-            "title": "제조 엔지니어",
-            "counts": {
-              "job": 10,
-              "user": 12512
-            }
-          },
-          {
-            "id": 10114,
-            "image": "https://static.wanted.co.kr/images/tags/5a0d0904.jpg",
-            "title": "반도체·디스플레이",
-            "counts": {
-              "job": 10,
-              "user": 6967
-            }
-          },
-          {
-            "id": 695,
-            "image": "https://static.wanted.co.kr/images/tags/fe7fc226.jpg",
-            "title": "조립 기술자",
-            "counts": {
-              "job": 9,
-              "user": 10242
-            }
-          },
-          {
-            "id": 10113,
-            "image": "https://static.wanted.co.kr/images/tags/08515c8a.jpg",
-            "title": "섬유·의류·패션",
-            "counts": {
-              "job": 9,
-              "user": 5155
-            }
-          },
-          {
-            "id": 702,
-            "image": "https://static.wanted.co.kr/images/tags/cc0e419e-039f-11e7-8502-0aba6235ef6f.jpg",
-            "title": "생산직 종사자",
-            "counts": {
-              "job": 8,
-              "user": 48734
-            }
-          },
-          {
-            "id": 706,
-            "image": "https://static.wanted.co.kr/images/tags/40e73766.jpg",
-            "title": "제조 테스트 엔지니어",
-            "counts": {
-              "job": 6,
-              "user": 5086
-            }
-          },
-          {
-            "id": 697,
-            "image": "https://static.wanted.co.kr/images/tags/cad900f0-43f8-11e6-aa6b-0a30d591bfc5.jpg",
-            "title": "기계제작 기술자",
-            "counts": {
-              "job": 5,
-              "user": 6093
-            }
-          },
-          {
-            "id": 705,
-            "image": "https://static.wanted.co.kr/images/tags/57bf5d4e.jpg",
-            "title": "안전 관리자",
-            "counts": {
-              "job": 2,
-              "user": 8136
-            }
-          }
-        ],
-        "title": "제조·생산",
-        "counts": {
-          "job": 126,
-          "user": 144865
-        }
-      },
-      {
-        "id": 10101,
-        "image": "https://static.wanted.co.kr/images/tags/9755eed1.jpg",
-        "tags": [
-          {
-            "id": 10103,
-            "image": "https://static.wanted.co.kr/images/tags/72f149b2.jpg",
-            "title": "교재·교육기획",
-            "counts": {
-              "job": 61,
-              "user": 9957
-            }
-          },
-          {
-            "id": 10102,
-            "image": "https://static.wanted.co.kr/images/tags/6459b56e.jpg",
-            "title": "전문강사",
-            "counts": {
-              "job": 25,
-              "user": 10748
-            }
-          },
-          {
-            "id": 10104,
-            "image": "https://static.wanted.co.kr/images/tags/29385c79.jpg",
-            "title": "학원강사",
-            "counts": {
-              "job": 24,
-              "user": 13452
-            }
-          },
-          {
-            "id": 10109,
-            "image": "https://static.wanted.co.kr/images/tags/e5e34efd.jpg",
-            "title": "자격증·기술전문교육",
-            "counts": {
-              "job": 23,
-              "user": 3986
-            }
-          },
-          {
-            "id": 10106,
-            "image": "https://static.wanted.co.kr/images/tags/849b212b.jpg",
-            "title": "외국어교육",
-            "counts": {
-              "job": 22,
-              "user": 6665
-            }
-          },
-          {
-            "id": 10105,
-            "image": "https://static.wanted.co.kr/images/tags/f7a1dac8.jpg",
-            "title": "교직원",
-            "counts": {
-              "job": 7,
-              "user": 7807
-            }
-          },
-          {
-            "id": 10107,
-            "image": "https://static.wanted.co.kr/images/tags/55e4ec71.jpg",
-            "title": "유치원·보육교사",
-            "counts": {
-              "job": 4,
-              "user": 12741
-            }
-          },
-          {
-            "id": 10108,
-            "image": "https://static.wanted.co.kr/images/tags/24f5b854.jpg",
-            "title": "초·중·고 교사",
-            "counts": {
-              "job": 3,
-              "user": 6511
-            }
-          }
-        ],
-        "title": "교육",
-        "counts": {
-          "job": 84,
-          "user": 58982
-        }
-      },
-      {
-        "id": 515,
-        "image": "https://static.wanted.co.kr/images/tags/7952b34e.jpg",
-        "tags": [
-          {
-            "id": 739,
-            "image": "https://static.wanted.co.kr/images/tags/83c6be50.jpg",
-            "title": "연구원",
-            "counts": {
-              "job": 57,
-              "user": 13417
-            }
-          },
-          {
-            "id": 740,
-            "image": "https://static.wanted.co.kr/images/tags/038d30da.jpg",
-            "title": "생명공학 연구원",
-            "counts": {
-              "job": 25,
-              "user": 6352
-            }
-          },
-          {
-            "id": 735,
-            "image": "https://static.wanted.co.kr/images/tags/c4e62e6a.jpg",
-            "title": "임상시험 연구원",
-            "counts": {
-              "job": 24,
-              "user": 2774
-            }
-          },
-          {
-            "id": 737,
-            "image": "https://static.wanted.co.kr/images/tags/31f41a02.jpg",
-            "title": "미생물학자",
-            "counts": {
-              "job": 8,
-              "user": 1861
-            }
-          },
-          {
-            "id": 736,
-            "image": "https://static.wanted.co.kr/images/tags/aaa86cac.jpg",
-            "title": "임상시험 간호사",
-            "counts": {
-              "job": 5,
-              "user": 984
-            }
-          },
-          {
-            "id": 627,
-            "image": "https://static.wanted.co.kr/images/tags/376cff36.jpg",
-            "title": "간호사",
-            "counts": {
-              "job": 4,
-              "user": 13505
-            }
-          },
-          {
-            "id": 634,
-            "image": "https://static.wanted.co.kr/images/tags/58260bc0.jpg",
-            "title": "수의사",
-            "counts": {
-              "job": 4,
-              "user": 646
-            }
-          },
-          {
-            "id": 738,
-            "image": null,
-            "title": "유전공학자",
-            "counts": {
-              "job": 4,
-              "user": 1351
-            }
-          },
-          {
-            "id": 626,
-            "image": "https://static.wanted.co.kr/images/tags/aba9c04c.jpg",
-            "title": "임상병리사",
-            "counts": {
-              "job": 2,
-              "user": 2993
-            }
-          },
-          {
-            "id": 633,
-            "image": "https://static.wanted.co.kr/images/tags/a1644634.jpg",
-            "title": "의사",
-            "counts": {
-              "job": 2,
-              "user": 1776
-            }
-          },
-          {
-            "id": 635,
-            "image": "https://static.wanted.co.kr/images/tags/5d7abe3e.jpg",
-            "title": "간호 조무사",
-            "counts": {
-              "job": 2,
-              "user": 12287
-            }
-          },
-          {
-            "id": 733,
-            "image": "https://static.wanted.co.kr/images/tags/905cf828-03a1-11e7-bd2d-0aba6235ef6f.jpg",
-            "title": "약사",
-            "counts": {
-              "job": 2,
-              "user": 1913
-            }
-          },
-          {
-            "id": 623,
-            "image": "https://static.wanted.co.kr/images/tags/36eac8d6.jpg",
-            "title": "증례 관리자",
-            "counts": {
-              "job": 1,
-              "user": 409
-            }
-          },
-          {
-            "id": 630,
-            "image": "https://static.wanted.co.kr/images/tags/55b9acae.jpg",
-            "title": "물리 치료사",
-            "counts": {
-              "job": 1,
-              "user": 3263
-            }
-          },
-          {
-            "id": 632,
-            "image": "https://static.wanted.co.kr/images/tags/4b816338.jpg",
-            "title": "수의 테크니션",
-            "counts": {
-              "job": 1,
-              "user": 890
-            }
-          },
-          {
-            "id": 731,
-            "image": "https://static.wanted.co.kr/images/tags/7f83955c.jpg",
-            "title": "약학 분석 화학자",
-            "counts": {
-              "job": 1,
-              "user": 2347
-            }
-          },
-          {
-            "id": 10054,
-            "image": "https://static.wanted.co.kr/images/tags/499ba946.jpg",
-            "title": "방사선사",
-            "counts": {
-              "job": 1,
-              "user": 1424
-            }
-          },
-          {
-            "id": 10134,
-            "image": "https://static.wanted.co.kr/images/tags/c8055d89.jpg",
-            "title": "병원 코디네이터",
-            "counts": {
-              "job": 1,
-              "user": 2889
-            }
-          },
-          {
-            "id": 622,
-            "image": "https://static.wanted.co.kr/images/tags/58f2d248.jpg",
-            "title": "치과 위생사",
-            "counts": {
-              "job": 0,
-              "user": 3255
-            }
-          },
-          {
-            "id": 624,
-            "image": "https://static.wanted.co.kr/images/tags/46095954.jpg",
-            "title": "간병인",
-            "counts": {
-              "job": 0,
-              "user": 1583
-            }
-          },
-          {
-            "id": 625,
-            "image": "https://static.wanted.co.kr/images/tags/2c06bb78.jpg",
-            "title": "조무사",
-            "counts": {
-              "job": 0,
-              "user": 5316
-            }
-          },
-          {
-            "id": 629,
-            "image": "https://static.wanted.co.kr/images/tags/f3e231b4.jpg",
-            "title": "작업 치료사",
-            "counts": {
-              "job": 0,
-              "user": 1248
-            }
-          },
-          {
-            "id": 631,
-            "image": "https://static.wanted.co.kr/images/tags/acddd3c6.jpg",
-            "title": "호흡장애 치료사",
-            "counts": {
-              "job": 0,
-              "user": 154
-            }
-          },
-          {
-            "id": 636,
-            "image": "https://static.wanted.co.kr/images/tags/38c892dc.jpg",
-            "title": "치과의사",
-            "counts": {
-              "job": 0,
-              "user": 466
-            }
-          },
-          {
-            "id": 637,
-            "image": "https://static.wanted.co.kr/images/tags/4ca10988.jpg",
-            "title": "검안사",
-            "counts": {
-              "job": 0,
-              "user": 735
-            }
-          },
-          {
-            "id": 732,
-            "image": "https://static.wanted.co.kr/images/tags/6e1966ca.jpg",
-            "title": "연구실 기사",
-            "counts": {
-              "job": 0,
-              "user": 1847
-            }
-          },
-          {
-            "id": 734,
-            "image": "https://static.wanted.co.kr/images/tags/6c538f64.jpg",
-            "title": "약사 보조원",
-            "counts": {
-              "job": 0,
-              "user": 2320
-            }
-          },
-          {
-            "id": 1040,
-            "image": "https://static.wanted.co.kr/images/tags/b6f4c4c4.jpg",
-            "title": "한의사",
-            "counts": {
-              "job": 0,
-              "user": 488
-            }
-          },
-          {
-            "id": 10135,
-            "image": "https://static.wanted.co.kr/images/tags/6dc37980.jpg",
-            "title": "의무기록사",
-            "counts": {
-              "job": 0,
-              "user": 1077
-            }
-          },
-          {
-            "id": 10147,
-            "image": "https://static.wanted.co.kr/images/tags/921854c4.jpg",
-            "title": "임상심리사",
-            "counts": {
-              "job": 0,
-              "user": 333
-            }
-          }
-        ],
-        "title": "의료·제약·바이오",
-        "counts": {
-          "job": 80,
-          "user": 75307
+          "job": 122,
+          "user": 24295
         }
       },
       {
@@ -6747,8 +6567,8 @@
             "image": "https://static.wanted.co.kr/images/tags/2a28a288-4fc8-11e6-8a12-0a30d591bfc5.jpg",
             "title": "물류담당",
             "counts": {
-              "job": 56,
-              "user": 23569
+              "job": 79,
+              "user": 29254
             }
           },
           {
@@ -6756,17 +6576,8 @@
             "image": "https://static.wanted.co.kr/images/tags/0ed51b6e.jpg",
             "title": "입·출고 관리자",
             "counts": {
-              "job": 48,
-              "user": 8611
-            }
-          },
-          {
-            "id": 10149,
-            "image": "https://static.wanted.co.kr/images/tags/c9cdfa6d.jpg",
-            "title": "유통 관리자",
-            "counts": {
-              "job": 25,
-              "user": 4713
+              "job": 34,
+              "user": 12980
             }
           },
           {
@@ -6774,8 +6585,17 @@
             "image": "https://static.wanted.co.kr/images/tags/a965098b.jpg",
             "title": "수출입사무",
             "counts": {
-              "job": 19,
-              "user": 7016
+              "job": 30,
+              "user": 10707
+            }
+          },
+          {
+            "id": 10149,
+            "image": "https://static.wanted.co.kr/images/tags/c9cdfa6d.jpg",
+            "title": "유통 관리자",
+            "counts": {
+              "job": 29,
+              "user": 7212
             }
           },
           {
@@ -6783,17 +6603,8 @@
             "image": "https://static.wanted.co.kr/images/tags/678d348c-03a9-11e7-b0b5-0219382c3fab.jpg",
             "title": "물류 분석가",
             "counts": {
-              "job": 15,
-              "user": 6603
-            }
-          },
-          {
-            "id": 10053,
-            "image": "https://static.wanted.co.kr/images/tags/0de100ea.jpg",
-            "title": "무역사무",
-            "counts": {
-              "job": 15,
-              "user": 12738
+              "job": 24,
+              "user": 8251
             }
           },
           {
@@ -6801,8 +6612,26 @@
             "image": "https://static.wanted.co.kr/images/tags/0e89ba22-ccbd-11e6-95de-0a30d591bfc5.jpg",
             "title": "배송담당",
             "counts": {
-              "job": 6,
-              "user": 9378
+              "job": 17,
+              "user": 10960
+            }
+          },
+          {
+            "id": 10053,
+            "image": "https://static.wanted.co.kr/images/tags/0de100ea.jpg",
+            "title": "무역사무",
+            "counts": {
+              "job": 12,
+              "user": 16132
+            }
+          },
+          {
+            "id": 779,
+            "image": null,
+            "title": "운행 관리원",
+            "counts": {
+              "job": 4,
+              "user": 1673
             }
           },
           {
@@ -6810,35 +6639,17 @@
             "image": "https://static.wanted.co.kr/images/tags/f3470398.jpg",
             "title": "운송 관리자",
             "counts": {
-              "job": 5,
-              "user": 6032
-            }
-          },
-          {
-            "id": 10150,
-            "image": "https://static.wanted.co.kr/images/tags/f5d59c36.jpg",
-            "title": "바이어관리·상담·개발",
-            "counts": {
               "job": 4,
-              "user": 2113
+              "user": 7232
             }
           },
           {
-            "id": 787,
-            "image": "https://static.wanted.co.kr/images/tags/0eefc224.jpg",
-            "title": "웨어하우스",
+            "id": 10139,
+            "image": "https://static.wanted.co.kr/images/tags/d16c1eb3.jpg",
+            "title": "관세사",
             "counts": {
-              "job": 3,
-              "user": 2891
-            }
-          },
-          {
-            "id": 788,
-            "image": "https://static.wanted.co.kr/images/tags/90409596.jpg",
-            "title": "항공 운송",
-            "counts": {
-              "job": 3,
-              "user": 3931
+              "job": 2,
+              "user": 895
             }
           },
           {
@@ -6846,26 +6657,8 @@
             "image": "https://static.wanted.co.kr/images/tags/4380b0d8.jpg",
             "title": "지게차 운전사",
             "counts": {
-              "job": 2,
-              "user": 5063
-            }
-          },
-          {
-            "id": 785,
-            "image": "https://static.wanted.co.kr/images/tags/03b6efa0.jpg",
-            "title": "선적,발송 사무원",
-            "counts": {
-              "job": 2,
-              "user": 4013
-            }
-          },
-          {
-            "id": 789,
-            "image": "https://static.wanted.co.kr/images/tags/cbc4e8d8.jpg",
-            "title": "해운·해양 운송",
-            "counts": {
-              "job": 2,
-              "user": 4445
+              "job": 1,
+              "user": 6155
             }
           },
           {
@@ -6874,16 +6667,43 @@
             "title": "운전기사",
             "counts": {
               "job": 1,
-              "user": 7559
+              "user": 8538
             }
           },
           {
-            "id": 10139,
-            "image": "https://static.wanted.co.kr/images/tags/d16c1eb3.jpg",
-            "title": "관세사",
+            "id": 784,
+            "image": "https://static.wanted.co.kr/images/tags/993c311e.jpg",
+            "title": "화물트럭 운전기사",
             "counts": {
               "job": 1,
-              "user": 671
+              "user": 4824
+            }
+          },
+          {
+            "id": 787,
+            "image": "https://static.wanted.co.kr/images/tags/0eefc224.jpg",
+            "title": "웨어하우스",
+            "counts": {
+              "job": 1,
+              "user": 3282
+            }
+          },
+          {
+            "id": 788,
+            "image": "https://static.wanted.co.kr/images/tags/90409596.jpg",
+            "title": "항공 운송",
+            "counts": {
+              "job": 1,
+              "user": 4728
+            }
+          },
+          {
+            "id": 10150,
+            "image": "https://static.wanted.co.kr/images/tags/f5d59c36.jpg",
+            "title": "바이어관리·상담·개발",
+            "counts": {
+              "job": 1,
+              "user": 2647
             }
           },
           {
@@ -6892,25 +6712,25 @@
             "title": "디젤 정비공",
             "counts": {
               "job": 0,
-              "user": 219
+              "user": 236
             }
           },
           {
-            "id": 779,
-            "image": null,
-            "title": "운행 관리원",
+            "id": 785,
+            "image": "https://static.wanted.co.kr/images/tags/03b6efa0.jpg",
+            "title": "선적,발송 사무원",
             "counts": {
               "job": 0,
-              "user": 1553
+              "user": 4584
             }
           },
           {
-            "id": 784,
-            "image": "https://static.wanted.co.kr/images/tags/993c311e.jpg",
-            "title": "화물트럭 운전기사",
+            "id": 789,
+            "image": "https://static.wanted.co.kr/images/tags/cbc4e8d8.jpg",
+            "title": "해운·해양 운송",
             "counts": {
               "job": 0,
-              "user": 4082
+              "user": 5387
             }
           },
           {
@@ -6919,7 +6739,7 @@
             "title": "보세사",
             "counts": {
               "job": 0,
-              "user": 1559
+              "user": 1788
             }
           },
           {
@@ -6928,7 +6748,7 @@
             "title": "원산지관리사",
             "counts": {
               "job": 0,
-              "user": 625
+              "user": 902
             }
           },
           {
@@ -6937,7 +6757,7 @@
             "title": "항해사",
             "counts": {
               "job": 0,
-              "user": 109
+              "user": 192
             }
           },
           {
@@ -6946,133 +6766,14 @@
             "title": "기관사",
             "counts": {
               "job": 0,
-              "user": 92
+              "user": 155
             }
           }
         ],
         "title": "물류·무역",
         "counts": {
-          "job": 79,
-          "user": 69256
-        }
-      },
-      {
-        "id": 521,
-        "image": "https://static.wanted.co.kr/images/tags/601ae856.jpg",
-        "tags": [
-          {
-            "id": 691,
-            "image": "https://static.wanted.co.kr/images/tags/c6dc9202-0318-11e7-8ad5-0219382c3fab.jpg",
-            "title": "변호사",
-            "counts": {
-              "job": 25,
-              "user": 2816
-            }
-          },
-          {
-            "id": 1002,
-            "image": "https://static.wanted.co.kr/images/tags/68a88b0a.jpg",
-            "title": "법무담당",
-            "counts": {
-              "job": 23,
-              "user": 5238
-            }
-          },
-          {
-            "id": 10136,
-            "image": "https://static.wanted.co.kr/images/tags/8d32b81a.jpg",
-            "title": "변리사",
-            "counts": {
-              "job": 6,
-              "user": 463
-            }
-          },
-          {
-            "id": 10137,
-            "image": "https://static.wanted.co.kr/images/tags/437b3d12.jpg",
-            "title": "특허담당",
-            "counts": {
-              "job": 5,
-              "user": 988
-            }
-          },
-          {
-            "id": 692,
-            "image": "https://static.wanted.co.kr/images/tags/d840deda-0319-11e7-a894-0aba6235ef6f.jpg",
-            "title": "법무 자문위원",
-            "counts": {
-              "job": 4,
-              "user": 595
-            }
-          },
-          {
-            "id": 694,
-            "image": "https://static.wanted.co.kr/images/tags/86a7f94c.jpg",
-            "title": "법무사",
-            "counts": {
-              "job": 3,
-              "user": 733
-            }
-          },
-          {
-            "id": 686,
-            "image": "https://static.wanted.co.kr/images/tags/400a9d9e.jpg",
-            "title": "수사관",
-            "counts": {
-              "job": 0,
-              "user": 627
-            }
-          },
-          {
-            "id": 687,
-            "image": "https://static.wanted.co.kr/images/tags/dcd26cee.jpg",
-            "title": "보호 관찰관",
-            "counts": {
-              "job": 0,
-              "user": 307
-            }
-          },
-          {
-            "id": 688,
-            "image": "https://static.wanted.co.kr/images/tags/4c372252.jpg",
-            "title": "경찰관",
-            "counts": {
-              "job": 0,
-              "user": 1331
-            }
-          },
-          {
-            "id": 689,
-            "image": "https://static.wanted.co.kr/images/tags/b442b838.jpg",
-            "title": "보안요원",
-            "counts": {
-              "job": 0,
-              "user": 1475
-            }
-          },
-          {
-            "id": 690,
-            "image": "https://static.wanted.co.kr/images/tags/39ba58f6.jpg",
-            "title": "경호원",
-            "counts": {
-              "job": 0,
-              "user": 710
-            }
-          },
-          {
-            "id": 693,
-            "image": "https://static.wanted.co.kr/images/tags/7f32f9e6.jpg",
-            "title": "법무관",
-            "counts": {
-              "job": 0,
-              "user": 347
-            }
-          }
-        ],
-        "title": "법률·법집행기관",
-        "counts": {
-          "job": 41,
-          "user": 13508
+          "job": 103,
+          "user": 81511
         }
       },
       {
@@ -7080,30 +6781,12 @@
         "image": "https://static.wanted.co.kr/images/tags/d4536952.jpg",
         "tags": [
           {
-            "id": 749,
-            "image": "https://static.wanted.co.kr/images/tags/a1b328cc.jpg",
-            "title": "외식업 종사자",
-            "counts": {
-              "job": 17,
-              "user": 21627
-            }
-          },
-          {
-            "id": 10153,
-            "image": "https://static.wanted.co.kr/images/tags/17a53bd1.jpg",
-            "title": "식품가공·개발",
-            "counts": {
-              "job": 16,
-              "user": 4569
-            }
-          },
-          {
             "id": 761,
             "image": "https://static.wanted.co.kr/images/tags/6885cf40-637f-11e6-831d-0a30d591bfc5.jpg",
             "title": "식품 MD",
             "counts": {
-              "job": 12,
-              "user": 7335
+              "job": 16,
+              "user": 8640
             }
           },
           {
@@ -7111,17 +6794,17 @@
             "image": "https://static.wanted.co.kr/images/tags/7f9b4a94.jpg",
             "title": "요리사",
             "counts": {
-              "job": 11,
-              "user": 18506
+              "job": 12,
+              "user": 21259
             }
           },
           {
-            "id": 10058,
-            "image": "https://static.wanted.co.kr/images/tags/22ba7996.jpg",
-            "title": "메뉴개발",
+            "id": 749,
+            "image": "https://static.wanted.co.kr/images/tags/a1b328cc.jpg",
+            "title": "외식업 종사자",
             "counts": {
-              "job": 7,
-              "user": 6257
+              "job": 12,
+              "user": 25181
             }
           },
           {
@@ -7129,17 +6812,35 @@
             "image": "https://static.wanted.co.kr/images/tags/e7dd1766.jpg",
             "title": "레스토랑 관리자",
             "counts": {
-              "job": 6,
-              "user": 5616
+              "job": 10,
+              "user": 6336
             }
           },
           {
-            "id": 747,
-            "image": "https://static.wanted.co.kr/images/tags/36e06782.jpg",
-            "title": "바텐더",
+            "id": 10058,
+            "image": "https://static.wanted.co.kr/images/tags/22ba7996.jpg",
+            "title": "메뉴개발",
             "counts": {
-              "job": 3,
-              "user": 2399
+              "job": 8,
+              "user": 7553
+            }
+          },
+          {
+            "id": 10153,
+            "image": "https://static.wanted.co.kr/images/tags/17a53bd1.jpg",
+            "title": "식품가공·개발",
+            "counts": {
+              "job": 7,
+              "user": 6547
+            }
+          },
+          {
+            "id": 10154,
+            "image": "https://static.wanted.co.kr/images/tags/0b479ede.jpg",
+            "title": "바리스타",
+            "counts": {
+              "job": 7,
+              "user": 10393
             }
           },
           {
@@ -7148,16 +6849,7 @@
             "title": "소믈리에",
             "counts": {
               "job": 2,
-              "user": 548
-            }
-          },
-          {
-            "id": 628,
-            "image": "https://static.wanted.co.kr/images/tags/b052888c.jpg",
-            "title": "영양사",
-            "counts": {
-              "job": 1,
-              "user": 3797
+              "user": 705
             }
           },
           {
@@ -7166,16 +6858,7 @@
             "title": "제과·제빵사",
             "counts": {
               "job": 1,
-              "user": 6474
-            }
-          },
-          {
-            "id": 10154,
-            "image": "https://static.wanted.co.kr/images/tags/0b479ede.jpg",
-            "title": "바리스타",
-            "counts": {
-              "job": 1,
-              "user": 8351
+              "user": 7738
             }
           },
           {
@@ -7183,197 +6866,525 @@
             "image": "https://static.wanted.co.kr/images/tags/a2f54b2e.jpg",
             "title": "푸드스타일리스트",
             "counts": {
+              "job": 1,
+              "user": 1518
+            }
+          },
+          {
+            "id": 628,
+            "image": "https://static.wanted.co.kr/images/tags/b052888c.jpg",
+            "title": "영양사",
+            "counts": {
               "job": 0,
-              "user": 1161
+              "user": 4464
+            }
+          },
+          {
+            "id": 747,
+            "image": "https://static.wanted.co.kr/images/tags/36e06782.jpg",
+            "title": "바텐더",
+            "counts": {
+              "job": 0,
+              "user": 2648
             }
           }
         ],
         "title": "식·음료",
         "counts": {
-          "job": 41,
-          "user": 66492
+          "job": 96,
+          "user": 77110
         }
       },
       {
-        "id": 509,
-        "image": "https://static.wanted.co.kr/images/tags/974967d0.jpg",
+        "id": 521,
+        "image": "https://static.wanted.co.kr/images/tags/601ae856.jpg",
         "tags": [
           {
-            "id": 10143,
-            "image": "https://static.wanted.co.kr/images/tags/52b43ffc.jpg",
-            "title": "건축시공·감리",
+            "id": 1002,
+            "image": "https://static.wanted.co.kr/images/tags/68a88b0a.jpg",
+            "title": "법무담당",
             "counts": {
-              "job": 14,
-              "user": 7711
+              "job": 54,
+              "user": 6337
             }
           },
           {
-            "id": 10142,
-            "image": "https://static.wanted.co.kr/images/tags/a3529322.jpg",
-            "title": "실내건축",
+            "id": 691,
+            "image": "https://static.wanted.co.kr/images/tags/c6dc9202-0318-11e7-8ad5-0219382c3fab.jpg",
+            "title": "변호사",
             "counts": {
-              "job": 11,
-              "user": 7213
+              "job": 53,
+              "user": 3258
             }
           },
           {
-            "id": 604,
-            "image": "https://static.wanted.co.kr/images/tags/1216fbdc-4284-11e6-a15c-029e8c03f357.jpg",
-            "title": "건축가",
+            "id": 10529,
+            "image": null,
+            "title": "인허가(RA) 담당",
             "counts": {
-              "job": 9,
-              "user": 8610
+              "job": 15,
+              "user": 76
             }
           },
           {
-            "id": 572,
-            "image": "https://static.wanted.co.kr/images/tags/d43af124.jpg",
-            "title": "현장 소장",
+            "id": 692,
+            "image": "https://static.wanted.co.kr/images/tags/d840deda-0319-11e7-a894-0aba6235ef6f.jpg",
+            "title": "법무 자문위원",
             "counts": {
-              "job": 8,
-              "user": 6244
+              "job": 12,
+              "user": 675
             }
           },
           {
-            "id": 10144,
-            "image": "https://static.wanted.co.kr/images/tags/c2223e20.jpg",
-            "title": "건설 안전·품질·검사",
+            "id": 694,
+            "image": "https://static.wanted.co.kr/images/tags/86a7f94c.jpg",
+            "title": "법무사",
+            "counts": {
+              "job": 5,
+              "user": 802
+            }
+          },
+          {
+            "id": 10136,
+            "image": "https://static.wanted.co.kr/images/tags/8d32b81a.jpg",
+            "title": "변리사",
+            "counts": {
+              "job": 5,
+              "user": 575
+            }
+          },
+          {
+            "id": 10137,
+            "image": "https://static.wanted.co.kr/images/tags/437b3d12.jpg",
+            "title": "특허담당",
+            "counts": {
+              "job": 5,
+              "user": 1314
+            }
+          },
+          {
+            "id": 686,
+            "image": "https://static.wanted.co.kr/images/tags/400a9d9e.jpg",
+            "title": "수사관",
+            "counts": {
+              "job": 0,
+              "user": 707
+            }
+          },
+          {
+            "id": 687,
+            "image": "https://static.wanted.co.kr/images/tags/dcd26cee.jpg",
+            "title": "보호 관찰관",
+            "counts": {
+              "job": 0,
+              "user": 335
+            }
+          },
+          {
+            "id": 688,
+            "image": "https://static.wanted.co.kr/images/tags/4c372252.jpg",
+            "title": "경찰관",
+            "counts": {
+              "job": 0,
+              "user": 1426
+            }
+          },
+          {
+            "id": 689,
+            "image": "https://static.wanted.co.kr/images/tags/b442b838.jpg",
+            "title": "보안요원",
+            "counts": {
+              "job": 0,
+              "user": 1696
+            }
+          },
+          {
+            "id": 690,
+            "image": "https://static.wanted.co.kr/images/tags/39ba58f6.jpg",
+            "title": "경호원",
+            "counts": {
+              "job": 0,
+              "user": 813
+            }
+          },
+          {
+            "id": 693,
+            "image": "https://static.wanted.co.kr/images/tags/7f32f9e6.jpg",
+            "title": "법무관",
+            "counts": {
+              "job": 0,
+              "user": 401
+            }
+          }
+        ],
+        "title": "법률·법집행기관",
+        "counts": {
+          "job": 80,
+          "user": 15707
+        }
+      },
+      {
+        "id": 10101,
+        "image": "https://static.wanted.co.kr/images/tags/9755eed1.jpg",
+        "tags": [
+          {
+            "id": 10103,
+            "image": "https://static.wanted.co.kr/images/tags/72f149b2.jpg",
+            "title": "교재·교육기획",
+            "counts": {
+              "job": 58,
+              "user": 12921
+            }
+          },
+          {
+            "id": 10109,
+            "image": "https://static.wanted.co.kr/images/tags/e5e34efd.jpg",
+            "title": "자격증·기술전문교육",
+            "counts": {
+              "job": 20,
+              "user": 4923
+            }
+          },
+          {
+            "id": 10102,
+            "image": "https://static.wanted.co.kr/images/tags/6459b56e.jpg",
+            "title": "전문강사",
+            "counts": {
+              "job": 15,
+              "user": 13336
+            }
+          },
+          {
+            "id": 10106,
+            "image": "https://static.wanted.co.kr/images/tags/849b212b.jpg",
+            "title": "외국어교육",
+            "counts": {
+              "job": 10,
+              "user": 8157
+            }
+          },
+          {
+            "id": 10104,
+            "image": "https://static.wanted.co.kr/images/tags/29385c79.jpg",
+            "title": "학원강사",
             "counts": {
               "job": 6,
-              "user": 6531
+              "user": 16674
             }
           },
           {
-            "id": 584,
-            "image": "https://static.wanted.co.kr/images/tags/2dfbd79c.jpg",
-            "title": "견적 기술자",
+            "id": 10105,
+            "image": "https://static.wanted.co.kr/images/tags/f7a1dac8.jpg",
+            "title": "교직원",
             "counts": {
-              "job": 4,
-              "user": 3539
+              "job": 5,
+              "user": 9540
             }
           },
           {
-            "id": 575,
-            "image": "https://static.wanted.co.kr/images/tags/6fc39f94.jpg",
-            "title": "유지보수 관리자",
+            "id": 10108,
+            "image": "https://static.wanted.co.kr/images/tags/24f5b854.jpg",
+            "title": "초·중·고 교사",
+            "counts": {
+              "job": 1,
+              "user": 7524
+            }
+          },
+          {
+            "id": 10107,
+            "image": "https://static.wanted.co.kr/images/tags/55e4ec71.jpg",
+            "title": "유치원·보육교사",
+            "counts": {
+              "job": 0,
+              "user": 14473
+            }
+          }
+        ],
+        "title": "교육",
+        "counts": {
+          "job": 80,
+          "user": 69415
+        }
+      },
+      {
+        "id": 515,
+        "image": "https://static.wanted.co.kr/images/tags/7952b34e.jpg",
+        "tags": [
+          {
+            "id": 739,
+            "image": "https://static.wanted.co.kr/images/tags/83c6be50.jpg",
+            "title": "연구원",
+            "counts": {
+              "job": 39,
+              "user": 18272
+            }
+          },
+          {
+            "id": 735,
+            "image": "https://static.wanted.co.kr/images/tags/c4e62e6a.jpg",
+            "title": "임상시험 연구원",
+            "counts": {
+              "job": 25,
+              "user": 3949
+            }
+          },
+          {
+            "id": 740,
+            "image": "https://static.wanted.co.kr/images/tags/038d30da.jpg",
+            "title": "생명공학 연구원",
+            "counts": {
+              "job": 18,
+              "user": 8637
+            }
+          },
+          {
+            "id": 627,
+            "image": "https://static.wanted.co.kr/images/tags/376cff36.jpg",
+            "title": "간호사",
+            "counts": {
+              "job": 6,
+              "user": 16609
+            }
+          },
+          {
+            "id": 736,
+            "image": "https://static.wanted.co.kr/images/tags/aaa86cac.jpg",
+            "title": "임상시험 간호사",
+            "counts": {
+              "job": 6,
+              "user": 1347
+            }
+          },
+          {
+            "id": 10134,
+            "image": "https://static.wanted.co.kr/images/tags/c8055d89.jpg",
+            "title": "병원 코디네이터",
+            "counts": {
+              "job": 3,
+              "user": 3930
+            }
+          },
+          {
+            "id": 731,
+            "image": "https://static.wanted.co.kr/images/tags/7f83955c.jpg",
+            "title": "약학 분석 화학자",
             "counts": {
               "job": 2,
-              "user": 9616
+              "user": 2853
             }
           },
           {
-            "id": 576,
-            "image": "https://static.wanted.co.kr/images/tags/8dae9f1c.jpg",
-            "title": "관리인",
+            "id": 733,
+            "image": "https://static.wanted.co.kr/images/tags/905cf828-03a1-11e7-bd2d-0aba6235ef6f.jpg",
+            "title": "약사",
+            "counts": {
+              "job": 2,
+              "user": 2154
+            }
+          },
+          {
+            "id": 626,
+            "image": "https://static.wanted.co.kr/images/tags/aba9c04c.jpg",
+            "title": "임상병리사",
             "counts": {
               "job": 1,
-              "user": 13338
+              "user": 3659
             }
           },
           {
-            "id": 577,
-            "image": "https://static.wanted.co.kr/images/tags/db158410.jpg",
-            "title": "전기 기술자",
+            "id": 629,
+            "image": "https://static.wanted.co.kr/images/tags/f3e231b4.jpg",
+            "title": "작업 치료사",
             "counts": {
               "job": 1,
-              "user": 9132
+              "user": 1501
             }
           },
           {
-            "id": 578,
-            "image": "https://static.wanted.co.kr/images/tags/ca4acd48.jpg",
-            "title": "인스톨러",
+            "id": 630,
+            "image": "https://static.wanted.co.kr/images/tags/55b9acae.jpg",
+            "title": "물리 치료사",
             "counts": {
               "job": 1,
-              "user": 630
+              "user": 3985
             }
           },
           {
-            "id": 571,
-            "image": "https://static.wanted.co.kr/images/tags/5a12d500.jpg",
-            "title": "목수",
+            "id": 737,
+            "image": "https://static.wanted.co.kr/images/tags/31f41a02.jpg",
+            "title": "미생물학자",
             "counts": {
-              "job": 0,
-              "user": 5221
+              "job": 1,
+              "user": 2487
             }
           },
           {
-            "id": 573,
-            "image": "https://static.wanted.co.kr/images/tags/1e6be40c.jpg",
-            "title": "중장비 기술자",
+            "id": 738,
+            "image": null,
+            "title": "유전공학자",
             "counts": {
-              "job": 0,
-              "user": 4757
-            }
-          },
-          {
-            "id": 574,
-            "image": "https://static.wanted.co.kr/images/tags/ee8c2b02.jpg",
-            "title": "정비공",
-            "counts": {
-              "job": 0,
+              "job": 1,
               "user": 1808
             }
           },
           {
-            "id": 579,
-            "image": "https://static.wanted.co.kr/images/tags/76e60f54.jpg",
-            "title": "페인터",
+            "id": 10054,
+            "image": "https://static.wanted.co.kr/images/tags/499ba946.jpg",
+            "title": "방사선사",
             "counts": {
-              "job": 0,
-              "user": 1520
+              "job": 1,
+              "user": 1867
             }
           },
           {
-            "id": 580,
-            "image": "https://static.wanted.co.kr/images/tags/67ff458c.jpg",
-            "title": "플랜트 관리자",
+            "id": 622,
+            "image": "https://static.wanted.co.kr/images/tags/58f2d248.jpg",
+            "title": "치과 위생사",
             "counts": {
               "job": 0,
-              "user": 2663
+              "user": 4105
             }
           },
           {
-            "id": 581,
-            "image": "https://static.wanted.co.kr/images/tags/aa10a0c6.jpg",
-            "title": "용접기사",
+            "id": 623,
+            "image": "https://static.wanted.co.kr/images/tags/36eac8d6.jpg",
+            "title": "증례 관리자",
             "counts": {
               "job": 0,
-              "user": 3140
+              "user": 458
             }
           },
           {
-            "id": 582,
-            "image": "https://static.wanted.co.kr/images/tags/417c01b0.jpg",
-            "title": "배관공",
+            "id": 624,
+            "image": "https://static.wanted.co.kr/images/tags/46095954.jpg",
+            "title": "간병인",
             "counts": {
               "job": 0,
-              "user": 4476
+              "user": 1684
             }
           },
           {
-            "id": 583,
-            "image": "https://static.wanted.co.kr/images/tags/ac420272.jpg",
-            "title": "연관공",
+            "id": 625,
+            "image": "https://static.wanted.co.kr/images/tags/2c06bb78.jpg",
+            "title": "조무사",
             "counts": {
               "job": 0,
-              "user": 745
+              "user": 5808
             }
           },
           {
-            "id": 585,
-            "image": "https://static.wanted.co.kr/images/tags/40ea813c.jpg",
-            "title": "측량·계측",
+            "id": 631,
+            "image": "https://static.wanted.co.kr/images/tags/acddd3c6.jpg",
+            "title": "호흡장애 치료사",
             "counts": {
               "job": 0,
-              "user": 1741
+              "user": 172
+            }
+          },
+          {
+            "id": 632,
+            "image": "https://static.wanted.co.kr/images/tags/4b816338.jpg",
+            "title": "수의 테크니션",
+            "counts": {
+              "job": 0,
+              "user": 1225
+            }
+          },
+          {
+            "id": 633,
+            "image": "https://static.wanted.co.kr/images/tags/a1644634.jpg",
+            "title": "의사",
+            "counts": {
+              "job": 0,
+              "user": 2076
+            }
+          },
+          {
+            "id": 634,
+            "image": "https://static.wanted.co.kr/images/tags/58260bc0.jpg",
+            "title": "수의사",
+            "counts": {
+              "job": 0,
+              "user": 752
+            }
+          },
+          {
+            "id": 635,
+            "image": "https://static.wanted.co.kr/images/tags/5d7abe3e.jpg",
+            "title": "간호 조무사",
+            "counts": {
+              "job": 0,
+              "user": 14322
+            }
+          },
+          {
+            "id": 636,
+            "image": "https://static.wanted.co.kr/images/tags/38c892dc.jpg",
+            "title": "치과의사",
+            "counts": {
+              "job": 0,
+              "user": 530
+            }
+          },
+          {
+            "id": 637,
+            "image": "https://static.wanted.co.kr/images/tags/4ca10988.jpg",
+            "title": "검안사",
+            "counts": {
+              "job": 0,
+              "user": 893
+            }
+          },
+          {
+            "id": 732,
+            "image": "https://static.wanted.co.kr/images/tags/6e1966ca.jpg",
+            "title": "연구실 기사",
+            "counts": {
+              "job": 0,
+              "user": 2060
+            }
+          },
+          {
+            "id": 734,
+            "image": "https://static.wanted.co.kr/images/tags/6c538f64.jpg",
+            "title": "약사 보조원",
+            "counts": {
+              "job": 0,
+              "user": 2585
+            }
+          },
+          {
+            "id": 1040,
+            "image": "https://static.wanted.co.kr/images/tags/b6f4c4c4.jpg",
+            "title": "한의사",
+            "counts": {
+              "job": 0,
+              "user": 556
+            }
+          },
+          {
+            "id": 10135,
+            "image": "https://static.wanted.co.kr/images/tags/6dc37980.jpg",
+            "title": "의무기록사",
+            "counts": {
+              "job": 0,
+              "user": 1493
+            }
+          },
+          {
+            "id": 10147,
+            "image": "https://static.wanted.co.kr/images/tags/921854c4.jpg",
+            "title": "임상심리사",
+            "counts": {
+              "job": 0,
+              "user": 450
             }
           }
         ],
-        "title": "건설·시설",
+        "title": "의료·제약·바이오",
         "counts": {
-          "job": 26,
-          "user": 80005
+          "job": 65,
+          "user": 91731
         }
       },
       {
@@ -7381,21 +7392,12 @@
         "image": "https://static.wanted.co.kr/images/tags/80c36024.jpg",
         "tags": [
           {
-            "id": 10055,
-            "image": "https://static.wanted.co.kr/images/tags/7b9042ea.jpg",
-            "title": "사회복지사",
-            "counts": {
-              "job": 1,
-              "user": 16176
-            }
-          },
-          {
             "id": 609,
             "image": "https://static.wanted.co.kr/images/tags/3cfade82.jpg",
             "title": "카운셀러",
             "counts": {
               "job": 0,
-              "user": 4680
+              "user": 5257
             }
           },
           {
@@ -7404,7 +7406,7 @@
             "title": "소방관",
             "counts": {
               "job": 0,
-              "user": 1028
+              "user": 1185
             }
           },
           {
@@ -7413,7 +7415,7 @@
             "title": "환경 전문가",
             "counts": {
               "job": 0,
-              "user": 3862
+              "user": 4676
             }
           },
           {
@@ -7422,7 +7424,7 @@
             "title": "정보 분석가",
             "counts": {
               "job": 0,
-              "user": 3043
+              "user": 3302
             }
           },
           {
@@ -7431,7 +7433,7 @@
             "title": "인명 구조원",
             "counts": {
               "job": 0,
-              "user": 535
+              "user": 632
             }
           },
           {
@@ -7440,7 +7442,7 @@
             "title": "지역 전문가",
             "counts": {
               "job": 0,
-              "user": 4686
+              "user": 5215
             }
           },
           {
@@ -7449,7 +7451,7 @@
             "title": "공무원",
             "counts": {
               "job": 0,
-              "user": 14939
+              "user": 16701
             }
           },
           {
@@ -7458,7 +7460,7 @@
             "title": "직업군인",
             "counts": {
               "job": 0,
-              "user": 2655
+              "user": 3016
             }
           },
           {
@@ -7467,7 +7469,16 @@
             "title": "자원봉사자",
             "counts": {
               "job": 0,
-              "user": 7073
+              "user": 7511
+            }
+          },
+          {
+            "id": 10055,
+            "image": "https://static.wanted.co.kr/images/tags/7b9042ea.jpg",
+            "title": "사회복지사",
+            "counts": {
+              "job": 0,
+              "user": 19869
             }
           },
           {
@@ -7476,7 +7487,7 @@
             "title": "응급구조사",
             "counts": {
               "job": 0,
-              "user": 417
+              "user": 562
             }
           },
           {
@@ -7485,14 +7496,14 @@
             "title": "요양보호사",
             "counts": {
               "job": 0,
-              "user": 8206
+              "user": 9108
             }
           }
         ],
         "title": "공공·복지",
         "counts": {
-          "job": 1,
-          "user": 59763
+          "job": 0,
+          "user": 68098
         }
       }
     ]

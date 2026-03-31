@@ -71,6 +71,115 @@ export interface Commands {
   options?: CommandOption[];
 }
 
+/** https://discord.com/developers/docs/interactions/application-commands#registering-a-command */
+const COMMAND_LIMITS = {
+  MAX_COMMANDS: 100,
+  MAX_OPTIONS: 25,
+  MAX_CHOICES: 25,
+  NAME_MAX_LENGTH: 32,
+  DESCRIPTION_MAX_LENGTH: 100,
+  CHOICE_NAME_MAX_LENGTH: 100,
+  CHOICE_VALUE_MAX_LENGTH: 100,
+} as const;
+
+export interface CommandValidationError {
+  command: string;
+  option?: string;
+  message: string;
+}
+
+/**
+ * Discord slash command 스키마의 제한 사항을 검사합니다.
+ * @param {Commands[]} commands - 검사할 명령어 배열
+ * @returns {CommandValidationError[]} 발견된 오류 목록 (빈 배열이면 유효)
+ */
+export function validateCommands(commands: Commands[]): CommandValidationError[] {
+  const errors: CommandValidationError[] = [];
+
+  if (commands.length > COMMAND_LIMITS.MAX_COMMANDS) {
+    errors.push({
+      command: '(global)',
+      message: `Commands exceed limit: ${commands.length} > ${COMMAND_LIMITS.MAX_COMMANDS}`,
+    });
+  }
+
+  for (const command of commands) {
+    if (command.name.length > COMMAND_LIMITS.NAME_MAX_LENGTH) {
+      errors.push({
+        command: command.name,
+        message: `Command name too long: ${command.name.length} > ${COMMAND_LIMITS.NAME_MAX_LENGTH}`,
+      });
+    }
+
+    if (command.description.length > COMMAND_LIMITS.DESCRIPTION_MAX_LENGTH) {
+      errors.push({
+        command: command.name,
+        message: `Command description too long: ${command.description.length} > ${COMMAND_LIMITS.DESCRIPTION_MAX_LENGTH}`,
+      });
+    }
+
+    const options = command.options ?? [];
+
+    if (options.length > COMMAND_LIMITS.MAX_OPTIONS) {
+      errors.push({
+        command: command.name,
+        message: `Options exceed limit: ${options.length} > ${COMMAND_LIMITS.MAX_OPTIONS}`,
+      });
+    }
+
+    for (const option of options) {
+      if (option.name.length > COMMAND_LIMITS.NAME_MAX_LENGTH) {
+        errors.push({
+          command: command.name,
+          option: option.name,
+          message: `Option name too long: ${option.name.length} > ${COMMAND_LIMITS.NAME_MAX_LENGTH}`,
+        });
+      }
+
+      if (option.description.length > COMMAND_LIMITS.DESCRIPTION_MAX_LENGTH) {
+        errors.push({
+          command: command.name,
+          option: option.name,
+          message: `Option description too long: ${option.description.length} > ${COMMAND_LIMITS.DESCRIPTION_MAX_LENGTH}`,
+        });
+      }
+
+      const choices = option.choices ?? [];
+
+      if (choices.length > COMMAND_LIMITS.MAX_CHOICES) {
+        errors.push({
+          command: command.name,
+          option: option.name,
+          message: `Choices exceed limit: ${choices.length} > ${COMMAND_LIMITS.MAX_CHOICES}`,
+        });
+      }
+
+      for (const choice of choices) {
+        if (choice.name.length > COMMAND_LIMITS.CHOICE_NAME_MAX_LENGTH) {
+          errors.push({
+            command: command.name,
+            option: option.name,
+            message: `Choice name too long: "${choice.name}" (${choice.name.length} > ${COMMAND_LIMITS.CHOICE_NAME_MAX_LENGTH})`,
+          });
+        }
+
+        if (
+          typeof choice.value === 'string' &&
+          choice.value.length > COMMAND_LIMITS.CHOICE_VALUE_MAX_LENGTH
+        ) {
+          errors.push({
+            command: command.name,
+            option: option.name,
+            message: `Choice value too long: "${choice.value}" (${choice.value.length} > ${COMMAND_LIMITS.CHOICE_VALUE_MAX_LENGTH})`,
+          });
+        }
+      }
+    }
+  }
+
+  return errors;
+}
+
 /**
  * Discord API에 전역 명령 설치
  * @param {string} appId - Discord 애플리케이션 ID

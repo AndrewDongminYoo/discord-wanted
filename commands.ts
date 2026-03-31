@@ -1,6 +1,6 @@
 import { config } from 'dotenv';
 
-import { type Commands, InstallGlobalCommands } from './src/utils.js';
+import { type Commands, InstallGlobalCommands, validateCommands } from './src/utils.js';
 
 config();
 
@@ -246,5 +246,15 @@ const SARAMIN_COMMAND: Commands = {
 
 // 명령어를 명령 리스트에 추가
 const ALL_COMMANDS = [WANTED_COMMAND, SARAMIN_COMMAND];
+
+const validationErrors = validateCommands(ALL_COMMANDS);
+if (validationErrors.length > 0) {
+  console.error('Command schema validation failed:');
+  for (const error of validationErrors) {
+    const location = error.option ? `${error.command} > ${error.option}` : error.command;
+    console.error(`  [${location}] ${error.message}`);
+  }
+  process.exit(1);
+}
 
 InstallGlobalCommands(APPLICATION_ID, ALL_COMMANDS);

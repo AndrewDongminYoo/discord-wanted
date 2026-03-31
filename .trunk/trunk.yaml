@@ -24,7 +24,7 @@ lint:
         - json
   enabled:
     - actionlint@1.7.11
-    - renovate@43.100.0
+    - renovate@43.101.2
     - osv-scanner@2.2.4
     - cspell@9.7.0
     - eslint@10.1.0

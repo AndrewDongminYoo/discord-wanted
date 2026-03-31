@@ -1,10 +1,9 @@
 import Axios from 'axios';
 
 import { JobInfoDisplay } from './job-info-display.js';
-import { isValidLocation } from './locations.js';
-import { type JobGroupId, type JobIds, type JobSort, type Years } from './types/user-enums.js';
-import { type UserInput } from './types/user-input.js';
-import { type CountryCode, type JobData, type WantedResponse } from './types/wanted-response.js';
+import type { JobGroupId, JobIds, JobSort, Years } from './types/user-enums.js';
+import type { UserInput } from './types/user-input.js';
+import type { CountryCode, JobData, WantedResponse } from './types/wanted-response.js';
 
 const baseURL = 'https://www.wanted.co.kr';
 
@@ -59,12 +58,9 @@ function buildUrl(params: UserInput): string {
   // 국가 추가
   queryParams.push(`country=${countryKey}`);
 
-  if (isValidLocation(params.locationKey)) {
+  if (params.locationKey) {
     // 위치 추가
     queryParams.push(`locations=${params.locationKey}`);
-  } else {
-    // 모든 지역
-    queryParams.push('locations=all');
   }
 
   // 결과 제한 추가

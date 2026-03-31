@@ -1,5 +1,5 @@
 import { type AdditionalInfo, IJobInfoDisplay, type UsefulInfo } from '../i-job-info-display.js';
-import { type Position } from './types/jump-it-response.js';
+import type { Position } from './types/jump-it-response.js';
 
 export class JobInfoDisplay extends IJobInfoDisplay {
   constructor(protected position: Position) {

@@ -1,9 +1,9 @@
 import Axios from 'axios';
 
 import { JobInfoDisplay } from './job-info-display.js';
-import { type Sort } from './types/job-codes.js';
-import { type JumpItResponse, type JumpItResult, type Position } from './types/jump-it-response.js';
-import { type StackName } from './types/tech-stacks.js';
+import type { Sort } from './types/job-codes.js';
+import type { JumpItResponse, JumpItResult, Position } from './types/jump-it-response.js';
+import type { StackName } from './types/tech-stacks.js';
 
 const baseURL = 'https://jumpit-api.saramin.co.kr';
 

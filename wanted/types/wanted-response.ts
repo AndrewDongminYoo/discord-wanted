@@ -1,4 +1,4 @@
-import { type JobGroupId, type JobIds } from './user-enums.js';
+import type { JobGroupId, JobIds } from './user-enums.js';
 
 export interface WantedResponse {
   /** 채용정보 리스트 */

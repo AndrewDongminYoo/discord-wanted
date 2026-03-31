@@ -1,5 +1,5 @@
-import { type JobGroupId, type JobIds, type JobSort, type Years } from './user-enums.ts';
-import { type CountryCode } from './wanted-response.ts';
+import type { JobGroupId, JobIds, JobSort, Years } from './user-enums.ts';
+import type { CountryCode } from './wanted-response.ts';
 
 export interface UserInput {
   /**

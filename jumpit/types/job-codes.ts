@@ -1,4 +1,4 @@
-import { type StackName } from './tech-stacks.js';
+import type { StackName } from './tech-stacks.js';
 
 export interface TechStack {
   name: StackName;

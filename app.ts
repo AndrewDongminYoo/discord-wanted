@@ -7,13 +7,13 @@ import { config } from 'dotenv';
 import express, { type Request, type Response } from 'express';
 import serverless from 'serverless-http';
 
-import { type IJobInfoDisplay } from './i-job-info-display.js';
+import type { IJobInfoDisplay } from './i-job-info-display.js';
 import { fetchSaraminJobs } from './jumpit/index.js';
-import { type Sort } from './jumpit/types/job-codes.js';
-import { type StackName } from './jumpit/types/tech-stacks.js';
+import type { Sort } from './jumpit/types/job-codes.js';
+import type { StackName } from './jumpit/types/tech-stacks.js';
 import { getRandomEmoji } from './src/utils.js';
 import { fetchJobs } from './wanted/index.js';
-import { type JobIds, type Years } from './wanted/types/user-enums.js';
+import type { JobIds, Years } from './wanted/types/user-enums.js';
 
 config();
 

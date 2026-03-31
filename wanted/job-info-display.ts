@@ -1,7 +1,7 @@
 import { type AdditionalInfo, IJobInfoDisplay, type UsefulInfo } from '../i-job-info-display.js';
 import { attractionTagsMap } from './attraction-tags.js';
 import { skillStackTagsMap } from './skill-tags.js';
-import { type JobData, type Reward } from './types/wanted-response.js';
+import type { JobData, Reward } from './types/wanted-response.js';
 
 export class JobInfoDisplay extends IJobInfoDisplay {
   constructor(protected jobData: JobData) {

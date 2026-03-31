@@ -14,7 +14,7 @@ if (!DISCORD_TOKEN) {
  * @param {AxiosRequestConfig} options - Axios 요청 옵션
  * @returns Promise<AxiosResponse<any>>
  */
-export async function DiscordRequest(
+async function DiscordRequest(
   endpoint: string,
   options?: AxiosRequestConfig
 ): Promise<AxiosResponse> {
@@ -22,7 +22,7 @@ export async function DiscordRequest(
   const url = 'https://discord.com/api/v10/' + endpoint;
 
   // Axios 요청
-  return axios({
+  return await axios({
     url,
     headers: {
       'Authorization': `Bot ${DISCORD_TOKEN}`,

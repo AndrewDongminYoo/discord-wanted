@@ -10,10 +10,12 @@ Deployed as an AWS Lambda function via the Serverless Framework.
 ## Commands
 
 ```bash
-yarn start        # Run locally with serverless-offline (port 3000)
+yarn dev          # Run locally with serverless-offline (port 3000)
 yarn register     # Register slash commands with Discord API (tsx commands.ts)
 yarn deploy       # Deploy to AWS Lambda
 yarn logs         # Tail Lambda function logs
+yarn lint         # Lint and auto-fix with ESLint
+yarn format       # Format all JS/TS/JSON files with Prettier
 ```
 
 No test runner script is configured — Jest is set up in `package.json` but no test files exist yet.

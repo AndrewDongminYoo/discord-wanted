@@ -8,7 +8,9 @@
     "node": ">=22.x"
   },
   "scripts": {
-    "start": "serverless offline",
+    "dev": "serverless offline",
+    "format": "prettier **/*.{js,ts,mjs,json} --write",
+    "lint": "eslint . --fix",
     "logs": "serverless logs -f app --tail",
     "deploy": "serverless deploy",
     "register": "yarn tsx commands.ts"

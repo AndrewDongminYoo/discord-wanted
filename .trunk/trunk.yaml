@@ -7,13 +7,13 @@ cli:
 plugins:
   sources:
     - id: trunk
-      ref: v1.7.6
+      ref: v1.11.0
       uri: https://github.com/trunk-io/plugins
 # Many linters and tools depend on runtimes - configure them here. (https://docs.trunk.io/runtimes)
 runtimes:
   enabled:
     - node@22.16.0
-    - python@3.10.8
+    - python@3.14.4
 # This is the section where you manage your linters. (https://docs.trunk.io/check/configuration)
 lint:
   definitions:
@@ -23,15 +23,17 @@ lint:
         - javascript
         - json
   enabled:
+    - grype@0.110.0
+    - pinact@4.0.0
     - actionlint@1.7.11
-    - renovate@43.101.2
+    - renovate@44.6.0
     - osv-scanner@2.2.4
-    - cspell@9.7.0
-    - eslint@10.1.0
-    - checkov@3.2.513
+    - cspell@10.0.1
+    - eslint@10.8.0
+    - checkov@3.3.8
     - git-diff-check
-    - markdownlint@0.48.0
-    - prettier@3.8.1
+    - markdownlint@0.49.1
+    - prettier@3.9.6
     - trufflehog@3.90.13
     - yamllint@1.38.0
 actions:

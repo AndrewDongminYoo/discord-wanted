@@ -58,5 +58,8 @@
     "serverless-offline": {
       "serverless": "$serverless"
     }
+  },
+  "resolutions": {
+    "undici": "^6.28.0"
   }
 }

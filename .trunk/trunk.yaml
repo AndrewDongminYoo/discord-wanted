@@ -26,11 +26,11 @@ lint:
     - grype@0.110.0
     - pinact@4.0.0
     - actionlint@1.7.11
-    - renovate@44.6.0
+    - renovate@44.50.3
     - osv-scanner@2.2.4
-    - cspell@10.0.1
-    - eslint@10.8.0
-    - checkov@3.3.8
+    - cspell@10.1.1
+    - eslint@10.9.1
+    - checkov@3.3.15
     - git-diff-check
     - markdownlint@0.49.1
     - prettier@3.9.6

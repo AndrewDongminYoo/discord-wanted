@@ -169,6 +169,7 @@ Gitblit
 Gitbook
 Gitea
 Gitorious
+Gitter
 Glip
 Gonic
 GORM
@@ -286,7 +287,9 @@ Maakyo
 Maesh
 Mageni
 Magento
+Mailchimp
 mailgen
+Mailgun
 MAMP
 MANGOPAY
 Mapbox
@@ -407,6 +410,7 @@ scikit
 Scrapy
 Seldon
 Sellsy
+Sencha
 Serilog
 Sheetsee
 Sheetsu
@@ -524,6 +528,7 @@ Zammad
 Zeplin
 zeroheight
 Ziflow
+Zipkin
 Zitadel
 Zocalo
 Zooto

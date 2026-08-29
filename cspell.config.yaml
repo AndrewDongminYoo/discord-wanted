@@ -13,14 +13,26 @@ dictionaryDefinitions:
   - name: technical
     path: .cspell/technical.txt
     addWords: true
+  - name: job-domain
+    path: .cspell/job-domain.txt
+    addWords: false
 dictionaries:
   - regional
   - technical
+  - job-domain
+  - en-gb
+  - node
+  - npm
+  - typescript
+  - softwareTerms
+  - filetypes
+  - fonts
 words:
   - adwords
   - asana
   - cnet
   - convio
+  - dongmin
   - dongminyu
   - dotenv
   - flickr
@@ -28,7 +40,9 @@ words:
   - jumpit
   - pharma
   - recommendee
+  - saramin
+  - wanted
 ignoreWords: []
 import: []
 useGitignore: true
-allowCompoundWords: true
+allowCompoundWords: false

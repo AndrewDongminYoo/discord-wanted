@@ -44,8 +44,10 @@ eunpyeong
 gangbuk
 ganghwa
 gangjin
+gangnam
 gangneung
 gangseo
+gangwon
 gapyeong
 geoje
 geumcheon
@@ -154,6 +156,7 @@ seosan
 siheung
 sinan
 sokcho
+songpa
 suncheon
 suseong
 suyeong
@@ -194,5 +197,6 @@ yeonje
 yeonsu
 yeosu
 yesan
+yongsan
 yunlin
 yuseong

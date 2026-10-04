@@ -39,6 +39,12 @@ jobs:
       - name: Check ESLint
         run: yarn eslint .
 
+      - name: Check TypeScript
+        run: yarn tsc --noEmit
+
+      - name: Check dependency consumers
+        run: yarn jest --runInBand
+
   semantic-pull-request:
     if: ${{ !contains(fromJSON('["dependabot[bot]", "renovate[bot]", "snyk-bot", "allcontributors[bot]"]'), github.actor) }}
     runs-on: ubuntu-latest

@@ -18,7 +18,7 @@
   "author": "Dongmin Yu",
   "license": "MIT",
   "dependencies": {
-    "axios": "^1.19.0",
+    "axios": "^1.20.0",
     "discord-interactions": "^4.1.0",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
@@ -49,6 +49,9 @@
       "ts"
     ],
     "testRegex": ".test.ts$",
+    "moduleNameMapper": {
+      "^(\\.{1,2}/.*)\\.js$": "$1"
+    },
     "transform": {
       "^.+\\.(t|j)s$": "ts-jest"
     },
@@ -61,6 +64,16 @@
   },
   "resolutions": {
     "qs": "^6.16.0",
-    "undici": "^6.28.0"
+    "serverless/undici": "^6.28.1",
+    "**/@istanbuljs/load-nyc-config/js-yaml": "^3.15.2",
+    "**/test-exclude/minimatch/brace-expansion": "^1.1.21",
+    "**/test-exclude/glob/minimatch/brace-expansion": "^1.1.21",
+    "**/rimraf/glob/minimatch/brace-expansion": "^2.1.7",
+    "**/@jest/reporters/glob/minimatch/brace-expansion": "^2.1.7",
+    "**/jest-config/glob/minimatch/brace-expansion": "^2.1.7",
+    "**/jest-runtime/glob/minimatch/brace-expansion": "^2.1.7",
+    "**/eslint/minimatch/brace-expansion": "^5.0.12",
+    "**/@eslint/config-array/minimatch/brace-expansion": "^5.0.12",
+    "**/@typescript-eslint/typescript-estree/minimatch/brace-expansion": "^5.0.12"
   }
 }

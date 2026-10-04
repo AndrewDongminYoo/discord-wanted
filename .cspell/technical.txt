@@ -338,6 +338,7 @@ Nsun
 Numba
 Nuxeo
 Nuxt
+nycrc
 Octopress
 Octotree
 Odoo

@@ -1,7 +1,7 @@
 name: discord-wanted
 
 concurrency:
-  group: discord-wanted
+  group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 permissions: read-all
@@ -63,7 +63,6 @@ jobs:
           wip: false
 
   spell-check:
-    if: ${{ !contains(fromJSON('["dependabot[bot]", "renovate[bot]", "snyk-bot", "allcontributors[bot]"]'), github.actor) }}
     defaults:
       run:
         working-directory: .

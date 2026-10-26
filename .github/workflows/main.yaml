@@ -63,7 +63,6 @@ jobs:
           wip: false
 
   spell-check:
-    if: ${{ !contains(fromJSON('["dependabot[bot]", "renovate[bot]", "snyk-bot", "allcontributors[bot]"]'), github.actor) }}
     defaults:
       run:
         working-directory: .

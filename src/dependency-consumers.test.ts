@@ -8,14 +8,6 @@ import type * as Undici from 'undici';
 
 const projectRequire = createRequire(__filename);
 
-function consumerRequire(...chain: string[]) {
-  let current = projectRequire;
-  for (const name of chain) {
-    current = createRequire(current.resolve(name));
-  }
-  return current;
-}
-
 test('Istanbul reads a synthetic YAML configuration through its own loader', async () => {
   const fixture = mkdtempSync(join(tmpdir(), 'discord-dependency-'));
   const loader = projectRequire('@istanbuljs/load-nyc-config') as {

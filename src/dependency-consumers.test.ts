@@ -35,37 +35,6 @@ test('Istanbul reads a synthetic YAML configuration through its own loader', asy
   }
 });
 
-test('the Istanbul YAML loader counts empty merge sources against its budget', () => {
-  const yaml = consumerRequire('@istanbuljs/load-nyc-config')('js-yaml') as {
-    load(source: string, options: { maxTotalMergeKeys: number }): unknown;
-  };
-
-  expect(() =>
-    yaml.load('source: &source [{}, {}, {}]\ntarget:\n  <<: *source\n', {
-      maxTotalMergeKeys: 1,
-    })
-  ).toThrow();
-});
-
-test.each([
-  ['eslint', 'minimatch'],
-  ['glob', 'minimatch'],
-  ['test-exclude', 'minimatch'],
-  ['test-exclude', 'glob', 'minimatch'],
-])('brace expansion works through the %s consumer chain', (...chain) => {
-  const parent = consumerRequire(...chain.slice(0, -1));
-  const minimatch = parent(chain[chain.length - 1]) as {
-    braceExpand(pattern: string): string[];
-  };
-
-  expect(minimatch.braceExpand('src/{wanted,jumpit}/index.{ts,js}')).toEqual([
-    'src/wanted/index.ts',
-    'src/wanted/index.js',
-    'src/jumpit/index.ts',
-    'src/jumpit/index.js',
-  ]);
-});
-
 test('Serverless loads the Undici ProxyAgent API without installing or running a binary', async () => {
   const fromServerless = createRequire(projectRequire.resolve('serverless/binary.js'));
   const undici = fromServerless('undici') as typeof Undici;

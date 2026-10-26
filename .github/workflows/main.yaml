@@ -1,7 +1,7 @@
 name: discord-wanted
 
 concurrency:
-  group: discord-wanted
+  group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 permissions: read-all

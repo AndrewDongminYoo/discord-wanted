@@ -20,26 +20,26 @@
   "dependencies": {
     "axios": "^1.20.0",
     "discord-interactions": "^4.1.0",
-    "dotenv": "^17.4.2",
-    "express": "^5.2.1",
+    "dotenv": "^18.0.9",
+    "express": "^5.3.0",
     "serverless-http": "^4.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "@types/express": "^5.0.0",
     "@types/jest": "^30.0.0",
-    "@typescript-eslint/parser": "^8.65.0",
-    "eslint": "^10.8.0",
+    "@typescript-eslint/parser": "^8.72.0",
+    "eslint": "^10.13.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-import-resolver-typescript": "^4.4.5",
     "eslint-plugin-simple-import-sort": "^14.0.0",
-    "globals": "^17.8.0",
-    "jest": "^30.4.2",
-    "serverless": "^4.40.0",
-    "serverless-offline": "^14.7.4",
-    "ts-jest": "^29.4.12",
+    "globals": "^17.13.0",
+    "jest": "^30.5.2",
+    "serverless": "^4.45.0",
+    "serverless-offline": "^14.8.4",
+    "ts-jest": "^29.4.15",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.65.0"
+    "typescript-eslint": "^8.72.0"
   },
   "jest": {
     "preset": "ts-jest",
@@ -63,17 +63,9 @@
     }
   },
   "resolutions": {
-    "qs": "^6.16.0",
-    "serverless/undici": "^6.28.1",
-    "**/@istanbuljs/load-nyc-config/js-yaml": "^3.15.2",
-    "**/test-exclude/minimatch/brace-expansion": "^1.1.21",
-    "**/test-exclude/glob/minimatch/brace-expansion": "^1.1.21",
-    "**/rimraf/glob/minimatch/brace-expansion": "^2.1.7",
-    "**/@jest/reporters/glob/minimatch/brace-expansion": "^2.1.7",
-    "**/jest-config/glob/minimatch/brace-expansion": "^2.1.7",
-    "**/jest-runtime/glob/minimatch/brace-expansion": "^2.1.7",
-    "**/eslint/minimatch/brace-expansion": "^5.0.12",
-    "**/@eslint/config-array/minimatch/brace-expansion": "^5.0.12",
-    "**/@typescript-eslint/typescript-estree/minimatch/brace-expansion": "^5.0.12"
+    "brace-expansion": "^5.0.12",
+    "js-yaml": "^5.5.0",
+    "qs": "^6.16.1",
+    "undici": "^8.12.3"
   }
 }

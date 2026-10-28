@@ -1,5 +1,7 @@
 # Discord-wanted 🚀
 
+<!-- cspell:words GHSA-gcqx-w48m-w2h4 -->
+
 🎯 **당신의 *Wanted!***
 
 파편화된 수많은 공고들을 한 곳에서 깔끔하게 모아보세요, 바로 당신의 Discord에서!
@@ -58,10 +60,12 @@
     │   ├── regional.txt
     │   ├── technical.txt
     ├── .github
-    │   └── .trunk
-    │       ├── configs
-    │       ├── .gitignore
-    │       ├── trunk.yaml
+    │   └── workflows
+    │       └── main.yaml
+    ├── .trunk
+    │   ├── configs
+    │   ├── .gitignore
+    │   ├── trunk.yaml
     ├── .vscode
     │   ├── extensions.json
     │   ├── settings.json
@@ -74,6 +78,8 @@
     │   ├── index.ts
     │   ├── job-info-display.ts
     ├── src
+    │   ├── dependency-consumers.test.ts
+    │   ├── request-clients.test.ts
     │   ├── utils.ts
     ├── wanted
     │   ├── types
@@ -101,6 +107,28 @@
     ├── cspell.config.json
     └── serverless.yml
 ```
+
+---
+
+## Development Checks
+
+Use Node.js `22.23.3` from `.nvmrc` and Yarn Classic `1.22.22`, matching the CI package-manager setup.
+
+```bash
+yarn install --frozen-lockfile --non-interactive
+yarn eslint .
+yarn tsc --noEmit
+yarn jest --runInBand
+trunk check --all --no-fix --jobs=2
+```
+
+The committed Jest suites use synthetic fixtures, an in-memory Axios adapter, mocked dotenv loading, and a network-disabled Undici dispatcher.
+They check request construction, result mapping, transport failures, and dependency APIs; they do not verify live provider acceptance or deployment behavior.
+Trunk manages its own Node.js `24.22.1` runtime for Renovate `44.190.2`, which requires Node.js `^24.11.0`.
+The application and CI stay on Node.js 22.
+TruffleHog uses offline detection with `--no-verification` and keeps unverified findings visible.
+The OSV configuration records one unresolved, unpatched advisory in Jest's development dependency on `deepmerge@4.3.1` (`GHSA-gcqx-w48m-w2h4`).
+Re-evaluate it when a patch, parent dependency, or consumer scope changes.
 
 ---
 

@@ -37,6 +37,10 @@ TruffleHog uses `--no-verification` to keep secret detection offline; its JSON-t
 `osv-scanner.toml` accepts the unpatched `GHSA-gcqx-w48m-w2h4` advisory only for the reviewed Jest development dependency on `deepmerge@4.3.1`.
 The risk remains unresolved and must be re-evaluated when a patch, parent dependency, or consumer scope changes.
 
+
+Run `python3 -B .trunk/configs/tests/test_trufflehog_to_sarif.py` for ten standard-library filesystem-reader regressions.
+The local reader retains decoded findings at file level when no literal location exists and omits secret values from SARIF messages.
+
 ## Required Environment Variables
 
 ```env

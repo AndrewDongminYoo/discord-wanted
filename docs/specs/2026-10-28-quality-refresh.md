@@ -24,7 +24,7 @@ Preserve public APIs, generated artifacts and repository-specific boundaries.
   Change only Trunk's managed Node.js runtime to `24.22.1` because Renovate `44.190.2` requires Node.js `^24.11.0`.
 - Update Actionlint to `1.7.12`, OSV Scanner to `2.7.0`, Renovate to `44.190.2`, and TruffleHog to `3.99.7`.
   Preserve the Trunk CLI, plugin source, Python runtime, and already-current enabled linter versions.
-- Run TruffleHog with `--no-verification` and without `--only-verified` while preserving the inherited JSON-to-SARIF parser.
+- Run TruffleHog with `--no-verification` and without `--only-verified` while preserving the SARIF result contract through the local filesystem reader.
 
 ## Verification Meaning
 
@@ -35,7 +35,7 @@ Preserve public APIs, generated artifacts and repository-specific boundaries.
 | TypeScript | The project type-checks under strict mode without emitting files. |
 | Jest | The committed request clients and installed dependency APIs work with offline fixtures. |
 | Focused consumer reads | Both brace-expansion major lines and the YAML and Undici consumers resolve the compatible installed APIs. |
-| Trunk | Every enabled linter runs through its configured reader, including offline secret detection and the documented OSV disposition. |
+| Trunk | Applicable enabled linters run through their configured readers, including offline secret detection and the documented OSV disposition. |
 
 Offline checks do not establish live Wanted, Saramin, or Discord acceptance, command registration, or deployment behavior.
 
@@ -59,3 +59,11 @@ The `wiki/concepts/authoring-time-vs-runtime-verification.md` precedent confirme
 
 Push and PR creation require explicit repository-specific approval.
 After approval, continue the requested hosted gates, merge, cleanup and memory recording.
+
+## Filesystem Reader Follow-up
+
+Use the reviewed standard-library reader and ten CLI regressions from `rn-typed-assets/.trunk/configs/`.
+Include the reader in the copy sandbox through `direct_configs` and retain decoded findings at file level when a literal position is unavailable.
+Keep `--no-verification --no-update`, omit secret values from SARIF messages and fail malformed input without partial clean output.
+CI invokes the exact reader test file separately from the existing application checks.
+Preserve application source, public contracts, package manifests, lock files, credentials, deployment paths and existing spelling scope.

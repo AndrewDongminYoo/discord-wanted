@@ -33,3 +33,10 @@
 The optional whole-graph manifest helper failed on package exports and Node's builtin resolution and is not a verification gate.
 Use Yarn-native graph evidence, focused actual consumers, and the declared project gates.
 The root coordinator owns final review, local commits, publication approval, and later hosted checks.
+
+## Reader Follow-up Verification
+
+1. Verify byte identity with the independently reviewed shared reader/test and run all ten standard-library regressions.
+2. Reproduce old-reader decoded loss and actual configured encoded/literal failures plus clean success.
+3. Run the full no-fix Trunk gate and observed spelling controls without expanding dictionary scope.
+4. Verify exact CI-step addition and retain prior application gates only after protected inputs compare equal.

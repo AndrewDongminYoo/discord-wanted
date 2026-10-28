@@ -23,6 +23,9 @@ Use 2-space indentation, single quotes, semicolons, trailing commas, and a 100-c
 
 ## Testing Guidelines
 
+Run `python3 -B .trunk/configs/tests/test_trufflehog_to_sarif.py` for ten standard-library filesystem-reader regressions.
+The local reader retains decoded findings at file level when no literal location exists and omits secret values from SARIF messages.
+
 Jest with `ts-jest` runs the committed `src/request-clients.test.ts` and `src/dependency-consumers.test.ts` suites and looks for `*.test.ts`.
 The request-client suite uses an in-memory Axios adapter and mocks dotenv loading; the consumer suite reads synthetic YAML and uses Undici's network-disabled mock dispatcher.
 These tests check request construction, result mapping, transport failures, and installed dependency APIs without contacting Wanted, Saramin, or Discord.
@@ -37,7 +40,7 @@ Generate dependency changes with Yarn, then verify `yarn install --frozen-lockfi
 Keep TypeScript on the supported `6.0.3` line while `typescript-eslint` requires TypeScript below `6.1.0` and `ts-jest` requires TypeScript below `7`.
 Run `trunk check --all --no-fix --jobs=2` for the complete configured quality gate.
 Trunk uses its own Node.js `24.22.1` runtime because Renovate `44.190.2` requires Node.js `^24.11.0`; the application and CI remain on Node.js 22.
-TruffleHog scans offline with `--no-verification`; preserve its JSON-to-SARIF parser and do not add `--only-verified`, which would hide unverified offline findings.
+TruffleHog scans offline with `--no-verification --no-update`; preserve its SARIF result contract and do not add `--only-verified`, which would hide unverified offline findings.
 `osv-scanner.toml` records the unresolved `GHSA-gcqx-w48m-w2h4` advisory in Jest's development-only `deepmerge@4.3.1` dependency.
 Re-evaluate that exception when a patch, parent dependency, or consumer scope changes; a configured scanner pass does not mean the package is fixed.
 

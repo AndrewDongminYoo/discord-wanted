@@ -36,6 +36,9 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile --non-interactive
 
+      - name: Test offline secret reader
+        run: python3 -B .trunk/configs/tests/test_trufflehog_to_sarif.py
+
       - name: Check ESLint
         run: yarn eslint .
 

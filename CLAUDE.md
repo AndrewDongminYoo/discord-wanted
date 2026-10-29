@@ -1,5 +1,7 @@
 # CLAUDE.md
 
+<!-- cspell:words SARIF GHSA-gcqx-w48m-w2h4 -->
+
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Project Overview
@@ -15,11 +17,29 @@ yarn register     # Register slash commands with Discord API (tsx commands.ts)
 yarn deploy       # Deploy to AWS Lambda
 yarn logs         # Tail Lambda function logs
 yarn lint         # Lint and auto-fix with ESLint
+yarn eslint .     # Check ESLint without changing files (CI)
+yarn tsc --noEmit # Check TypeScript without emitting files
+yarn jest --runInBand # Run the committed offline test suites
 yarn format       # Format all JS/TS/JSON files with Prettier
 ```
 
-No test runner script is configured — Jest is set up in `package.json` but no test files exist yet.
-To run tests when added: `yarn jest` or `yarn jest <file>`.
+Jest is configured in `package.json`; invoke it directly with `yarn jest --runInBand`.
+`src/request-clients.test.ts` mocks dotenv and uses an in-memory Axios adapter to check request construction, mappings, and transport failures.
+`src/dependency-consumers.test.ts` checks the Istanbul YAML loader and Serverless's installed Undici API with synthetic fixtures and a network-disabled dispatcher.
+These offline checks do not verify live provider acceptance, command registration, or deployment behavior.
+
+Use Node.js `22.23.3` from `.nvmrc` and Yarn Classic `1.22.22`, matching the CI package-manager setup.
+After dependency changes, verify `yarn install --frozen-lockfile --non-interactive` and the three CI checks above.
+TypeScript stays on `6.0.3` because the current `typescript-eslint` peer range is below `6.1.0` and `ts-jest` requires a version below `7`.
+Run `trunk check --all --no-fix --jobs=2` for the full configured quality gate.
+Trunk manages Node.js `24.22.1` for Renovate `44.190.2`, whose engine range is `^24.11.0`; the application and CI stay on Node.js 22.
+TruffleHog uses `--no-verification` to keep secret detection offline; its JSON-to-SARIF parser must continue reporting unverified findings.
+`osv-scanner.toml` accepts the unpatched `GHSA-gcqx-w48m-w2h4` advisory only for the reviewed Jest development dependency on `deepmerge@4.3.1`.
+The risk remains unresolved and must be re-evaluated when a patch, parent dependency, or consumer scope changes.
+
+
+Run `python3 -B .trunk/configs/tests/test_trufflehog_to_sarif.py` for 17 standard-library filesystem-reader regressions.
+The local reader retains decoded findings at file level when no literal location exists and omits secret values from SARIF messages.
 
 ## Required Environment Variables
 

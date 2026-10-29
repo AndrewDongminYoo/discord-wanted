@@ -361,6 +361,7 @@ pghoard
 Phalcon
 PHPCI
 Picreel
+pinact
 Pingendo
 Piwik
 Pixi
@@ -406,6 +407,7 @@ Rustpad
 Rxswift
 Samza
 Sanic
+sarif
 Scalyr
 scikit
 Scrapy

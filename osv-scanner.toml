@@ -1,0 +1,5 @@
+# cspell:words IgnoredVulns GHSA-gcqx-w48m-w2h4
+
+[[IgnoredVulns]]
+id = "GHSA-gcqx-w48m-w2h4"
+reason = "deepmerge@4.3.1 has no compatible patched release as of 2026-10-28; GitHub lists no patch and npm latest remains 4.3.1. Reviewed scope: yarn why deepmerge --json reports only the development path jest -> @jest/core -> jest-config@30.5.2 -> deepmerge, with repository-owned Jest configuration. Package-level poisoning remains reachable in a synthetic null-prototype/payload-target check, so this is an unresolved development-tool risk, not a fix. The actual raw OSV 2.7.0 lock scan fails for this advisory. Exception approved by the root Codex maintenance coordinator on 2026-10-28. Re-evaluation owner: AndrewDongminYoo. Remove this exception when a compatible patch or parent dependency change becomes available, or if a production consumer or untrusted configuration path appears."

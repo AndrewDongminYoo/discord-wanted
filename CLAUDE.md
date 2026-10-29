@@ -38,7 +38,7 @@ TruffleHog uses `--no-verification` to keep secret detection offline; its JSON-t
 The risk remains unresolved and must be re-evaluated when a patch, parent dependency, or consumer scope changes.
 
 
-Run `python3 -B .trunk/configs/tests/test_trufflehog_to_sarif.py` for ten standard-library filesystem-reader regressions.
+Run `python3 -B .trunk/configs/tests/test_trufflehog_to_sarif.py` for 17 standard-library filesystem-reader regressions.
 The local reader retains decoded findings at file level when no literal location exists and omits secret values from SARIF messages.
 
 ## Required Environment Variables

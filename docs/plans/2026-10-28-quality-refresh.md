@@ -36,7 +36,16 @@ The root coordinator owns final review, local commits, publication approval, and
 
 ## Reader Follow-up Verification
 
-1. Verify byte identity with the independently reviewed shared reader/test and run all ten standard-library regressions.
+1. Verify byte identity with the independently reviewed shared reader/test and run all 17 standard-library regressions.
 2. Reproduce old-reader decoded loss and actual configured encoded/literal failures plus clean success.
 3. Run the full no-fix Trunk gate and observed spelling controls without expanding dictionary scope.
 4. Verify exact CI-step addition and retain prior application gates only after protected inputs compare equal.
+
+## Offline scanner resource boundary
+
+Run `python3 -B .trunk/configs/tests/test_trufflehog_to_sarif.py` for the 17 command-line reader regressions.
+Source context is limited to 1 MiB plus a sentinel byte per read and at most eight cached files.
+Oversized, unreadable, binary or decoded-only findings retain file-level diagnostics instead of disappearing.
+Native Trunk paths and Unicode code-point columns are preserved.
+The large-source and multi-file regressions measure traced Python allocations on ASCII fixtures; they do not establish a universal process RSS or I/O timeout bound.
+Malformed scanner input fails the gate, and candidate credentials are never verified with a provider.

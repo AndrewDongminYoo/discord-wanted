@@ -23,7 +23,7 @@ Use 2-space indentation, single quotes, semicolons, trailing commas, and a 100-c
 
 ## Testing Guidelines
 
-Run `python3 -B .trunk/configs/tests/test_trufflehog_to_sarif.py` for ten standard-library filesystem-reader regressions.
+Run `python3 -B .trunk/configs/tests/test_trufflehog_to_sarif.py` for 17 standard-library filesystem-reader regressions.
 The local reader retains decoded findings at file level when no literal location exists and omits secret values from SARIF messages.
 
 Jest with `ts-jest` runs the committed `src/request-clients.test.ts` and `src/dependency-consumers.test.ts` suites and looks for `*.test.ts`.
@@ -51,3 +51,12 @@ Recent history uses Conventional Commit types with gitmoji, for example `feat: â
 ## Security & Configuration Tips
 
 Required secrets include `PUBLIC_KEY`, `APPLICATION_ID`, and `DISCORD_TOKEN`. Never commit credentials or raw API responses containing sensitive headers. Validate new environment variables in `serverless.yml` and document them in `README.md` and this guide when added.
+
+## Offline scanner resource boundary
+
+Run `python3 -B .trunk/configs/tests/test_trufflehog_to_sarif.py` for the 17 command-line reader regressions.
+Source context is limited to 1 MiB plus a sentinel byte per read and at most eight cached files.
+Oversized, unreadable, binary or decoded-only findings retain file-level diagnostics instead of disappearing.
+Native Trunk paths and Unicode code-point columns are preserved.
+The large-source and multi-file regressions measure traced Python allocations on ASCII fixtures; they do not establish a universal process RSS or I/O timeout bound.
+Malformed scanner input fails the gate, and candidate credentials are never verified with a provider.

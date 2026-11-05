@@ -40,6 +40,7 @@ lint:
             run: python3 .trunk/configs/trufflehog_to_sarif.py
   disabled:
     - grype
+    - renovate
   enabled:
     - actionlint@1.7.12
     - checkov@3.3.30
@@ -51,7 +52,6 @@ lint:
     - pinact@4.1.1!:
         commands: [lint, upgrade]
     - prettier@3.9.10
-    - renovate@44.190.2
     - trufflehog@3.99.7
     - yamllint@1.38.0
 actions:
